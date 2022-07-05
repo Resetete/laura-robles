@@ -15,3 +15,22 @@
  */
 
 @import "bootstrap";
+
+.hero-image {
+  height: 100vh;
+  width: 100vw;
+  background: image-url('laura-hero-start-desktop.jpg');
+}
+
+
+/***********************************+*/
+/**** MOBILE *************************/
+/***********************************+*/
+
+@media (max-width: 768px) {
+  .hero-image {
+    background-position: top center;
+    background: image-url('laura-hero-start-mobile.jpg') no-repeat;
+    background-size: 100vw auto;
+  }
+}
