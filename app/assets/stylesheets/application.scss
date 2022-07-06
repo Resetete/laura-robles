@@ -17,7 +17,7 @@
 @import "bootstrap";
 
 /* definition of variables */
-$primary-color: #243040;
+$primary-color: black;
 
 
 /* general styles */
@@ -32,8 +32,9 @@ $primary-color: #243040;
   width: 100vw;
   background: image-url('laura-hero-start-desktop.svg');
   background-size: cover;
+  position: absolute;
+  top: 0;
 }
-
 
 /***********************/
 /* Navigation styling */
@@ -110,8 +111,8 @@ $primary-color: #243040;
 .hamburger {
   position: fixed;
   z-index: 4;
-  top: 30px;
-  left: 30px;
+  top: 20px;
+  left: 15px;
   width: 45px;
   height: 34px;
   cursor: pointer;
