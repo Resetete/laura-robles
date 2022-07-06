@@ -32,8 +32,8 @@ document.onreadystatechange = function() {
 			console.log('closing...');
 		},
 		updateTransformOrigin: function() {
-			scrollTop = this.$window.scrollTop();
-			equation = (scrollTop + this.offset) / this.pageHeight * 100;
+			var scrollTop = this.$window.scrollTop();
+			var equation = (scrollTop + this.offset) / this.pageHeight * 100;
 			this.$paperFront.css('transform-origin', 'center ' + equation + '%');
 		},
 		//hamburger icon fix to keep its position
