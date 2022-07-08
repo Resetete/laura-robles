@@ -126,6 +126,7 @@ $primary-color: black;
       height: 6px;
       background-color: $primary-color;
       border-radius: 2px;
+      border:  1px solid white;
     }
     
     &:before, &:after {
