@@ -4,6 +4,8 @@ import "controllers"
 
 // install bootstrap and dependencies
 import "bootstrap"
+// install fonteawesome
+import "@fortawesome/fontawesome-free";
 
 import jquery from 'jquery'
 window.jQuery = jquery
