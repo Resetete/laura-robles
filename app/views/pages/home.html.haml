@@ -12,22 +12,21 @@
         .hamburger
           %span
         #container
-          %section
-            .hero-image
-              .social-media.fa-2x.fa-rotate-by
-                = link_to '#' do
-                  %i.fa-brands.fa-facebook-square.fa-bounce
-                = link_to '#' do
-                  %i.fa-brands.fa-instagram-square.fa-bounce
-                = link_to '#' do
-                  %i.fa-brands.fa-solid.fa-square-envelope.fa-bounce
+          %section.start-section
+            .social-media.fa-2x.fa-fw
+              = link_to '#' do
+                %i.fa-brands.fa-facebook-square.fa-fade
+              = link_to '#' do
+                %i.fa-brands.fa-instagram-square.fa-fade
+              = link_to '#' do
+                %i.fa-brands.fa-solid.fa-square-envelope.fa-fade
             .language-selection
               = link_to('DE', '#')
               = '/'
               = link_to('EN', '#')
               = '/'
               = link_to('ES', '#')
-          %section
+          %section.video-section
             TEST
           %section
             %h1 Music

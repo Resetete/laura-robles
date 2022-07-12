@@ -27,13 +27,13 @@ $primary-color: black;
 /**** Landing view **/
 /*****************+**/
 
-.hero-image {
-  height: 100vh;
-  width: 100vw;
-  background: image-url('laura-hero-start-desktop.svg');
-  background-size: cover;
-  position: absolute;
-  top: 0;
+/* hero image section */
+.start-section {
+  width: 100%;
+  height: 0;
+  background: image-url('laura-hero-start-desktop.svg') no-repeat;
+  background-size: contain;
+  padding-bottom: 72.2%; /* ((img-height:1265 / img-width:1752) *  container-width) */
 }
 
 .language-selection {
@@ -43,6 +43,7 @@ $primary-color: black;
   a {
     text-decoration: none;
     color: black;
+    filter: drop-shadow(1px 1px 1px white);
   }
 }
 
@@ -50,19 +51,20 @@ $primary-color: black;
 /* social media icons */
 .social-media {
   position: fixed;
-  /*background: white;*/
-  border-radius: 10px;
-  padding: 2px;
   top: 20%;
-  right: -10px;
-  display: inline-block;
-  --fa-rotate-angle: 90deg;
+  right: 10px;
   z-index: 10;
   a {
     text-decoration: none;
     color: black;
     --fa-animation-duration: 5s;
-    filter: drop-shadow(1px 1px 1px white) 
+    filter: drop-shadow(1px 1px 1px white);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-flow: column;
   }
 }
 
@@ -117,27 +119,6 @@ $primary-color: black;
   transition: all 0.3s ease;
 }
 
-//actual content
-#container {
-  section {
-    height: 100vh;
-    text-align: center;
-    &:first-of-type {
-      padding-top: 10vh;  
-      h1 { font-size: 45px; }
-      p { font-size: 25px; }
-      @media (max-width: 600px) {
-        padding-top: 15vh;  
-        h1 { font-size: 30px; }
-        p { font-size: 18px; }
-      }
-    }
-    &:nth-of-type(2n) {
-      background-color: lighten($primary-color, 75%);
-    }
-  }
-}
-
 .hamburger {
   position: fixed;
   z-index: 4;
@@ -155,8 +136,9 @@ $primary-color: black;
       width: 45px;
       height: 6px;
       background-color: $primary-color;
-      border-radius: 2px;
-      border:  1px solid white;
+      /*border-radius: 2px;
+      border:  1px solid white;*/
+      filter: drop-shadow(1px 1px 1px white)  /* highlight hamburger menu on black background */
     }
     
     &:before, &:after {
@@ -192,14 +174,23 @@ $primary-color: black;
 }
 
 
+/************************/
+/**** Video section *****/
+/************************/
+
+.video-section {
+  background: $primary-color;
+}
+
 /***********************************+*/
 /**** MOBILE *************************/
 /***********************************+*/
 
 @media (max-width: 768px) {
-  .hero-image {
-    background-position: top center;
+  .start-section {
     background: image-url('laura-hero-start-mobile.svg') no-repeat;
-    background-size: 100vw auto;
+    background-size: contain;
+    padding-bottom: 121.68%; /* ((img-height:1693 / img-width:1383) *  container-width) */
   }
+
 }
