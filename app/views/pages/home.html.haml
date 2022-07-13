@@ -27,33 +27,34 @@
               = '/'
               = link_to('ES', '#')
           %section.video-section
-            .carousel{'aria-label': 'Gallery'}
-              %ol.carousel__viewport
-                %li#carousel__slide1.carousel__slide{ 'tabindex': '0'}
-                  .carousel__snapper
-                  = link_to('Go to last slide', "#carousel__slide4", class: "carousel__prev")
-                  = link_to('Go to next slide', "#carousel__slide2", class: "carousel__next")
-                %li#carousel__slide2.carousel__slide{ 'tabindex': '0' }
-                  .carousel__snapper
-                  = link_to('Go to previous slide', "#carousel__slide1", class: "carousel__prev")
-                  = link_to('Go to next slide', "#carousel__slide3", class: "carousel__next")
-                %li#carousel__slide3.carousel__slide{'tabindex': "0"}
-                  .carousel__snapper
-                  = link_to('Go to previous slide', "#carousel__slide2", class: "carousel__prev")
-                  = link_to('Go to next slide', "#carousel__slide4", class: "carousel__next")
-                %li#carousel__slide4.carousel__slide{'tabindex':"0"}
-                  .carousel__snapper
-                  = link_to('Go to previous slide', "#carousel__slide3", class: "carousel__prev")
-                  = link_to('Go to first slide', "#carousel__slide1", class: "carousel__next")
-              %aside.carousel__navigation
-                %ol.carousel__navigation-list
-                  %li.carousel__navigation-item
-                    = link_to('Go to slide 1', "#carousel__slide1", class: "carousel__navigation-button")
-                  %li.carousel__navigation-item
-                    = link_to('Go to slide 2', "#carousel__slide2", class: "carousel__navigation-button")
-                  %li.carousel__navigation-item
-                    = link_to('Go to slide 3', "#carousel__slide3", class: "carousel__navigation-button")
-                  %li.carousel__navigation-item
-                    = link_to('Go to slide 4', "#carousel__slide4", class: "carousel__navigation-button")
+            .video-slider-wrapper
+              .carousel{'aria-label': 'Gallery'}
+                %ol.carousel__viewport
+                  %li#carousel__slide1.carousel__slide{ 'tabindex': '0'}
+                    .carousel__snapper
+                      = link_to('Go to last slide', "#carousel__slide4", class: "carousel__prev")
+                      = link_to('Go to next slide', "#carousel__slide2", class: "carousel__next")
+                  %li#carousel__slide2.carousel__slide{ 'tabindex': '0' }
+                    .carousel__snapper
+                      = link_to('Go to previous slide', "#carousel__slide1", class: "carousel__prev")
+                      = link_to('Go to next slide', "#carousel__slide3", class: "carousel__next")
+                  %li#carousel__slide3.carousel__slide{'tabindex': "0"}
+                    .carousel__snapper
+                      = link_to('Go to previous slide', "#carousel__slide2", class: "carousel__prev")
+                      = link_to('Go to next slide', "#carousel__slide4", class: "carousel__next")
+                  %li#carousel__slide4.carousel__slide{'tabindex':"0"}
+                    .carousel__snapper
+                      = link_to('Go to previous slide', "#carousel__slide3", class: "carousel__prev")
+                      = link_to('Go to first slide', "#carousel__slide1", class: "carousel__next")
+                %aside.carousel__navigation
+                  %ol.carousel__navigation-list
+                    %li.carousel__navigation-item
+                      = link_to('Go to slide 1', "#carousel__slide1", class: "carousel__navigation-button")
+                    %li.carousel__navigation-item
+                      = link_to('Go to slide 2', "#carousel__slide2", class: "carousel__navigation-button")
+                    %li.carousel__navigation-item
+                      = link_to('Go to slide 3', "#carousel__slide3", class: "carousel__navigation-button")
+                    %li.carousel__navigation-item
+                      = link_to('Go to slide 4', "#carousel__slide4", class: "carousel__navigation-button")
           %section
             %h1 Music
