@@ -57,7 +57,6 @@ $primary-color: black;
   a {
     text-decoration: none;
     color: black;
-    --fa-animation-duration: 5s;
     filter: drop-shadow(1px 1px 1px white);
     margin: 0;
     padding: 0;
@@ -65,6 +64,10 @@ $primary-color: black;
     justify-items: center;
     align-items: center;
     flex-flow: column;
+    /* animation styles */
+    --fa-animation-duration: 5s;
+    --fa-flip-x: .5;
+    --fa-flip-y: 0;
   }
 }
 
