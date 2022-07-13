@@ -232,21 +232,23 @@ a:hover {
   box-sizing: border-box;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  background-image: url('https://assets.codepen.io/1462889/sl1.jpg');
+  /*background-image: url('https://assets.codepen.io/1462889/sl1.jpg');*/
   animation: border-transform 6s linear infinite alternate forwards;
     -webkit-animation-play-state: paused;
     -moz-animation-play-state: paused;
     animation-play-state: paused;
 }
-.checkbox.scnd + label{
+
+/*.checkbox.scnd + label{
   background-image: url('https://assets.codepen.io/1462889/sl2.jpg');
 }
-.checkbox.thrd + label{
+*/
+/*.checkbox.thrd + label{
   background-image: url('https://assets.codepen.io/1462889/sl3.jpg');
 }
 .checkbox.foth + label{
   background-image: url('https://assets.codepen.io/1462889/sl4.jpg');
-}
+}*/
 
 .checkbox:checked + label{
   box-shadow: 0 8px 25px 0 rgba(16,39,112,.3);
@@ -294,7 +296,6 @@ ul li {
   border: 5px solid #bdc3c7;
   background-size: cover;
   background-position: center;
-  background-image: url('https://assets.codepen.io/1462889/sl1.jpg');
   border-radius: 50%;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
@@ -313,16 +314,6 @@ ul li {
 ul li span {
   mix-blend-mode: difference;
 }
-ul li:nth-child(2) {
-  background-image: url('https://assets.codepen.io/1462889/sl2.jpg');
-}
-ul li:nth-child(3) {
-  background-image: url('https://assets.codepen.io/1462889/sl3.jpg');
-}
-ul li:nth-child(4) {
-  background-image: url('https://assets.codepen.io/1462889/sl4.jpg');
-}
-
 
 .checkbox.frst:checked ~ ul li:nth-child(1) {
   opacity: 1;
@@ -344,21 +335,6 @@ ul li:nth-child(4) {
   pointer-events: auto;
   border-radius: 16px;
 }
-
-.logo {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  display: block;
-  z-index: 100;
-  transition: all 250ms linear;
-}
-.logo img {
-  height: 26px;
-  width: auto;
-  display: block;
-}
-
 
 
 @media (max-width: 767px) {
