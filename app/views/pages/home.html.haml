@@ -27,6 +27,27 @@
               = '/'
               = link_to('ES', '#')
           %section.video-section
-            TEST
+            .section.full-height.over-hide.px-4.px-sm-0
+              .container
+                .row.full-height.justify-content-center
+                  .col-lg-10.col-xl-8.align-self-center.padding-tb
+                    .section.mx-auto.text-center.slider-height-padding
+                      %input#slide-1.checkbox.frst{'checked': "checked", 'name': "slider", 'type': "radio"}/
+                      %label{for: "slide-1"}
+                      %input#slider-2.checkbox.scnd{'name': "slider", 'type': "radio"}/
+                      %label{for: "slider-2"}
+                      %input#slider-3.checkbox.thrd{'name': "slider", 'type': "radio"}/
+                      %label{for: "slider-3"}
+                      %input#slider-4.checkbox.foth{'name': "slider", 'type': "radio"}/
+                      %label{for: "slider-4"}
+                      %ul
+                        %li
+                          %span MALE GOOFY FACE
+                        %li
+                          %span TOY PIG
+                        %li
+                          %span SHY PORTRAIT
+                        %li
+                          %span SKATEBOARD FACE
           %section
             %h1 Music
