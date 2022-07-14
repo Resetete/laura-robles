@@ -21,7 +21,16 @@ $primary-color: black;
 
 
 /* general styles */
+body { 
+  overflow-x: hidden;
+}
 
+a {
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: none;
+}
 
 /*****************+**/
 /**** Landing view **/
@@ -46,7 +55,6 @@ $primary-color: black;
     filter: drop-shadow(1px 1px 1px white);
   }
 }
-
 
 /* social media icons */
 .social-media {
@@ -185,38 +193,29 @@ $primary-color: black;
   background: $primary-color;
 }
 
-body{ 
-  overflow-x: hidden;
-}
-
-a {
-  cursor: pointer;
-}
-a:hover {
-  text-decoration: none;
-}
-
-.section{
+.section {
   position: relative;
   width: 100%;
   display: block;
 }
-.full-height{
+
+.full-height {
   min-height: 100vh;
 }
-.over-hide{
+.over-hide {
   overflow: hidden;
 }
-.padding-tb{
+.padding-tb {
   padding: 100px 0;
 }
+
 [type="radio"]:checked,
 [type="radio"]:not(:checked){
   position: absolute;
   left: -9999px;
 }
 .checkbox:checked + label,
-.checkbox:not(:checked) + label{
+.checkbox:not(:checked) + label {
   position: relative;
   cursor: pointer;
   margin: 0 auto;
@@ -238,14 +237,23 @@ a:hover {
     animation-play-state: paused;
 }
 
-.checkbox:checked + label{
+/* add instrument icons to video slider */
+.bg-cajon {
+  background: image-url('video-icons/cajon');
+}
+
+.bg-bass {
+  background: image-url('video-icons/bass.jpg');
+}
+
+.checkbox:checked + label {
   box-shadow: 0 8px 25px 0 rgba(16,39,112,.3);
   transform: scale(1.3);
     -webkit-animation-play-state: running;
     -moz-animation-play-state: running;
     animation-play-state: running;
 }
-@keyframes border-transform{
+@keyframes border-transform {
   0%,100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; } 
   14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; } 
   28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; } 
@@ -259,7 +267,20 @@ a:hover {
   padding-top: 440px;
 }
 
-ul {
+.video-wrapper {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.video-section ul {
   position: absolute;
   top: 0;
   left: 0;
@@ -270,7 +291,7 @@ ul {
   margin: 0;
   list-style: none;
 }
-ul li {
+.video-section ul li {
   position: absolute;
   top: 0;
   left: 0;
@@ -299,7 +320,7 @@ ul li {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-ul li span {
+.video-section ul li span {
   mix-blend-mode: difference;
 }
 
@@ -323,7 +344,6 @@ ul li span {
   pointer-events: auto;
   border-radius: 16px;
 }
-
 
 @media (max-width: 767px) {
   .slider-height-padding {
