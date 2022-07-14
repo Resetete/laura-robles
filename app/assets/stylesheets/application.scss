@@ -320,9 +320,6 @@ a:hover {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-.video-section ul li span {
-  mix-blend-mode: difference;
-}
 
 .checkbox.frst:checked ~ ul li:nth-child(1) {
   opacity: 1;
