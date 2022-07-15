@@ -190,6 +190,7 @@ a:hover {
 /************************/
 
 .video-section {
+  position: relative;
   background: $primary-color;
 }
 
@@ -197,6 +198,13 @@ a:hover {
   position: relative;
   width: 100%;
   display: block;
+}
+
+#video-header {
+  position: absolute;
+  top: 10%;
+  left: 5vw;
+  transform: rotate(-20deg);
 }
 
 .full-height {
