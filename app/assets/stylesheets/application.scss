@@ -376,6 +376,25 @@ a:hover {
   }
 }
 
+/***********************/
+/*** News section *****/
+
+.news-section {
+  height: 100vh;
+  position: relative;
+  background-color: white;
+}
+
+#down-looking-face {
+  position: absolute;
+  top: 0;
+  left: 10vw;
+  width: 50vw;
+  img {
+    width: 100%;
+  }
+}
+
 /***********************************+*/
 /**** MOBILE *************************/
 /***********************************+*/
