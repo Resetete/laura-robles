@@ -46,13 +46,19 @@ a:hover {
 }
 
 .language-selection {
+  z-index: 200;
   position: fixed;
   top: 30px;
   right: 10px;
   a {
     text-decoration: none;
     color: black;
-    filter: drop-shadow(1px 1px 1px white);
+    filter: drop-shadow(.5px 1px .5px white);
+    /*text-shadow: 
+      -0.5px 0.5px 0 white,
+      0.5px 0.5px 0 white,
+      0.5px -0.5px 0 white,
+      0.5px -0.5px 0 white;*/
   }
 }
 
@@ -65,13 +71,14 @@ a:hover {
   a {
     text-decoration: none;
     color: black;
-    filter: drop-shadow(1px 1px 1px white);
     margin: 0;
     padding: 0;
     display: flex;
     justify-items: center;
     align-items: center;
     flex-flow: column;
+    /* add shadow around icons */
+    filter: drop-shadow(0.5px 1px 0.5px white);
     /* animation styles */
     --fa-animation-duration: 5s;
     --fa-flip-x: .5;
@@ -147,9 +154,8 @@ a:hover {
       width: 45px;
       height: 6px;
       background-color: $primary-color;
-      /*border-radius: 2px;
-      border:  1px solid white;*/
-      filter: drop-shadow(1px 1px 1px white)  /* highlight hamburger menu on black background */
+      /* highlight hamburger menu on black background */
+      filter: drop-shadow(0.5px 1px 0.5px white)
     }
     
     &:before, &:after {
