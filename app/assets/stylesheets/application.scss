@@ -378,6 +378,7 @@ a:hover {
 
 /***********************/
 /*** News section *****/
+/**********************/
 
 .news-section {
   height: 100vh;
@@ -393,6 +394,43 @@ a:hover {
   img {
     width: 100%;
   }
+}
+
+.news-section-content {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: space-between;
+}
+
+#updates-wrapper {
+  position: absolute;
+  top: 22vh;
+  left: 10vw;
+  width: 60vw;
+  .headline {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: space-between;
+  }
+}
+
+span.day {
+  font-size: 1em;
+  font-family: serif;
+  font-weight: bold;
+}
+
+span.month {
+  font-size: 1.2em;
+  font-weight: lighter;
+}
+
+span.year {
+  font-size: 1.5em;
+  font-weight: bolder;
+  font-style: italic;
 }
 
 /***********************************+*/
