@@ -46,7 +46,7 @@ a:hover {
 }
 
 .language-selection {
-  z-index: 200;
+  z-index: 999;
   position: fixed;
   top: 30px;
   right: 10px;
@@ -67,7 +67,7 @@ a:hover {
   position: fixed;
   top: 20%;
   right: 10px;
-  z-index: 10;
+  z-index: 999;
   a {
     text-decoration: none;
     color: black;
@@ -407,7 +407,7 @@ a:hover {
   position: absolute;
   top: 22vh;
   left: 10vw;
-  width: 60vw;
+  width: 70vw;
   .headline {
   display: flex;
   flex-direction: row;
@@ -435,7 +435,19 @@ span.year {
 
 #news-headline-section {
   height: 100vh;
+  z-index: 10;
 }
+
+/*Instagram embbed styles */
+.instagram-content-wrapper {
+  float: right;
+  transform: rotate(10deg);
+  shape-outside: polygon(0px 0px, 0px 189px, 100.48% 94.71%, 200px 120px, 80.67% 37.17%);
+  z-index: 9;
+}
+
+
+
 
 /***********************************+*/
 /**** MOBILE *************************/
