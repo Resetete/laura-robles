@@ -444,12 +444,12 @@ span.year {
 
 /*Instagram embbed styles */
 .instagram-content-wrapper {
+  margin-left: 4vw; /* to fit the mask better */
   float: right;
   height: 80%;
   width: auto;
   transform: rotate(10deg);
   shape-outside: polygon(20% -0%, 100% 0%, 100% 120%, -30% 110%);
-  /*shape-outside: content-box;*/
   padding: 5px;
   z-index: 9;
 }
