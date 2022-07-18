@@ -448,7 +448,9 @@ span.year {
   height: 80%;
   width: auto;
   transform: rotate(10deg);
-  shape-outside: polygon(0px 0px, 0px 189px, 100.48% 94.71%, 200px 120px, 80.67% 37.17%);
+  shape-outside: polygon(20% -0%, 100% 0%, 100% 120%, -30% 110%);
+  /*shape-outside: content-box;*/
+  padding: 5px;
   z-index: 9;
 }
 
