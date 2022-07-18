@@ -213,6 +213,13 @@ a:hover {
   transform: rotate(-20deg);
 }
 
+#laura-portrait-video {
+  position: absolute;
+  width: 25vw;
+  top: 20vh;
+  right: 0;
+}
+
 .full-height {
   min-height: 100vh;
 }
@@ -253,7 +260,7 @@ a:hover {
 
 /* add instrument icons to video slider */
 .bg-cajon {
-  background: image-url('video-icons/laura-cajon.jpeg');
+  background: image-url('video-icons/cajon');
 }
 
 .bg-bass {
