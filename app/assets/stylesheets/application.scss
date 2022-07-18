@@ -441,11 +441,21 @@ span.year {
 /*Instagram embbed styles */
 .instagram-content-wrapper {
   float: right;
+  height: 80%;
+  width: auto;
   transform: rotate(10deg);
   shape-outside: polygon(0px 0px, 0px 189px, 100.48% 94.71%, 200px 120px, 80.67% 37.17%);
   z-index: 9;
 }
 
+.contact-button {
+  position: absolute;
+  top: 50vh;
+  left: 5vw;
+  a img {
+    width: 20vw;
+  }
+}
 
 
 
