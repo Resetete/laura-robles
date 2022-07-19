@@ -110,7 +110,14 @@
                       Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium po. Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras Cras quis nulla commodo, liquam lectus sed, blandit Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras
                   .contact-button
                     = link_to '#' do
-                      = image_tag('buttons/contact-button.svg')
+                      = image_tag('buttons/contact-button')
+                  #animated-text
+                    %span#text1
+                    %span#text2
+                  %svg#filters
+                    %defs
+                      %filter#threshold
+                        %fecolormatrix{:in => "SourceGraphic", :type => "matrix", :values => "1 0 0 0 0\r\n\t\t\t\t\t\t\t\t\t0 1 0 0 0\r\n\t\t\t\t\t\t\t\t\t0 0 1 0 0\r\n\t\t\t\t\t\t\t\t\t0 0 0 255 -140"}
               #news-headline-section
                 = image_tag('news-vertical.svg')
           %section.about-section

@@ -15,6 +15,9 @@
  */
 
 @import "bootstrap";
+/* custom fonts */
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
 /* definition of variables */
 $primary-color: black;
@@ -414,7 +417,6 @@ a:hover {
 /**********************/
 
 .news-section {
-  /*min-height: 100vh;*/
   height: 100%;
   position: relative;
   background-color: white;
@@ -435,6 +437,12 @@ a:hover {
   flex-direction: row;
   align-content: space-between;
   justify-content: space-between;
+}
+
+#news-headline-section {
+  min-height: 100vh;
+  z-index: 10;
+  /*background: image-url('news-vertical.svg');*/
 }
 
 #news-content-elements {
@@ -470,10 +478,6 @@ span.year {
   font-style: italic;
 }
 
-#news-headline-section {
-  min-height: 100vh;
-  z-index: 10;
-}
 
 /*Instagram embbed styles */
 .instagram-content-wrapper {
@@ -490,9 +494,33 @@ span.year {
 .contact-button {
   margin: 10vh 0 5vh 10vw;
   a img {
-    width: 20vw;
+    width: 25vw;
   }
 }
+
+#animated-text {
+    position: absolute;
+    margin: auto;
+    width: 20vw;
+    height: 30pt;
+    top: 70%;
+    bottom: 0;
+    left: 0;
+
+    filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    font-size: 30pt;
+    font-family: "Caveat", cursive;
+    text-align: center;
+    user-select: none;
+}
+
 
 /**********************/
 /**** ABOUT section *****/
