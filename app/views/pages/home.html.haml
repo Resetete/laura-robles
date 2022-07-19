@@ -115,8 +115,9 @@
                 = image_tag('news-vertical.svg')
           %section.about-section
             = image_tag('atardecer.jpg', id: 'about-section-bg')
+            .about-section-heading
+              = image_tag('about.svg')
             .about-text-wrapper
-              .left-text-funnel
               .about-text#part1
                 %p<
                   My name is
@@ -135,7 +136,6 @@
                   I live with my family in Berlin.
                   If you are interested in knowing more about my work or playing with me, you can
                   = link_to('write me', 'mailto:lauraroblesinfo@gmail.com', class: 'btn btn-outline-dark')
-              .right-text-funnel
 
 
 
