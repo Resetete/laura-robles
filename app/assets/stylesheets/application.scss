@@ -510,12 +510,24 @@ span.year {
   width: 100vw;
 }
 
-
 .about-text {
   position: absolute;
-  top: 50%;
-  color: white;
+  width: 40vw;
 }
+#part1 {
+  color: white;
+  background:  $primary-color;
+  top: 50%;
+  right: 5%;
+}
+#part2 {
+  color: $primary-color;
+  background: white;
+  bottom: 5%;
+  left: 5%; 
+}
+
+
 
 /***********************************+*/
 /**** MOBILE *************************/
