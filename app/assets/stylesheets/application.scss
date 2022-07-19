@@ -498,11 +498,23 @@ span.year {
 /**********************/
 
 .about-section {
+  position: relative;
   background: $primary-color;
+  /*background: image-url('atardecer.jpg') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;*/
 }
 
 #about-section-bg {
   width: 100vw;
+}
+
+
+.about-text {
+  position: absolute;
+  top: 50%;
+  color: white;
 }
 
 /***********************************+*/
