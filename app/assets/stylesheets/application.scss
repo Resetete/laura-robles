@@ -26,6 +26,7 @@ $primary-color: black;
 /* general styles */
 body { 
   overflow-x: hidden;
+  color: $primary-color;
 }
 
 a {
@@ -607,10 +608,16 @@ svg#filters {
     display: none;
   }
 
+  #paper-window {
+    background-color: $primary-color;
+  }
+
   .start-section {
-    background: image-url('laura-hero-start-mobile.svg') no-repeat;
-    background-size: contain;
-    padding-bottom: 121.68%; /* ((img-height:1693 / img-width:1383) *  container-width) */
+    background: image-url('laura-hero-start-mobile.svg') center center no-repeat;
+    height: 90vh;
+    background-size: cover;
+    margin-top: 10vh;
+    z-index: 99;
   }
 
   .video-section {
