@@ -642,10 +642,7 @@ svg#filters {
   }
 
   .slider-height-padding {
-    padding-top: 50vh;
-    @media(max-width: 375px) {
-      padding-top: 65vh;
-    }
+    padding-top: 65vh;
   }
 
   .news-section-content {
