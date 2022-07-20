@@ -21,6 +21,7 @@
 
 /* definition of variables */
 $primary-color: black;
+$secondary-color: white;
 
 
 /* general styles */
@@ -263,7 +264,7 @@ a:hover {
   display: inline-block;
   width: 50px;
   height: 50px;
-  border: 3px solid #bdc3c7;
+  border: 3px solid $secondary-color;
   background-size: cover;
   background-position: center;
   box-sizing: border-box;
@@ -285,7 +286,7 @@ a:hover {
   visibility: hidden;
   opacity: 0;
   width: 140px;
-  color: white;
+  color: $secondary-color;
   text-align: left;
   transition: opacity 1s ease-in-out;
 
@@ -365,7 +366,7 @@ a:hover {
   margin: 0;
   list-style: none;
   height: 400px;
-  border: 5px solid #bdc3c7;
+  border: 5px solid $secondary-color;
   background-size: cover;
   background-position: center;
   border-radius: 50%;
@@ -431,7 +432,7 @@ a:hover {
 
 .news-section {
   position: relative;
-  background-color: white;
+  background-color: $secondary-color;
 }
 
 #down-looking-face {
@@ -571,7 +572,7 @@ svg#filters {
   position: relative;
   margin: 55% 5vw 5vh 0;
   width: 35vw;
-  color: white;
+  color: $secondary-color;
   background: $primary-color;
   p {
     z-index: 10;
@@ -726,7 +727,7 @@ svg#filters {
     width: 80%;
     padding: 0;
     margin: 5vh 10vw;
-    color: white;
+    color: $secondary-color;
     background-color: $primary-color;
   }
 
