@@ -241,6 +241,7 @@ a:hover {
 .over-hide {
   overflow: hidden;
 }
+
 .padding-tb {
   padding: 100px 0;
 }
@@ -324,6 +325,7 @@ a:hover {
 }
 
 .slider-height-padding {
+  z-index: 2;
   padding-top: 440px;
 }
 
@@ -427,7 +429,6 @@ a:hover {
 /**********************/
 
 .news-section {
-  height: 100%;
   position: relative;
   background-color: white;
 }
@@ -612,6 +613,34 @@ svg#filters {
     padding-bottom: 121.68%; /* ((img-height:1693 / img-width:1383) *  container-width) */
   }
 
+  .video-section {
+    padding: 0;
+  }
+
+  #video-header {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    transform: rotate(-10deg);
+    width: 100vw;
+  }
+
+  #laura-portrait-video {
+    position: absolute;
+    width: 60vw;
+    bottom: -10vh;
+    right: 0;
+    z-index: 1;
+    transform: rotate(10deg);
+  }
+
+  .slider-height-padding {
+    padding-top: 50vh;
+    @media(max-width: 375px) {
+      padding-top: 65vh;
+    }
+  }
+
   .news-section-content {
     flex-direction: column-reverse;
     align-content: flex-start;
@@ -635,6 +664,13 @@ svg#filters {
 
   #down-looking-face {
     width: 60vw;
+    position: absolute;
+    top: 25%;
+    left: -20vw !important;
+    margin: 0;
+    padding: 0;
+    height: 20vw;
+    transform: rotate(-90deg) scaleX(-1);
   }
 
   /*Instagram embbed styles */
