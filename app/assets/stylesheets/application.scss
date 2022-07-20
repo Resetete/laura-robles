@@ -595,6 +595,7 @@ span.year {
   .about-section {
     background: black;
     height: 100%;
+    padding-bottom: 10vh;
   }
 
   .about-mobile-bg {
@@ -607,15 +608,16 @@ span.year {
   }
 
   .about-text-wrapper {
+    height: 100%;
     flex-direction: column;
-    justify-content: space-between;
-    align-content: space-between;
+    justify-content: center;
+    align-content: center;
   }
 
   #about-text-part1 {
     width: 80%;
     padding: 0;
-    margin: 0 10vw;
+    margin: 5vh 10vw;
     color: white;
     background-color: $primary-color;
   }
