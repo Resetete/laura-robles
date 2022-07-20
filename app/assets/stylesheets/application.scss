@@ -542,6 +542,18 @@ svg#filters {
 /**********************/
 
 .about-section {
+  background: black;
+  height: 100%;
+  /*padding-bottom: 80vh;*/
+  position: relative;
+}
+
+.about-mobile-bg {
+  display: none;
+}
+
+.about-desktop-bg {
+  display: block;
   background: image-url('atardecer.jpg') no-repeat;
   width: 100%;
   height: 0;
@@ -549,11 +561,11 @@ svg#filters {
   padding-bottom: 93.66%; /* ((img-height:1265 / img-width:1752) *  container-width 100) */
 }
 
-.about-mobile-bg {
-    display: none;
-  }
-
 .about-text-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -595,6 +607,13 @@ svg#filters {
   }
 }
 
+/**********************/
+/**** image section ***/
+/**********************/
+
+.image-bass-player {
+  width: 50vw;
+}
 
 /***********************************+*/
 /**** MOBILE *************************/
@@ -699,9 +718,12 @@ svg#filters {
   }
 
   .about-section {
-    background: black;
     height: 100%;
     padding-bottom: 10vh;
+  }
+
+  .about-desktop-bg {
+    display: none;
   }
 
   .about-mobile-bg {
@@ -714,6 +736,7 @@ svg#filters {
   }
 
   .about-text-wrapper {
+    position: inherit;
     height: 100%;
     flex-direction: column;
     justify-content: center;
