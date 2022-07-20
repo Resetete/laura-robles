@@ -146,7 +146,15 @@
                 .about-section-heading
                   = image_tag('about.svg')
           %section.images-section
-            = image_tag('infierno.jpg', class: 'image-bass-player')
+            .row-first
+              = image_tag('infierno.jpg', class: 'image-bass-player')
+              = image_tag('buttons/bass-bg-black.svg', class: 'bass-button')
+            .row-second
+              .icon
+                = image_tag('videos/laura-video-gif.gif', class: 'image-cajon-player')
+                = image_tag('buttons/bass.svg', class: 'cajon-button')
+                .second-row-part1
+                .second-row-part2
           %section.projects-section
             %h1 Test
 

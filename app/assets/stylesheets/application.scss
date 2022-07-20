@@ -611,9 +611,58 @@ svg#filters {
 /**** image section ***/
 /**********************/
 
-.image-bass-player {
-  width: 50vw;
+.images-section {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
+
+.row-first {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  background: $primary-color;
+}
+
+.image-bass-player {
+  width: 60vw;
+  /*transform: scaleX(-1);*/
+  mask-image: circle(50%);
+}
+
+.bass-button {
+  width: 20vw;
+  margin: 0 10vw;
+}
+
+.icon {
+  position: relative;
+}
+.second-row-part1 {
+  background-color: $primary-color;
+  height: 30vh;
+}
+.second-row-part2 {
+  background-color: $secondary-color;
+  height: 30vh;
+}
+.cajon-button {
+  position: absolute;
+  bottom: 5vh;
+  left: 10vw;
+  width: 35vw;
+}
+.image-cajon-player {
+  position: absolute;
+  bottom: 10vh;
+  right: 10vw;
+  transform: rotate(10deg);
+}
+
+
+
 
 /***********************************+*/
 /**** MOBILE *************************/
