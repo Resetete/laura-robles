@@ -82,7 +82,6 @@ const texts = [
     "just",
     "click",
     "the", 
-    "contact", 
     "button",
     ";)"
 ];

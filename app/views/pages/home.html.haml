@@ -119,7 +119,8 @@
                       %filter#threshold
                         %fecolormatrix{:in => "SourceGraphic", :type => "matrix", :values => "1 0 0 0 0\r\n\t\t\t\t\t\t\t\t\t0 1 0 0 0\r\n\t\t\t\t\t\t\t\t\t0 0 1 0 0\r\n\t\t\t\t\t\t\t\t\t0 0 0 255 -140"}
               #news-headline-section
-                = image_tag('news-vertical.svg')
+                = image_tag('news-vertical.svg', class: 'desktop')
+                = image_tag('news-horizontal.svg', class: 'mobile')
           %section.about-section
             .about-mobile-bg
             .about-text-wrapper

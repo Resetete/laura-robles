@@ -35,6 +35,16 @@ a:hover {
   text-decoration: none;
 }
 
+/* responsiveness styles */
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: block;
+}
+
+
 /*****************+**/
 /**** Landing view **/
 /*****************+**/
@@ -440,9 +450,7 @@ a:hover {
 }
 
 #news-headline-section {
-  min-height: 100vh;
   z-index: 10;
-  /*background: image-url('news-vertical.svg');*/
 }
 
 #news-content-elements {
@@ -505,8 +513,7 @@ span.year {
     height: 30pt;
     top: 70%;
     bottom: 0;
-    left: 0;
-
+    left: 5%;
     filter: url(#threshold) blur(0.6px);
 }
 
@@ -519,6 +526,11 @@ span.year {
     font-family: "Caveat", cursive;
     text-align: center;
     user-select: none;
+}
+
+svg#filters {
+  display: none;
+  height: 0;
 }
 
 
@@ -586,10 +598,64 @@ span.year {
 /***********************************+*/
 
 @media (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+
   .start-section {
     background: image-url('laura-hero-start-mobile.svg') no-repeat;
     background-size: contain;
     padding-bottom: 121.68%; /* ((img-height:1693 / img-width:1383) *  container-width) */
+  }
+
+  .news-section-content {
+    flex-direction: column-reverse;
+    align-content: flex-start;
+    justify-content: flex-start;
+    img {
+      margin-top: 10vh;
+      width: 100%;
+    }
+  }
+
+  .news-content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #updates-wrapper {
+    margin-top: 0;
+    margin-left: 10vw;
+    width: 80vw;
+  }
+
+  #down-looking-face {
+    width: 60vw;
+  }
+
+  /*Instagram embbed styles */
+  .instagram-content-wrapper {
+    margin-left: 0;
+    float: none;
+    height: 80%;
+    width: auto;
+    transform: rotate(3deg);
+    shape-outside: none;
+    padding: 5px;
+  }
+
+  .contact-button {
+    width: 80vw;
+    margin: 10vh 10vw;
+    align-content: center;
+    a img {
+      width: 100%;
+      margin: 0;
+    }
   }
 
   .about-section {
