@@ -7,9 +7,12 @@ import "bootstrap"
 // install fonteawesome
 import "@fortawesome/fontawesome-free";
 
-import jquery from 'jquery'
+import jquery from 'jquery';
+import * as Parallax from 'parallax.js'
+
 window.jQuery = jquery
 window.$ = jquery
+
 
 document.onreadystatechange = function() {
   var paperMenu = {
@@ -158,8 +161,7 @@ animate();
 
 
 /*** parallax illustration ******/
-const Parallax = require('parallax-js')
-var scene = document.getElementById('scene');
+var scene = $('#scene').get(0);
 var parallaxInstance = new Parallax(scene);
 };
 

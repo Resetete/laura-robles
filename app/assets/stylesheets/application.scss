@@ -618,19 +618,6 @@ svg#filters {
   flex-direction: column;
 }
 
-.row-first {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  background: $primary-color;
-}
-
-.image-bass-player {
-  width: 60vw;
-  /*transform: scaleX(-1);*/
-  mask-image: circle(50%);
-}
 
 .bass-button {
   width: 20vw;
@@ -661,6 +648,48 @@ svg#filters {
   transform: rotate(10deg);
 }
 
+.row-first {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  background: $primary-color;
+  height: 40vh;
+}
+
+/* parallax */
+#scene {
+  position: relative;
+  width: 60vw;
+  height: 60vh;
+}
+
+.inferno-wrapper-parallax#scene.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 95vh;
+  width: 100%;
+}
+
+.inferno-wrapper-parallax #scene .layer img {
+  height: 100%;
+  width: 100%;
+}
+
+#bass-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40vh;
+}
+#bass-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40vh;
+}
 
 
 

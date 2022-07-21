@@ -148,7 +148,11 @@
           %section.images-section
             .row-first
               .inferno-wrapper-parallax
-              = image_tag('illustration/inferno-white.svg', class: 'image-bass-player')
+                #scene
+                  .layer{'data-depth': 0.1}
+                    = image_tag('illustration/inferno-bass-player-bg-layer.svg', id: 'bass-bg')
+                  .layer{'data-depth': 0.5}
+                    = image_tag('illustration/inferno-bass-player-front-layer.svg', id: 'bass-front')
               = image_tag('buttons/bass-bg-black.svg', class: 'bass-button')
             .row-second
               .icon
