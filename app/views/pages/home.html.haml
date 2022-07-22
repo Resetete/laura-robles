@@ -146,10 +146,10 @@
                   = image_tag('about.svg')
           %section.images-section
             .row-first
-              #scene
+              .scene#bass-player-illustration
                 %div{'data-depth': 0.1}
                   = image_tag('illustration/inferno-bass-player-bg-layer.svg', id: 'bass-bg')
-                %div{'data-depth': 0.6}
+                %div{'data-depth': 0.3}
                   = image_tag('illustration/inferno-bass-player-front-layer.svg', id: 'bass-front')
               = image_tag('buttons/bass-bg-black.svg', class: 'bass-button')
             .row-second
@@ -168,7 +168,11 @@
                     Fusce vehicula dolor arcu, sit amet blandi dolor mollis nec. Donec iverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices.Donec euismod scelerisque li gula. Maecenas eu varius risus, eu aliquet arcu. Curabitur fermentum suscipit est, tincidunt.
               .project-media
                 .project-image
-                  = image_tag('illustration/craneo.svg')
+                  .scene2
+                    %div{'data-depth': 0.1}
+                      = image_tag('illustration/craneo.svg')
+                    %div{'data-depth': 0.3}
+                      = image_tag('illustration/craneo-black.svg')
                 .sound
 
 

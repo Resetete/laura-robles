@@ -14,9 +14,11 @@ window.$ = jquery
 
 
 document.addEventListener("DOMContentLoaded", function(){
-  console.log('test');
-  var scene = $('#scene').get(0);
+  var scene = $('.scene').get(0);
   var parallaxInstance = new Parallax(scene);
+
+  var scene2 = $('.scene2').get(0);
+  var parallaxInstance2 = new Parallax(scene2);
 });
 
 

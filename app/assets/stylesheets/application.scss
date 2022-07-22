@@ -652,11 +652,11 @@ svg#filters {
 }
 
 /* parallax */
-#scene {
+#bass-player-illustration {
   width: 60vw;
   z-index: 2;
 }
-#scene img {
+.scene img {
   height: 100%;
   width: 100%;
 }
@@ -848,7 +848,7 @@ svg#filters {
   }
 
   /* parallax */
-  #scene {
+  .scene {
     margin: 0;
     width: 100vw;
   }
