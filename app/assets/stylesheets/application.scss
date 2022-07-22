@@ -661,6 +661,39 @@ svg#filters {
   width: 100%;
 }
 
+/******************************/
+/**** Projects section ********/
+/******************************/
+
+.projects-section {
+  background: $primary-color;
+}
+
+#project-headline {
+  margin: 10vh;
+}
+
+.project-text {
+  color: $secondary-color;
+}
+
+.project-wrapper {
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.project-text {
+  width: 50vw;
+}
+.project-image {
+  width: 30vw;
+  img {
+    width: 100%;
+  }
+}
+
 
 /***********************************+*/
 /**** MOBILE *************************/
