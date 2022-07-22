@@ -145,19 +145,17 @@
                   = image_tag('about.svg')
           %section.images-section
             .row-first
-              .inferno-wrapper-parallax
-                #scene
-                  %div{'data-depth': 0.1}
-                    = image_tag('illustration/inferno-bass-player-bg-layer.svg', id: 'bass-bg')
-                  %div{'data-depth': 0.6}
-                    = image_tag('illustration/inferno-bass-player-front-layer.svg', id: 'bass-front')
+              #scene
+                %div{'data-depth': 0.1}
+                  = image_tag('illustration/inferno-bass-player-bg-layer.svg', id: 'bass-bg')
+                %div{'data-depth': 0.6}
+                  = image_tag('illustration/inferno-bass-player-front-layer.svg', id: 'bass-front')
               = image_tag('buttons/bass-bg-black.svg', class: 'bass-button')
             .row-second
-              .icon
-                = image_tag('videos/laura-video-gif.gif', class: 'image-cajon-player')
-                = image_tag('buttons/bass.svg', class: 'cajon-button')
-                .second-row-part1
-                .second-row-part2
+              = image_tag('videos/laura-video-gif.gif', class: 'image-cajon-player')
+              = image_tag('buttons/bass.svg', class: 'cajon-button')
+              .second-row-part1
+              .second-row-part2
           %section.projects-section
             %h1 Test
 

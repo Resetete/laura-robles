@@ -602,33 +602,15 @@ svg#filters {
   flex-direction: column;
 }
 
-
 .bass-button {
   width: 20vw;
   margin: 0 10vw;
 }
 
-.icon {
-  position: relative;
-}
-.second-row-part1 {
-  background-color: $primary-color;
-  height: 30vh;
-}
-.second-row-part2 {
-  background-color: $secondary-color;
-  height: 30vh;
-}
 .cajon-button {
-  position: absolute;
-  bottom: 5vh;
-  left: 10vw;
   width: 35vw;
 }
 .image-cajon-player {
-  position: absolute;
-  bottom: 10vh;
-  right: 10vw;
   transform: rotate(10deg);
 }
 
@@ -641,12 +623,39 @@ svg#filters {
   height: 60vh;
 }
 
+.row-second {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: 60vh;
+}
+
+.second-row-part1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $secondary-color;
+  height: 30vh;
+  width: 100vw;
+  z-index: 1;
+}
+.second-row-part2 {
+  position: absolute;
+  top: 30vh;
+  left: 0;
+  background: $primary-color;
+  height: 30vh;
+  z-index: 1;
+}
+
 /* parallax */
 #scene {
   width: 60vw;
   z-index: 2;
 }
-.inferno-wrapper-parallax #scene img {
+#scene img {
   height: 100%;
   width: 100%;
 }
@@ -784,11 +793,58 @@ svg#filters {
 
   .about-section-heading {
     position: absolute;
-    bottom: -10vh;
+    top: -10vh;
     left: 0;
     img {
       width: 90vw;
     }
   }
 
+  .images-section {
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  }
+
+  .row-first {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+  /* parallax */
+  #scene {
+    margin: 0;
+    width: 100vw;
+  }
+
+  .bass-button {
+    width: 50vw;
+    margin: 0;
+  }
+
+  .row-second {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    height: 60vh;
+  }
+
+  .image-cajon-player {
+    position: absolute;
+    top: 5vh;
+    height: 50vh;
+    z-index: 2;
+  }
+  .image-cajon-player img {
+    height: 100%;
+  }
+  .cajon-button {
+    position: absolute;
+    top: 0;
+    left: 5vw;
+    width: 55vw;
+    z-index: 2;
+  }
 }
