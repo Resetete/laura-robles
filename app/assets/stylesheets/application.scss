@@ -609,9 +609,11 @@ svg#filters {
 
 .cajon-button {
   width: 35vw;
+  z-index: 2;
 }
 .image-cajon-player {
   transform: rotate(10deg);
+  z-index: 2;
 }
 
 .row-first {
@@ -628,7 +630,7 @@ svg#filters {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: row;
+  flex-direction: row-reverse;
   height: 60vh;
 }
 
