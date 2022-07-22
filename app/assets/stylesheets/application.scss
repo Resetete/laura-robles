@@ -682,11 +682,24 @@ svg#filters {
   width: 100vw;
   justify-content: space-around;
   align-content: center;
+  flex-direction: row;
 }
 
 .project-text {
   width: 50vw;
+  padding-left: 10vw;
 }
+
+.project-title {
+  font-size: 1.5em;
+  width: 10vw;
+  background: $secondary-color;
+  color: $primary-color;
+  padding: 5px;
+  margin-bottom: 10px;
+  transform: rotate(3deg);
+}
+
 .project-image {
   width: 30vw;
   img {
@@ -694,6 +707,14 @@ svg#filters {
   }
 }
 
+.sound {
+  align-self: flex-end;
+  width: 10vw;
+  padding-bottom: 10vh;
+  img {
+    width: 100%;
+  }
+}
 
 /***********************************+*/
 /**** MOBILE *************************/
