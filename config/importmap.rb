@@ -1,4 +1,4 @@
-# Pin npm packages by running ./bin/importmap
+# Pin npm packages by running
 
 pin "application", preload: true
 pin "@hotwired/turbo-rails", to: "turbo.min.js", preload: true
@@ -15,4 +15,3 @@ pin "@fortawesome/fontawesome-svg-core", to: "https://ga.jspm.io/npm:@fortawesom
 pin "@fortawesome/free-brands-svg-icons", to: "https://ga.jspm.io/npm:@fortawesome/free-brands-svg-icons@6.1.1/index.es.js"
 pin "@fortawesome/free-regular-svg-icons", to: "https://ga.jspm.io/npm:@fortawesome/free-regular-svg-icons@6.1.1/index.es.js"
 pin "@fortawesome/free-solid-svg-icons", to: "https://ga.jspm.io/npm:@fortawesome/free-solid-svg-icons@6.1.1/index.es.js"
-pin "parallax.js", to: "https://ga.jspm.io/npm:parallax.js@0.1.0/src/parallax.js"

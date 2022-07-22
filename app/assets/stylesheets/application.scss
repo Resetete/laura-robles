@@ -655,42 +655,20 @@ svg#filters {
   align-items: center;
   flex-direction: row;
   background: $primary-color;
-  height: 40vh;
+  height: 60vh;
 }
 
 /* parallax */
 #scene {
-  position: relative;
   width: 60vw;
-  height: 60vh;
+  z-index: 2;
 }
 
-.inferno-wrapper-parallax#scene.layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 95vh;
-  width: 100%;
-}
 
-.inferno-wrapper-parallax #scene .layer img {
+/*.inferno-wrapper-parallax #scene .layer img {
   height: 100%;
   width: 100%;
-}
-
-#bass-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 40vh;
-}
-#bass-front {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 40vh;
-}
-
+}*/
 
 
 /***********************************+*/
