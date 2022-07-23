@@ -671,6 +671,7 @@ svg#filters {
 
 #project-headline {
   margin: 10vh;
+  max-width: 100vw;
 }
 
 .project-text {
@@ -692,7 +693,7 @@ svg#filters {
 
 .project-title {
   font-size: 1.5em;
-  width: 10vw;
+  width: 30%;
   background: $secondary-color;
   color: $primary-color;
   padding: 5px;
@@ -730,14 +731,15 @@ svg#filters {
   }
 
   #navline {
-    height: 10vh;
+    height: 5vh;
     background: $primary-color;
   }
 
   .start-section {
-    background: image-url('laura-hero-start-mobile.svg') center center no-repeat;
-    height: 90vh;
+    background: image-url('laura-hero-start-mobile.svg') no-repeat;
+    height: 97vh;
     background-size: cover;
+    background-position: center bottom;
   }
 
   .video-section {
@@ -901,5 +903,32 @@ svg#filters {
     left: 5vw;
     width: 55vw;
     z-index: 2;
+  }
+
+  #project-headline {
+    margin: 5vh 0;
+    max-width: 100vw;
+  }
+
+  .project-wrapper {
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  }
+
+  .project-text {
+    width: 90%;
+    padding-left: 10%;
+  }
+
+  .project-image {
+    width: 100%;
+    padding: 0 20%;
+  }
+
+  .sound {
+    align-self: center;
+    width: 100%;
+    padding: 0 30% 10% 40%;
   }
 }
