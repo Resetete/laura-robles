@@ -2,14 +2,14 @@
   .first-part  
     = image_tag('infierno-footer-black.svg')
   .middle-part
-    %p social media
+    = social_media_helper
     %p
       = image_tag('chamaeleon.png', id: 'copyright-icon')
       copyright
       = Time.zone.now.year
       = link_to('theresamannschatz.design', 'https://theresamannschatz.design')
   .footer-text
-    %p contact
-    %p admin
-    %p imprint
+    = contact_helper
+    = link_to('admin', '#')
+    = link_to('imprint', '#')
   
