@@ -717,6 +717,51 @@ svg#filters {
   }
 }
 
+/****************/
+/*** Footer ****/
+/***************/
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.first-part {
+  margin-left: 10%;
+  img {
+    width: 10vw;
+  }
+}
+
+.middle-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.middle-part a {
+  color: $primary-color;
+  text-decoration: none;
+}
+.middle-part a:hover {
+  font-weight: bold;
+}
+
+#copyright-icon {
+  width: 2vw;
+  min-width: 20px;
+  img {
+    width: 100%;
+  }
+}
+
+.footer-text {
+  margin-right: 10%;
+}
+
 /***********************************+*/
 /**** MOBILE *************************/
 /***********************************+*/
