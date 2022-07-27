@@ -584,9 +584,9 @@ svg#filters {
   position: absolute;
   bottom: 1%;
   right: 3%;
-  z-index: 1;
+  z-index: 99;
   img {
-    z-index: 1;
+    z-index: 99;
   }
 }
 
@@ -850,10 +850,10 @@ svg#filters {
 
   .about-section-heading {
     position: absolute;
-    top: -10vh;
-    left: 0;
+    top: -5vh;
+    right: 5vw;
     img {
-      width: 90vw;
+      width: 60vw;
     }
   }
 
