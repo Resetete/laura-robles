@@ -885,12 +885,11 @@ svg#filters {
     justify-content: center;
     align-items: center;
     flex-direction: column-reverse;
-    height: 60vh;
+    height: auto;
   }
 
   .image-cajon-player {
-    position: absolute;
-    top: 5vh;
+    margin-top: 5vh;
     height: 50vh;
     z-index: 2;
   }
@@ -898,9 +897,7 @@ svg#filters {
     height: 100%;
   }
   .cajon-button {
-    position: absolute;
-    top: 0;
-    left: 5vw;
+    margin-left: 5vw;
     width: 55vw;
     z-index: 2;
   }
