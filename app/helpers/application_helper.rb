@@ -1,6 +1,16 @@
 module ApplicationHelper
+  CONTACT_EMAIL = 'mailto:lauraroblesinfo@gmail.com'.freeze
+
   def contact_helper
-    link_to('contact', 'mailto:lauraroblesinfo@gmail.com', class: 'contact-link')
+    link_to('contact', CONTACT_EMAIL, class: 'contact-link')
+  end
+
+  def contact_button
+    tag.div(class: 'contact-button') do
+      link_to CONTACT_EMAIL do
+        image_tag('buttons/contact-button.svg')
+      end
+    end
   end
 
   def social_media_helper(animation:, direction:)
@@ -12,7 +22,7 @@ module ApplicationHelper
         (link_to '#' do
           tag.i(class: "fa-brands fa-instagram-square #{animation}")
         end),
-        (link_to '#' do
+        (link_to CONTACT_EMAIL do
           tag.i(class: "fa-brands fa-solid fa-square-envelope #{animation}")
         end)
       ].join.html_safe
