@@ -78,7 +78,7 @@ a:hover {
 }
 
 /* social media icons */
-.social-media {
+.social-media-vertical {
   position: fixed;
   top: 20%;
   right: 10px;
@@ -98,6 +98,19 @@ a:hover {
     --fa-animation-duration: 5s;
     --fa-flip-x: .5;
     --fa-flip-y: 0;
+  }
+}
+
+.social-media-horizontal {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-flow: row;
+  a {
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 5px;
   }
 }
 
@@ -739,7 +752,7 @@ svg#filters {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 .middle-part a {
   color: $primary-color;
