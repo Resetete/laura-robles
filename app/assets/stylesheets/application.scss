@@ -743,6 +743,7 @@ svg#filters {
 }
 
 .first-part {
+  margin: 0 10px;
   img {
     width: 10vw;
   }
@@ -1002,5 +1003,19 @@ svg#filters {
     align-self: center;
     width: 100%;
     padding: 0 30% 10% 40%;
+  }
+
+  .footer-wrapper {
+    padding: 10px 0;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .footer-text {
+    margin: 0 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }

@@ -63,9 +63,8 @@ module ApplicationHelper
     tag.p(id: 'copyright') do
       [
         image_tag('chamaeleon.png', id: 'copyright-icon'),
-        'copyright',
         Time.zone.now.year,
-        link_to('theresamannschatz.design', 'https://theresamannschatz.design'),
+        link_to('@theresamannschatz.design', 'https://theresamannschatz.design'),
       ].join(' ').html_safe
     end
   end
