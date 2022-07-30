@@ -66,7 +66,7 @@ module ApplicationHelper
         'copyright',
         Time.zone.now.year,
         link_to('theresamannschatz.design', 'https://theresamannschatz.design'),
-      ].join.html_safe
+      ].join(' ').html_safe
     end
   end
 end
