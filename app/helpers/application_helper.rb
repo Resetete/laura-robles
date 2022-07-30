@@ -24,7 +24,7 @@ module ApplicationHelper
         end),
         (link_to CONTACT_EMAIL do
           tag.i(class: "fa-brands fa-solid fa-square-envelope #{animation}")
-        end)
+        end),
       ].join.html_safe
     end
   end
@@ -36,8 +36,26 @@ module ApplicationHelper
         '/',
         link_to('EN', '#'),
         '/',
-        link_to('ES', '#')
+        link_to('ES', '#'),
       ].join(' ').html_safe
     end
+  end
+
+  def slogan_animation
+    [
+      tag.div(id: 'animated-text') do
+      [
+        tag.div(id: 'text1'),
+        tag.div(id: 'text2')
+      ].join.html_safe
+      end,
+      tag.svg(id: 'filters') do
+        tag.defs do
+          tag.filter(id: 'threshold') do
+            '<fecolormatrix>{:in => "SourceGraphic", :type => "matrix", :values => "1 0 0 0 0\r\n\t\t\t\t\t\t\t\t\t0 1 0 0 0\r\n\t\t\t\t\t\t\t\t\t0 0 1 0 0\r\n\t\t\t\t\t\t\t\t\t0 0 0 255 -140"}</fecolormatrix>'.html_safe
+          end
+        end
+      end,
+    ].join.html_safe
   end
 end
