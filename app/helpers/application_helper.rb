@@ -1,6 +1,16 @@
 module ApplicationHelper
   CONTACT_EMAIL = 'mailto:lauraroblesinfo@gmail.com'.freeze
 
+  def navigation_items
+    [
+      link_to('Videos', '#videos'),
+      link_to('News', '#news'),
+      link_to('About', '#about'),
+      link_to('Projects', '#projects'),
+      link_to('Contact', CONTACT_EMAIL),
+     ].join.html_safe
+  end
+
   def contact_helper
     link_to('contact', CONTACT_EMAIL, class: 'contact-link')
   end
