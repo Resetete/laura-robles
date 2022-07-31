@@ -3,10 +3,11 @@
     #paper-back
       %nav
         .close
-          = link_to('Music', '#')
-          = link_to('About', '#')
-          = link_to('Projects', '#')
-          = link_to('Contact', '#')
+          = link_to('Videos', '#videos')
+          = link_to('News', '#news')
+          = link_to('About', '#about')
+          = link_to('Projects', '#projects')
+          = link_to('Contact', 'mailto:lauraroblesinfo@gmail.com')
     #paper-window
       #paper-front
         .hamburger
@@ -16,7 +17,7 @@
           %section.start-section
             = social_media_helper(animation: 'fa-flip', direction: 'vertical')
             = language_selection
-          %section.video-section
+          %section.video-section#videos
             = image_tag('video-header.svg', id: 'video-header')
             = image_tag('laura-portrait.svg', id: 'laura-portrait-video')
             .section.full-height.over-hide.px-4.px-sm-0
@@ -42,7 +43,7 @@
                           %iframe{:allow => "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/orwZBgfxqoo", :title => "YouTube video player"}
                         %li.video-wrapper
                           %iframe{:allow => "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/LLWE7mp-Yg8", :title => "YouTube video player"}
-          %section.news-section
+          %section.news-section#news
             #down-looking-face
               = image_tag('facelookingdown.svg')
             .news-section-content
@@ -103,7 +104,7 @@
               #news-headline-section
                 = image_tag('news-vertical.svg', class: 'desktop')
                 = image_tag('news-horizontal.svg', class: 'mobile')
-          %section.about-section
+          %section.about-section#about
             .about-text-wrapper
               #about-text-part1
                 %p<
@@ -126,7 +127,7 @@
                     = link_to('write me', 'mailto:lauraroblesinfo@gmail.com', class: 'btn btn-outline-light mt-2')
                 .about-section-heading
                   = image_tag('about.svg')
-          %section.images-section
+          %section.images-section#images
             .row-first
               .scene#bass-player-illustration
                 %div{'data-depth': 0.1}
@@ -139,7 +140,7 @@
               = image_tag('buttons/bass.svg', class: 'cajon-button')
               .second-row-part1
               .second-row-part2
-          %section.projects-section
+          %section.projects-section#projects
             = image_tag('projects-headline-white.svg', id: 'project-headline')
             .project-wrapper
               .project-text
