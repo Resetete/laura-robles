@@ -26,10 +26,10 @@ module ApplicationHelper
   def social_media_helper(animation:, direction:)
     tag.div(class: "social-media-#{direction} fa-2x #{'fa-fw' if direction == 'vertical'}") do
       [
-        (link_to '#' do
+        (link_to 'https://www.facebook.com/Laura-Robles-Marcuello-112091183627939' do
           tag.i(class: "fa-brands fa-facebook-square #{animation}")
         end),
-        (link_to '#' do
+        (link_to 'https://www.instagram.com/lauraroblesmarcuello/' do
           tag.i(class: "fa-brands fa-instagram-square #{animation}")
         end),
         (link_to CONTACT_EMAIL do
