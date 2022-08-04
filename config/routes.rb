@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  root 'pages#home'
+  scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do
+    root 'pages#home'
+  end
 end
