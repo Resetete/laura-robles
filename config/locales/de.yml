@@ -1,4 +1,9 @@
 de:
   pages:
     home_page:
-      about_text: 'Hallo ich bin Laura'
+      about_text: 
+        part_1_html: "Mein Name ist <span class='text-highlight'>Laura Robles Marcuello</span>, ich wurde am 21.07.1981 in Swasiland, Mbabane, geboren, weil mein Vater (Peruaner) in der Nähe arbeitete und wir dann für eine Weile auf die Kapverden gingen. Meine Mutter (Argentinien) war es leid, in Afrika zu leben, und wir zogen nach Lima."
+        part_2: 'Als ich 4 Jahre alt war, begann ich Cajón zu spielen, mein erster Lehrer war Amador Chebo Ballumbrosio, ich war bei ihm, bis ich 12 Jahre alt war, dann wollte er mir keinen Unterricht mehr geben, er sagte mir, ich würde zu viele Fragen stellen. Meine Nachbarin Susana Baca, eine peruanische Sängerin, eröffnete ein Institut namens Negro Continuo, und ich konnte dort Theorieunterricht bei Nilo Borges nehmen, einem kubanischen Geiger und unglaublichen Menschen, der mich jahrelang unterrichtete, und gleichzeitig konnte ich bei Proben zuhören, viele Musiker treffen, die dort vorbeikamen, und mit meinen ersten Bands spielen. Dann lernte ich Laureano Rigol und Roberto Borrell kennen, beides Kubaner, bei denen ich u. a. Technik und Theorie, traditionelle und populäre kubanische Musik lernte. Ich habe mit 20 Jahren angefangen, E-Bass zu spielen. Ich habe verschiedene Projekte gegründet, aber das bisher wichtigste Projekt ist die Astrocombo.'
+        part_3: 'Ich habe mit Musikern aus vielen Ländern zusammengearbeitet und an internationalen Festivals teilgenommen. Gegenwärtig verbringe ich die meiste Zeit damit, verschiedene Arten des Schreibens traditioneller Rhythmen zu erforschen, zu erklären, wie man den Groove erklären kann und ick komponiere. Ich habe auch ein Trio für experimentelle Musik namens Tripas, ich bin Teil der Band Perfektomat unter der Leitung von Joscha Oetz, ich arbeite mit Peter Ehwald zusammen, unser Projekt heißt Camina, ein Duo mit Carlos Corona und ich arbeite an meinem Soloprojekt Antigroove.'
+        part_4: 'Ich lebe mit meiner Familie in Berlin. Wenn Sie mehr über meine Arbeit erfahren oder mit mir spielen möchten, können Sie mir'
+      about_button: 'schreiben'

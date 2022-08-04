@@ -42,11 +42,11 @@ module ApplicationHelper
   def language_selection
     tag.div(class: 'language-selection') do
       [
-        link_to('DE', '#'),
+        link_to('DE', root_path(locale: :de)),
         '/',
-        link_to('EN', '#'),
+        link_to('EN', root_path(locale: :en)),
         '/',
-        link_to('ES', '#'),
+        link_to('ES', root_path(locale: :es)),
       ].join(' ').html_safe
     end
   end
