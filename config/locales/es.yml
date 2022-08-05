@@ -1,9 +1,16 @@
 es:
   pages:
     home_page:
-      about_text: 
-        part_1_html: "Mi nombre es <span class='text-highlight'>Laura Robles Marcuello</span>, nací el 21.07.1981 en Swaziland, Mbabane porque mi papá (peruano) trabajaba cerca y luego nos fuimos a Cabo Verde por un tiempo. Mi mamá (Argentina) se cansó de estar en África y nos mudamos a Lima."
-        part_2: 'A los 4 años de edad empecé a tocar cajón, mi primer profesor fue Amador Chebo Ballumbrosio, estuve con él hasta los 12 años, luego él no quiso nunca más darme clases, me dijo que preguntaba mucho. Mi vecina Susana Baca, cantante peruana, abrió un instituto llamado Negro Continuo y pude seguir ahí clases de teoría junto a Nilo Borges, violinista cubano y una persona increíble que me regaló horas de enseñanza durante años y paralelamente pude escuchar ensayos, conocer a muchos músicos que pasaron por ahí y tocar con mis primeras bandas. Luego conocí a Laureano Rigol y Roberto Borrell, ambos cubanos, con ellos vi técnica y teoría, música tradicional y popular cubana, entre otras cosas. Empecé a tocar bajo electrico a los 20, formé distintos proyectos, pero hasta ahora el proyecto más importante es el Astrocombo.'
-        part_3: 'He trabajado con músicos de muchos países y participado en festivales internacionales. Actualmente, me dedico la mayor parte del tiempo a investigar distintas maneras de escribir ritmos tradicionales, a cómo poder explicar qué es el groove y a componer. También tengo un trío de música experimental llamado Tripas, formo parte de la banda Perfektomat que dirige Joscha Oetz, trabajo junto a Peter Ehwald, nuestro proyecto se llama Camina, un duo junto a Carlos Corona y trabajo en mi proyecto solista Antigroove.'
-        part_4: 'Vivo junto a mi familia en Berlín. Si te interesa saber más sobre mi trabajo o tocar conmigo, puedes'
-      about_button: 'escríbeme'
+      about_section:
+        about_text: 
+          part_1_html: "Mi nombre es <span class='text-highlight'>Laura Robles Marcuello</span>, nací el 21.07.1981 en Swaziland, Mbabane porque mi papá (peruano) trabajaba cerca y luego nos fuimos a Cabo Verde por un tiempo. Mi mamá (Argentina) se cansó de estar en África y nos mudamos a Lima."
+          part_2: 'A los 4 años de edad empecé a tocar cajón, mi primer profesor fue Amador Chebo Ballumbrosio, estuve con él hasta los 12 años, luego él no quiso nunca más darme clases, me dijo que preguntaba mucho. Mi vecina Susana Baca, cantante peruana, abrió un instituto llamado Negro Continuo y pude seguir ahí clases de teoría junto a Nilo Borges, violinista cubano y una persona increíble que me regaló horas de enseñanza durante años y paralelamente pude escuchar ensayos, conocer a muchos músicos que pasaron por ahí y tocar con mis primeras bandas. Luego conocí a Laureano Rigol y Roberto Borrell, ambos cubanos, con ellos vi técnica y teoría, música tradicional y popular cubana, entre otras cosas. Empecé a tocar bajo electrico a los 20, formé distintos proyectos, pero hasta ahora el proyecto más importante es el Astrocombo.'
+          part_3: 'He trabajado con músicos de muchos países y participado en festivales internacionales. Actualmente, me dedico la mayor parte del tiempo a investigar distintas maneras de escribir ritmos tradicionales, a cómo poder explicar qué es el groove y a componer. También tengo un trío de música experimental llamado Tripas, formo parte de la banda Perfektomat que dirige Joscha Oetz, trabajo junto a Peter Ehwald, nuestro proyecto se llama Camina, un duo junto a Carlos Corona y trabajo en mi proyecto solista Antigroove.'
+          part_4: 'Vivo junto a mi familia en Berlín. Si te interesa saber más sobre mi trabajo o tocar conmigo, puedes'
+        about_button: 'escríbeme'
+      projects_section:
+        tripas_text: 'El grupo, formado por Laura Robles: bajo ecajón, Gustavo Obligado: clarinete saxofón y Tom Kessler: guitarra y edrum, es una mezcla de sonidos urbanos caóticos latinoamericanos, folclore e improvisación libre. A lo largo de los dos últimos años, los tres músicos han utilizado diversos elementos rítmicos de la música popular latinoamericana y el ruido característico del continente para crear nuevos sonidos, melodías y ritmos con instrumentos tradicionales y equipos construidos por Tom K.'
+  buttons:
+    contact: 'contacto'
+    admin: 'admin'
+    imprint: 'aviso legal'

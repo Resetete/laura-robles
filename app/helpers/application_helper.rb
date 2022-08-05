@@ -12,7 +12,7 @@ module ApplicationHelper
   end
 
   def contact_helper
-    link_to('contact', CONTACT_EMAIL, class: 'contact-link')
+    link_to(t('buttons.contact'), CONTACT_EMAIL, class: 'contact-link')
   end
 
   def contact_button

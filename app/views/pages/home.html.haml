@@ -104,16 +104,16 @@
             .about-text-wrapper
               #about-text-part1
                 %p<
-                  = t('pages.home_page.about_text.part_1_html')
+                  = t('pages.home_page.about_section.about_text.part_1_html')
                 %p
-                  = t('pages.home_page.about_text.part_2')
+                  = t('pages.home_page.about_section.about_text.part_2')
               #about-text-part2
                 .text
                   %p
-                    = t('pages.home_page.about_text.part_3')
+                    = t('pages.home_page.about_section.about_text.part_3')
                   %p
-                    = t('pages.home_page.about_text.part_4')
-                    = link_to(t('pages.home_page.about_button'), 'mailto:lauraroblesinfo@gmail.com', class: 'btn btn-outline-light mt-2')
+                    = t('pages.home_page.about_section.about_text.part_4')
+                    = link_to(t('pages.home_page.about_section.about_button'), 'mailto:lauraroblesinfo@gmail.com', class: 'btn btn-outline-light mt-2')
                 .about-section-heading
                   = image_tag('about.svg')
           %section.images-section#images
@@ -137,7 +137,7 @@
                   Tripas
                 .project-content
                   %p
-                    Fusce vehicula dolor arcu, sit amet blandi dolor mollis nec. Donec iverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices.Donec euismod scelerisque li gula. Maecenas eu varius risus, eu aliquet arcu. Curabitur fermentum suscipit est, tincidunt.
+                    = t('pages.home_page.projects_section.tripas_text')
                 = render 'shared/music_player'
               .project-image
                 .scene2
