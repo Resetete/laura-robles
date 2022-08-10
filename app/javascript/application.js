@@ -19,6 +19,18 @@ document.addEventListener("DOMContentLoaded", function(){
 
   var scene2 = $('.scene2').get(0);
   var parallaxInstance2 = new Parallax(scene2);
+
+  var scene3 = $('.scene3').get(0);
+  var parallaxInstance3 = new Parallax(scene3);
+  
+  var scene4 = $('.scene4').get(0);
+  var parallaxInstance4 = new Parallax(scene4);
+
+  var scene5 = $('.scene5').get(0);
+  var parallaxInstance5 = new Parallax(scene5);
+
+  var scene6 = $('.scene6').get(0);
+  var parallaxInstance6 = new Parallax(scene6);
 });
 
 

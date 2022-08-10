@@ -678,6 +678,10 @@ svg#filters {
 
 .projects-section {
   background: $primary-color;
+  display: flex;
+  flex-direction: column;
+  align-item: center;
+  justify-content: center;
 }
 
 #project-headline {
@@ -694,26 +698,35 @@ svg#filters {
   width: 100vw;
   justify-content: space-around;
   align-content: center;
-  flex-direction: row;
+}
+
+.order-text-left {
+    flex-direction: row;
+}
+
+.order-text-right {
+  flex-direction: row-reverse;
 }
 
 .project-text {
   width: 50vw;
-  padding-left: 10vw;
+  padding: 0 10vw;
 }
 
 .project-title {
   font-size: 1.5em;
-  width: 30%;
+  width: 40%;
   background: $secondary-color;
   color: $primary-color;
   padding: 5px;
   margin-bottom: 10px;
   transform: rotate(3deg);
+  text-align: center;
 }
 
 .project-image {
   width: 30vw;
+  margin: 0 10vw;
   img {
     width: 100%;
   }

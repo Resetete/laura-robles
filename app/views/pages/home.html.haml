@@ -131,7 +131,7 @@
               .second-row-part2
           %section.projects-section#projects
             = image_tag('projects-headline-white.svg', id: 'project-headline')
-            .project-wrapper
+            .project-wrapper.order-text-left
               .project-text
                 .project-title
                   Tripas
@@ -141,6 +141,62 @@
                 = render 'shared/music_player'
               .project-image
                 .scene2
+                  %div{'data-depth': 0.1}
+                    = image_tag('illustration/craneo.svg')
+                  %div{'data-depth': 0.3}
+                    = image_tag('illustration/craneo-black.svg')
+            .project-wrapper.order-text-right
+              .project-text
+                .project-title
+                  Camina
+                .project-content
+                  %p
+                    = t('pages.home_page.projects_section.caminas_text')
+                = render 'shared/music_player'
+              .project-image
+                .scene3
+                  %div{'data-depth': 0.1}
+                    = image_tag('illustration/craneo.svg')
+                  %div{'data-depth': 0.3}
+                    = image_tag('illustration/craneo-black.svg')
+            .project-wrapper.order-text-left
+              .project-text
+                .project-title
+                  Anti-Groove
+                .project-content
+                  %p
+                    = t('pages.home_page.projects_section.anti_groove_text')
+                = render 'shared/music_player'
+              .project-image
+                .scene4
+                  %div{'data-depth': 0.1}
+                    = image_tag('illustration/craneo.svg')
+                  %div{'data-depth': 0.3}
+                    = image_tag('illustration/craneo-black.svg')
+            .project-wrapper.order-text-right
+              .project-text
+                .project-title
+                  Robles Carlos Duo
+                .project-content
+                  %p
+                    = t('pages.home_page.projects_section.robles_corona_duo_text')
+                = render 'shared/music_player'
+              .project-image
+                .scene5
+                  %div{'data-depth': 0.1}
+                    = image_tag('illustration/craneo.svg')
+                  %div{'data-depth': 0.3}
+                    = image_tag('illustration/craneo-black.svg')
+            .project-wrapper.order-text-left
+              .project-text
+                .project-title
+                  Astrocombo
+                .project-content
+                  %p
+                    = t('pages.home_page.projects_section.astrocombo_text')
+                = render 'shared/music_player'
+              .project-image
+                .scene6
                   %div{'data-depth': 0.1}
                     = image_tag('illustration/craneo.svg')
                   %div{'data-depth': 0.3}
