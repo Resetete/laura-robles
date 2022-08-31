@@ -18,7 +18,9 @@ gem 'devise'
 # use postgres
 gem 'pg'
 
+# bootstrap styles
 gem 'bootstrap', '~> 5.1.3'
+gem 'devise-bootstrap-views'
 
 # use haml for views
 gem 'haml'

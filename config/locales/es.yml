@@ -1,4 +1,8 @@
 es:
+  devise:
+    sessions:
+      new:
+        sign_in: 'Entrar'
   pages:
     home_page:
       about_section:

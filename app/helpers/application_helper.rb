@@ -81,9 +81,9 @@ module ApplicationHelper
 
   def admin_helper
     if admin_signed_in?
-      link_to(t('buttons.admin_logout'), destroy_admin_session_path, method: :delete)
+      button_to(t('buttons.admin_logout'), destroy_admin_session_path, method: :delete, class: 'btn btn-outline-dark')
     else
-      link_to(t('buttons.admin_login'), new_admin_session_path)
+      link_to(t('buttons.admin_login'), new_admin_session_path, class: 'btn btn-outline-dark')
     end
   end
 end

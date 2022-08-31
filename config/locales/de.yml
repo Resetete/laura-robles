@@ -1,4 +1,8 @@
 de:
+  devise:
+    sessions:
+      new:
+        sign_in: 'Einloggen'
   pages:
     home_page:
       about_section:
