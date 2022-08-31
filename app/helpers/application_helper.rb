@@ -78,4 +78,12 @@ module ApplicationHelper
       ].join(' ').html_safe
     end
   end
+
+  def admin_helper
+    if admin_signed_in?
+      link_to(t('buttons.admin_logout'), destroy_admin_session_path, method: :delete)
+    else
+      link_to(t('buttons.admin_login'), new_admin_session_path)
+    end
+  end
 end
