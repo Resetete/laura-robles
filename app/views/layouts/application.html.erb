@@ -16,11 +16,12 @@
   </head>
 
   <body>
-
-    <div class="error-messages">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div>
+    <% if notice || alert %>
+      <div class="error-messages">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
 
     <%= yield %>
   </body>
