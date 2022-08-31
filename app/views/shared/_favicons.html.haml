@@ -1,0 +1,14 @@
+- %w(57 72 76 114 120 144 152 180).each do |size|
+  = favicon_link_tag "favicons/apple-touch-icon-#{size}x#{size}.png", rel: 'apple-touch-icon', type: 'image/png', sizes: "#{size}x#{size}"
+
+- %w(57 60 72 76 114 120 144 152 180).each do |size|
+  = favicon_link_tag "favicons/apple-icon-#{size}x#{size}.png", rel: 'apple-touch-icon', type: 'image/png', sizes: "#{size}x#{size}"
+
+- %w(36 48 72 96 144 192).each do |size|
+  = favicon_link_tag "favicons/android-icon-#{size}x#{size}.png", rel: 'apple-touch-icon', type: 'image/png', sizes: "#{size}x#{size}"
+
+- %w(70 144 150 310).each do |size|
+  = favicon_link_tag "favicons/ms-icon-#{size}x#{size}.png", rel: 'apple-touch-icon', type: 'image/png', sizes: "#{size}x#{size}"
+
+- %w(16 32 96).each do |size|
+  = favicon_link_tag "favicons/favicon-#{size}x#{size}.png", rel: 'icon', type: 'image/png', sizes: "#{size}x#{size}"
