@@ -1,5 +1,5 @@
 class AboutContentsController < ApplicationController
   def index
-    @content = AboutContent.all
+    @contents = AboutContent.all
   end
 end

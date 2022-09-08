@@ -1,1 +1,16 @@
-%h1 Test
+.container
+	%h1 About text
+	.row
+		.col-md-3
+			%h2 En
+		.col-md-3
+			%h2 De
+		.col-md-3
+			%h2 Es
+
+		- @contents.each do |content|
+			.row
+				- ['en', 'es', 'de'].each do |locale|
+					.col-md-3
+						- ['part_1', 'part_2'].each do |part|
+							%p= content.version_for(part: part, locale: locale)
