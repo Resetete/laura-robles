@@ -11,9 +11,13 @@
 			%h2 Used?
 
 		- @contents.each do |content|
+			%h3
+				Version from
+				= content.created_at.strftime('%d/%m/%y %H:%M')
 			.row
 				- ['en', 'es', 'de'].each do |locale|
-					.col-md-3
+					.col-md-3.text-center
 						- ['part_1', 'part_2'].each do |part|
-							%p= content.version_for(part: part, locale: locale)
-				= content.active?
+							.card
+								%p.text-center= content.version_for(part: part, locale: locale)
+				.col-md-3= content.active?
