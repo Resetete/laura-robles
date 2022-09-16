@@ -18,6 +18,8 @@ es:
         anti_groove_text: 'En mi primer proyecto en solitario, utilizo ritmos de diferentes países y cambio el fraseo interno entre ellos mediante morphing e improvisación. También compongo ritmos y líneas melódicas que me acompañan durante el proceso de cambio.' 
         robles_corona_duo_text: 'Llevo cuatro años tocando con Carlos Corona (guitarra-México), es nuestra forma de estar siempre en sintonía con la música latina. También tocamos nuestras propias composiciones, todas con sonidos latinoamericanos.'
         astrocombo_text: 'El Astrocombo consta de 12 composiciones que no están 100% "terminadas" y que completo con cada invitado, cada invitado tiene espacio para interpretar la música como quiera. Un huésped se queda un máximo de dos años y cada temporada tiene un enfoque diferente.'
+  about_contents:
+    new: 'Adiciona un texto de about nuevo'
   buttons:
     contact: 'contacto'
     admin_login: 'admin'
