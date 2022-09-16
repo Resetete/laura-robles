@@ -58,3 +58,7 @@ en:
     admin_login: 'admin'
     admin_logout: 'logout'
     imprint: 'imprint'
+  locale:
+    en: 'English'
+    es: 'Spanish'
+    de: 'German'

@@ -11,7 +11,7 @@
             - ['part_1', 'part_2'].each do |part|
               .card
                 .card-body
-                  %h5.card-title= locale
+                  %h5.card-title= t("locale.#{locale}")
                   %p.card-text= content.version_for(part: part, locale: locale)
                   = link_to('Edit', '#')
                   = link_to('Delete', '#')

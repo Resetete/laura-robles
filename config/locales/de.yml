@@ -27,3 +27,7 @@ de:
     admin_login: 'Admin'
     admin_logout: 'Logout'
     imprint: 'Impressum'
+  locale:
+    en: 'Englisch'
+    es: 'Spanisch'
+    de: 'Deutsch'

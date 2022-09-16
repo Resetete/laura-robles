@@ -21,9 +21,13 @@ es:
   about_contents:
     new: 'Adiciona un texto de about nuevo'
     index:
-      used: 'Usado?'
+      used: 'Utilizado?'
   buttons:
     contact: 'contacto'
     admin_login: 'admin'
     admin_logout: 'logout'
     imprint: 'aviso legal'
+  locale:
+    en: 'Inglés'
+    es: 'Español'
+    de: 'Alemán'
