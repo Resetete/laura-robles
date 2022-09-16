@@ -1,4 +1,6 @@
 class AboutContentsController < ApplicationController
+  layout 'admin'
+
   def index
     @contents = AboutContent.all
   end
