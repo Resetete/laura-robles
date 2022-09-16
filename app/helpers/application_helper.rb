@@ -8,7 +8,11 @@ module ApplicationHelper
       link_to('About', '#about'),
       link_to('Projects', '#projects'),
       link_to('Contact', CONTACT_EMAIL),
-     ].join.html_safe
+     ]
+  end
+
+  def navigation_items_html_safe
+    navigation_items.join.html_safe
   end
 
   def contact_helper

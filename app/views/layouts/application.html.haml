@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title LauraRoblesWebapp
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"}
+    = csrf_meta_tags
+    = csp_meta_tag
+    = favicon_link_tag 'favicons/favicon.ico'
+    = render 'shared/favicons'
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_importmap_tags
+  %body
+    - if notice || alert
+      .error-messages
+        %p.notice= notice
+        %p.alert= alert
+    = yield

@@ -3,7 +3,7 @@
     #paper-back
       %nav
         .close
-          = navigation_items
+          = navigation_items_html_safe
     #paper-window
       #paper-front
         .hamburger
@@ -202,7 +202,3 @@
                   %div{'data-depth': 0.3}
                     = image_tag('illustration/craneo-black.svg')
           = render('shared/footer')
-
-
-
-

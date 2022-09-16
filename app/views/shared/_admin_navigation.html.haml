@@ -1,0 +1,9 @@
+%nav.navbar.navbar-expand-lg.bg-light
+  .container-fluid
+    %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarNav", "data-bs-toggle" => "collapse", :type => "button"}
+      %i.fa-solid.fa-burger
+    #navbarNav.collapse.navbar-collapse
+      %ul.navbar-nav
+        - navigation_items.each do |item|
+          %li.nav-item
+            .nav-link.admin-pages= item
