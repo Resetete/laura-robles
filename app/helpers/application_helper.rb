@@ -43,13 +43,13 @@ module ApplicationHelper
     end
   end
 
-  def language_selection
+  def language_selection(target: 'root_path')
     [
-      link_to('DE', root_path(locale: :de)),
+      link_to('DE', public_send("#{target}", locale: :de)),
       '/',
-      link_to('EN', root_path(locale: :en)),
+      link_to('EN', public_send("#{target}", locale: :en)),
       '/',
-      link_to('ES', root_path(locale: :es)),
+      link_to('ES', public_send("#{target}", locale: :es)),
     ]
   end
 

@@ -4,9 +4,12 @@
       %i.fa-solid.fa-burger
     .collapse.navbar-collapse#navbarSupportedContent
       %ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        %li.nav-item
+          .nav-link.admin-pages
+            = link_to('Home', root_path(locale: I18n.locale))
         - navigation_items.each do |item|
           %li.nav-item
             .nav-link.admin-pages= item
       .d-flex.admin-pages.navbar-nav
-        - language_selection.each do |language|
+        - language_selection(target: 'about_contents_path').each do |language|
           .nav-link= language.html_safe
