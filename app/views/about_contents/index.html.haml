@@ -1,24 +1,20 @@
 .container
-	%section.admin-pages-section
-		%h1 About text
-		.row
-			.col-md-3
-				%h2 En
-			.col-md-3
-				%h2 De
-			.col-md-3
-				%h2 Es
-			.col-md-3
-				%h2 Used?
-
-			- @contents.each do |content|
-				%h3
-					Version from
-					= content.created_at.strftime('%d/%m/%y %H:%M')
-				.row
-					- ['en', 'es', 'de'].each do |locale|
-						.col-md-3.text-center
-							- ['part_1', 'part_2'].each do |part|
-								.card
-									%p.text-center= content.version_for(part: part, locale: locale)
-					.col-md-3= content.active?
+  %section.admin-pages-section
+    %h1 About text
+    - @contents.each do |content|
+      %h3
+        Version from
+        = content.created_at.strftime('%d/%m/%y %H:%M')
+      .row
+        - ['en', 'es', 'de'].each do |locale|
+          .col-md-3
+            - ['part_1', 'part_2'].each do |part|
+              .card
+                .card-body
+                  %h5.card-title= locale
+                  %p.card-text= content.version_for(part: part, locale: locale)
+                  = link_to('Edit', '#')
+                  = link_to('Delete', '#')
+        .card.col-md-3
+          %h2= t('about_contents.index.used')
+          = content.active?

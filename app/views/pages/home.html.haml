@@ -12,7 +12,7 @@
           #navline.mobile
           %section.start-section
             = social_media_helper(animation: 'fa-flip', direction: 'vertical')
-            = language_selection
+            = language_selection_html_safe
           %section.video-section#videos
             = image_tag('video-header.svg', id: 'video-header')
             = image_tag('laura-portrait.svg', id: 'laura-portrait-video')

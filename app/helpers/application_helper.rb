@@ -44,14 +44,18 @@ module ApplicationHelper
   end
 
   def language_selection
+    [
+      link_to('DE', root_path(locale: :de)),
+      '/',
+      link_to('EN', root_path(locale: :en)),
+      '/',
+      link_to('ES', root_path(locale: :es)),
+    ]
+  end
+
+  def language_selection_html_safe
     tag.div(class: 'language-selection') do
-      [
-        link_to('DE', root_path(locale: :de)),
-        '/',
-        link_to('EN', root_path(locale: :en)),
-        '/',
-        link_to('ES', root_path(locale: :es)),
-      ].join(' ').html_safe
+      language_selection.join(' ').html_safe
     end
   end
 

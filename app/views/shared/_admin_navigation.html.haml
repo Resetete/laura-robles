@@ -2,8 +2,11 @@
   .container-fluid
     %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarNav", "data-bs-toggle" => "collapse", :type => "button"}
       %i.fa-solid.fa-burger
-    #navbarNav.collapse.navbar-collapse
-      %ul.navbar-nav
+    .collapse.navbar-collapse#navbarSupportedContent
+      %ul.navbar-nav.me-auto.mb-2.mb-lg-0
         - navigation_items.each do |item|
           %li.nav-item
             .nav-link.admin-pages= item
+      .d-flex.admin-pages.navbar-nav
+        - language_selection.each do |language|
+          .nav-link= language.html_safe
