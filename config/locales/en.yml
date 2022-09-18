@@ -51,6 +51,7 @@ en:
         astrocombo_text: 'The Astrocombo consists of 12 compositions that are not 100% "finished" and that I complete with each guest, each guest has room to interpret the music as they wish. A guest stays for a maximum of two years and each season has a different focus.'
   about_contents:
     new: 'Add a new about text'
+    edit: 'Edit about text'
     index:
       used: 'Used?'
   buttons:
@@ -58,6 +59,9 @@ en:
     admin_login: 'admin'
     admin_logout: 'logout'
     imprint: 'imprint'
+    new: 'New'
+    edit: 'Edit'
+    index: 'All versions'
   locale:
     en: 'English'
     es: 'Spanish'

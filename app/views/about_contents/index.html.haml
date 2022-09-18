@@ -13,8 +13,9 @@
                 .card-body
                   %h5.card-title= t("locale.#{locale}")
                   %p.card-text= content.version_for(part: part, locale: locale)
-                  = link_to('Edit', '#')
-                  = link_to('Delete', '#')
         .card.col-md-3
           %h2= t('about_contents.index.used')
           = content.active?
+          = link_to('Edit', '#')
+          = link_to('Delete', about_content_path(content), method: :delete, confirm: 'Are you sure you want to delete?')
+          

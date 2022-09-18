@@ -101,8 +101,10 @@
                 = image_tag('news-vertical.svg', class: 'desktop')
                 = image_tag('news-horizontal.svg', class: 'mobile')
           %section.about-section#about
-            .about-text-wrapper
+            .about-text-wrapper                  
               #about-text-part1
+                - if admin_signed_in?
+                  = admin_editor_tools(main_path: 'about_content', object: @about_content)
                 %p<
                   = t('pages.home_page.about_section.about_text.part_1_html')
                 %p
