@@ -30,7 +30,7 @@ de:
     imprint: 'Impressum'
     new: 'Neu'
     edit: 'Bearbeiten'
-    index: 'Alle Versionen'
+    index: 'Alle'
   locale:
     en: 'Englisch'
     es: 'Spanisch'

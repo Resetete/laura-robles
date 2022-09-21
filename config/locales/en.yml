@@ -62,7 +62,7 @@ en:
     imprint: 'imprint'
     new: 'New'
     edit: 'Edit'
-    index: 'All versions'
+    index: 'All'
   locale:
     en: 'English'
     es: 'Spanish'

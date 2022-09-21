@@ -30,7 +30,7 @@ es:
     imprint: 'aviso legal'
     new: 'Nuevo'
     edit: 'Editar'
-    index: 'Todas las versiones'
+    index: 'Todas'
   locale:
     en: 'Inglés'
     es: 'Español'
