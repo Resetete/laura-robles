@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
-  CONTACT_EMAIL = 'mailto:lauraroblesinfo@gmail.com'.freeze
+  CONTACT_EMAIL = 'mailto:lauraroblesinfo@gmail.com'
 
   def navigation_items
     [
@@ -7,12 +9,12 @@ module ApplicationHelper
       link_to('News', '#news'),
       link_to('About', '#about'),
       link_to('Projects', '#projects'),
-      link_to('Contact', CONTACT_EMAIL),
-     ]
+      link_to('Contact', CONTACT_EMAIL)
+    ]
   end
 
   def navigation_items_html_safe
-    navigation_items.join.html_safe
+    safe_join(navigation_items)
   end
 
   def contact_helper
@@ -29,7 +31,7 @@ module ApplicationHelper
 
   def social_media_helper(animation:, direction:)
     tag.div(class: "social-media-#{direction} fa-2x #{'fa-fw' if direction == 'vertical'}") do
-      [
+      safe_join([
         (link_to 'https://www.facebook.com/Laura-Robles-Marcuello-112091183627939' do
           tag.i(class: "fa-brands fa-facebook-square #{animation}")
         end),
@@ -38,34 +40,34 @@ module ApplicationHelper
         end),
         (link_to CONTACT_EMAIL do
           tag.i(class: "fa-brands fa-solid fa-square-envelope #{animation}")
-        end),
-      ].join.html_safe
+        end)
+      ])
     end
   end
 
   def language_selection(target: 'root_path')
     [
-      link_to('DE', public_send("#{target}", locale: :de)),
+      link_to('DE', public_send(target.to_s, locale: :de)),
       '/',
-      link_to('EN', public_send("#{target}", locale: :en)),
+      link_to('EN', public_send(target.to_s, locale: :en)),
       '/',
-      link_to('ES', public_send("#{target}", locale: :es)),
+      link_to('ES', public_send(target.to_s, locale: :es))
     ]
   end
 
   def language_selection_html_safe
     tag.div(class: 'language-selection') do
-      language_selection.join(' ').html_safe
+      safe_join(language_selection)
     end
   end
 
   def slogan_animation
-    [
+    safe_join([
       tag.div(id: 'animated-text') do
-      [
-        tag.div(id: 'text1'),
-        tag.div(id: 'text2')
-      ].join.html_safe
+        safe_join([
+          tag.div(id: 'text1'),
+          tag.div(id: 'text2')
+        ])
       end,
       tag.svg(id: 'filters') do
         tag.defs do
@@ -73,17 +75,17 @@ module ApplicationHelper
             '<fecolormatrix>{:in => "SourceGraphic", :type => "matrix", :values => "1 0 0 0 0\r\n\t\t\t\t\t\t\t\t\t0 1 0 0 0\r\n\t\t\t\t\t\t\t\t\t0 0 1 0 0\r\n\t\t\t\t\t\t\t\t\t0 0 0 255 -140"}</fecolormatrix>'.html_safe
           end
         end
-      end,
-    ].join.html_safe
+      end
+    ])
   end
 
   def footer_copyright
     tag.p(id: 'copyright') do
-      [
+      safe_join([
         image_tag('chamaeleon.png', id: 'copyright-icon'),
         Time.zone.now.year,
-        link_to('@theresamannschatz.design', 'https://theresamannschatz.design'),
-      ].join(' ').html_safe
+        link_to('@theresamannschatz.design', 'https://theresamannschatz.design')
+      ])
     end
   end
 

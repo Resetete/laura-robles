@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class AboutContentsController < ApplicationController
   layout 'admin'
 
-  before_action :set_about_content, only: [:show, :edit, :update, :destroy]
+  before_action :set_about_content, only: %i[show edit update destroy]
 
   def index
     @contents = AboutContent.all
@@ -44,8 +46,8 @@ class AboutContentsController < ApplicationController
   def about_content_params
     params.require(:about_content).permit(
       :active,
-      part_1: [:en, :es, :de],
-      part_2: [:en, :es, :de],
+      part_1: %i[en es de],
+      part_2: %i[en es de]
     )
   end
 

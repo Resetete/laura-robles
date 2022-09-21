@@ -1,0 +1,12 @@
+require: rubocop-rails
+
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'bin/{rails,rake}'
+    - 'bin/**'
+
+Style/Documentation:
+  Enabled: false

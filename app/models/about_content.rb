@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class AboutContent < ApplicationRecord
-  before_save :set_all_others_to_false, if: :is_active?
+  before_save :set_all_others_to_false, if: :active?
 
   # Format of the part_1 and part_2 entries
   # { en: 'english about text', de: 'deutscher about text', es: 'texto em espanhol' }
@@ -8,13 +10,13 @@ class AboutContent < ApplicationRecord
     public_send(part).to_h&.fetch(locale.to_s)
   end
 
+  def active?
+    active
+  end
+
   private
 
   def set_all_others_to_false
-    self.class.where.not(id: self.id).update_all(active: false)
-  end
-
-  def is_active?
-    self.active
+    self.class.where.not(id:).update(active: false)
   end
 end
