@@ -52,6 +52,7 @@ en:
   about_contents:
     new: 'Add a new about text'
     edit: 'Edit about text'
+    show: 'About text'
     index:
       used: 'Used?'
   buttons:

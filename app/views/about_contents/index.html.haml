@@ -16,6 +16,4 @@
         .card.col-md-3
           %h2= t('about_contents.index.used')
           = content.active?
-          = link_to('Edit', '#')
-          = link_to('Delete', about_content_path(content), method: :delete, confirm: 'Are you sure you want to delete?')
-          
+          = admin_editor_tools(main_path: 'about_content', object: content)

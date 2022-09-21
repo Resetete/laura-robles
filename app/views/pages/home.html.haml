@@ -105,16 +105,11 @@
               #about-text-part1
                 - if admin_signed_in?
                   = admin_editor_tools(main_path: 'about_content', object: @about_content)
-                %p<
-                  = t('pages.home_page.about_section.about_text.part_1_html')
-                %p
-                  = t('pages.home_page.about_section.about_text.part_2')
+                %p= @about_content.part_1.fetch(I18n.locale.to_s)                  
               #about-text-part2
                 .text
                   %p
-                    = t('pages.home_page.about_section.about_text.part_3')
-                  %p
-                    = t('pages.home_page.about_section.about_text.part_4')
+                    = @about_content.part_2.fetch(I18n.locale.to_s)
                     = link_to(t('pages.home_page.about_section.about_button'), 'mailto:lauraroblesinfo@gmail.com', class: 'btn btn-outline-light mt-2')
                 .about-section-heading
                   = image_tag('about.svg')

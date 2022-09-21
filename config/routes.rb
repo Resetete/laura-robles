@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     root 'pages#home'
 
     resources :about_contents
+    delete '/about_content/:id/destroy', to: 'about_contents#destroy', as: 'destroy_about_content'
   end
 end

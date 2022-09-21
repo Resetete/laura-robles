@@ -1,7 +1,7 @@
 class AboutContentsController < ApplicationController
   layout 'admin'
 
-  before_action :set_about_content, only: [:edit, :update, :destroy]
+  before_action :set_about_content, only: [:show, :edit, :update, :destroy]
 
   def index
     @contents = AboutContent.all
@@ -19,6 +19,8 @@ class AboutContentsController < ApplicationController
       render 'new'
     end
   end
+
+  def show; end
 
   def edit; end
 
