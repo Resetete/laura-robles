@@ -24,7 +24,10 @@ class AboutContentsController < ApplicationController
 
   def show; end
 
-  def edit; end
+  def edit
+    p "params #{params}"
+    p "content #{@content.inspect}"
+  end
 
   def update
     if @content.update(about_content_params)
@@ -46,8 +49,8 @@ class AboutContentsController < ApplicationController
   def about_content_params
     params.require(:about_content).permit(
       :active,
-      part_1: %i[en es de],
-      part_2: %i[en es de]
+      part_1: [:en, :es, :de],
+      part_2: [:en, :es, :de],
     )
   end
 
