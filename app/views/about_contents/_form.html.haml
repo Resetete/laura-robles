@@ -1,25 +1,15 @@
 = form_for @content do |f|
   %h3 Part 1
   .form-group
-    = f.label 'English'
-    = f.text_area :part_1, id: 'about_content_part_1_en', name: 'about_content[part_1][en]'
-  .form-group
-    = f.label 'Spanish'
-    = f.text_area :part_1, id: 'about_content_part_1_es', name: 'about_content[part_1][es]'
-  .form-group
-    = f.label 'German'
-    = f.text_area :part_1, id: 'about_content_part_1_de', name: 'about_content[part_1][de]'
+    = f.text_field :part_1_en
+    = f.text_field :part_1_es 
+    = f.text_field :part_1_de
 
   %h3 Part 2
   .form-group
-    = f.label 'English'
-    = f.text_area :part_2, id: 'about_content_part_2_en', name: 'about_content[part_2][en]'
-  .form-group
-    = f.label 'Spanish'
-    = f.text_area :part_2, id: 'about_content_part_2_es', name: 'about_content[part_2][es]'
-  .form-group
-    = f.label 'German'
-    = f.text_area :part_2, id: 'about_content_part_2_de', name: 'about_content[part_2][de]'
+    = f.text_field :part_2_en
+    = f.text_field :part_2_es
+    = f.text_field :part_2_de
 
   .form-check.form-switch
     = f.check_box :active, class: 'form-check-input', id: 'flexSwitchCheckDefault'

@@ -1,6 +1,7 @@
 .container
   %section.admin-pages-section
     %h1 About text
+    = admin_editor_tools(main_path: 'about_content')
     - @contents.each do |content|
       %h3
         Version from
@@ -12,7 +13,7 @@
               .card
                 .card-body
                   %h5.card-title= t("locale.#{locale}")
-                  %p.card-text= content.version_for(part: part, locale: locale)
+                  %p.card-text= content.public_send("#{part}_#{locale}")
         .card.col-md-3
           %h2= t('about_contents.index.used')
           = content.active?

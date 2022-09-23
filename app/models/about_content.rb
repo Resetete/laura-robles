@@ -3,6 +3,10 @@
 class AboutContent < ApplicationRecord
   before_save :set_all_others_to_false, if: :active?
 
+  store :part_1, accessors: [:en, :es, :de], prefix: :part_1
+  store :part_2, accessors: [:en, :es, :de], prefix: :part_2
+
+
   # Format of the part_1 and part_2 entries
   # { en: 'english about text', de: 'deutscher about text', es: 'texto em espanhol' }
 
