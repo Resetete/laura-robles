@@ -23,6 +23,9 @@ es:
     edit: 'Edita el texto de about'
     index:
       used: 'Utilizado?'
+    part_1: 'Primera parte'
+    part_2: 'Segunda parte'
+    use: '¿Debe aparecer este texto en la sección "About me" del sitio web? '
   buttons:
     contact: 'contacto'
     admin_login: 'admin'
@@ -31,6 +34,8 @@ es:
     new: 'Nuevo'
     edit: 'Editar'
     index: 'Todas'
+    save: 'Guardar'
+    destroy: 'Borrar'
   locale:
     en: 'Inglés'
     es: 'Español'

@@ -1,18 +1,39 @@
-= form_for @content do |f|
-  %h3 Part 1
-  .form-group
-    = f.text_field :part_1_en
-    = f.text_field :part_1_es 
-    = f.text_field :part_1_de
+- if content.errors.any?
+  The following error occured
+  - content.errors.each do |error|
+    %li= error.message
 
-  %h3 Part 2
+= form_with model: content, local: true do |f|
+  %h3.mt-3
+    = t('about_contents.part_1')
+  .mb-3
+    = f.label :part_1_en, t('locale.en'), class: 'form-label'
+    = f.text_area :part_1_en, class: 'form-control'
+  .mb-3
+    = f.label :part_1_es, t('locale.es'), class: 'form-label'
+    = f.text_area :part_1_es, class: 'form-control' 
   .form-group
-    = f.text_field :part_2_en
-    = f.text_field :part_2_es
-    = f.text_field :part_2_de
+    = f.label :part_1_de, t('locale.de')
+    = f.text_area :part_1_de, class: 'form-control'
+
+  %h3.pt-5
+    = t('about_contents.part_2')
+  .mb-3
+    = f.label :part_2_en, t('locale.en')
+    = f.text_area :part_2_en, class: 'form-control'
+  .mb-3
+    = f.label :part_2_en, t('locale.es')
+    = f.text_area :part_2_es, class: 'form-control'
+  .mb-3
+    = f.label :part_2_en, t('locale.de')
+    = f.text_area :part_2_de, class: 'form-control'
 
   .form-check.form-switch
     = f.check_box :active, class: 'form-check-input', id: 'flexSwitchCheckDefault'
-    = f.label 'Should be used?', class: 'form-check-label', for: 'flexSwitchCheckDefault'
-
-  = f.submit
+    = f.label t('about_contents.use'), class: 'form-check-label', for: 'flexSwitchCheckDefault'
+    - if content.errors['active'].present?
+      #error_explanation.alert.alert-danger
+        = content.errors['active'].first
+  
+  .mt-3
+    = f.submit t('buttons.save'), class: 'btn btn-primary'

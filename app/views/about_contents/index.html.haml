@@ -1,20 +1,19 @@
-.container
-  %section.admin-pages-section
-    %h1 About text
-    = admin_editor_tools(main_path: 'about_content')
-    - @contents.each do |content|
-      %h3
-        Version from
-        = content.created_at.strftime('%d/%m/%y %H:%M')
-      .row
-        - ['en', 'es', 'de'].each do |locale|
-          .col-md-3
-            - ['part_1', 'part_2'].each do |part|
-              .card
-                .card-body
-                  %h5.card-title= t("locale.#{locale}")
-                  %p.card-text= content.public_send("#{part}_#{locale}")
-        .card.col-md-3
-          %h2= t('about_contents.index.used')
-          = content.active?
-          = admin_editor_tools(main_path: 'about_content', object: content)
+%section.admin-pages-section
+  %h1 About text
+  = admin_editor_tools(main_path: 'about_content')
+  - @contents.each do |content|
+    %h3
+      Version from
+      = content.created_at.strftime('%d/%m/%y %H:%M')
+    .row
+      - ['en', 'es', 'de'].each do |locale|
+        .col-md-3
+          - ['part_1', 'part_2'].each do |part|
+            .card
+              .card-body
+                %h5.card-title= t("locale.#{locale}")
+                %p.card-text= content.public_send("#{part}_#{locale}")
+      .card.col-md-3
+        %h2= t('about_contents.index.used')
+        = content.active?
+      = admin_editor_tools(main_path: 'about_content', object: content)

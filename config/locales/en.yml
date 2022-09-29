@@ -55,6 +55,9 @@ en:
     show: 'About text'
     index:
       used: 'Used?'
+    part_1: 'First part'
+    part_2: 'Second part'
+    use: 'Should this text appear in the "About me" section of the website?'
   buttons:
     contact: 'contact'
     admin_login: 'admin'
@@ -63,6 +66,8 @@ en:
     new: 'New'
     edit: 'Edit'
     index: 'All'
+    save: 'Save'
+    destroy: 'Delete'
   locale:
     en: 'English'
     es: 'Spanish'

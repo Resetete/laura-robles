@@ -1,15 +1,10 @@
-.container
-  %h1= t('about_contents.show')
-  .row
-    - ['en', 'es', 'de'].each do |locale|
-      .col-md-3
-        - ['part_1', 'part_2'].each do |part|
-          .card
-            .card-body
-              %h5.card-title= t("locale.#{locale}")
-              %p.card-text= @content.version_for(part: part, locale: locale)
-  = admin_editor_tools(main_path: 'about_content', object: @content)
-
-
-
-    
+%h1= t('about_contents.show')
+.row
+  - ['en', 'es', 'de'].each do |locale|
+    .col-md-3
+      - ['part_1', 'part_2'].each do |part|
+        .card
+          .card-body
+            %h5.card-title= t("locale.#{locale}")
+            %p.card-text= @content.version_for(part: part, locale: locale)
+= admin_editor_tools(main_path: 'about_content', object: @content)

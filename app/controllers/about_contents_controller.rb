@@ -44,7 +44,6 @@ class AboutContentsController < ApplicationController
   private
 
   def about_content_params
-    p "Params: #{params.fetch(:about_content)}"
     params.require(:about_content).permit(
       :active,
       :part_1_en, :part_1_es, :part_1_de,
