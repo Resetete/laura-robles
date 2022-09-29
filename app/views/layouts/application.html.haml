@@ -11,8 +11,11 @@
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
   %body
-    - if notice || alert
-      .error-messages
-        %p.notice= notice
-        %p.alert= alert
+    - flash.each do |type, msg|
+        - if type == 'notice'
+          .alert.alert-info
+            = msg
+        - else
+          .alert.alert-danger
+            = msg
     = yield

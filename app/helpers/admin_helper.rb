@@ -25,7 +25,7 @@ module AdminHelper
   def delete_button(main_path, object)
     return unless object
 
-    link_to(t('buttons.destroy'), public_send("destroy_#{main_path}_path", id: object, locale: I18n.locale), data: { "turbo-method": :delete, turbo_confirm: 'Are you sure you want to delete?' }, class: 'btn btn-danger')
+    button_to(t('buttons.destroy'), public_send("destroy_#{main_path}s_path", id: object, locale: I18n.locale), method: :delete, data: { "turbo-method": :delete, turbo_confirm: 'Are you sure you want to delete?' }, class: 'btn btn-danger')
   end
 
   def index_button(main_path)

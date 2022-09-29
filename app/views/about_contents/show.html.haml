@@ -6,5 +6,5 @@
         .card
           .card-body
             %h5.card-title= t("locale.#{locale}")
-            %p.card-text= @content.version_for(part: part, locale: locale)
+            %p.card-text= @content.public_send("#{part}_#{locale}")
 = admin_editor_tools(main_path: 'about_content', object: @content)

@@ -12,11 +12,13 @@
     = javascript_importmap_tags
   %body
     = render 'shared/admin_navigation'
-    .container.mt-3.mb-5
-      - if notice || alert
-        .error-messages
-          %p.notice.alert.alert-success.alert-dismissible.fade{ role: 'alert' }
-            = notice
-          %p.alert.alert-danger{ role: 'alert' }
-            = alert
+    .container.mt-3.mb-5   
+      - flash.each do |type, msg|
+        - if type == 'notice'
+          .alert.alert-info
+            = msg
+        - else
+          .alert.alert-danger
+            = msg
+    
       = yield

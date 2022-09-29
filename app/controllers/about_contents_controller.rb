@@ -16,6 +16,7 @@ class AboutContentsController < ApplicationController
   def create
     @content = AboutContent.new(about_content_params)
     if @content.save
+      flash[:notice] = 'successfully created'
       redirect_to about_contents_path
     else
       render 'new'
@@ -28,7 +29,7 @@ class AboutContentsController < ApplicationController
 
   def update
     if @content.update(about_content_params)
-      flash[:notice] = 'Article successfully updated'
+      flash[:notice] = 'successfully updated'
       redirect_to about_contents_path
     else
       render 'edit'
@@ -36,9 +37,13 @@ class AboutContentsController < ApplicationController
   end
 
   def destroy
-    @content.destroy
-    flash[:alert] = 'successfully deleted'
-    redirect_to about_contents_path
+    if @content.destroy
+      flash[:alert] = 'successfully deleted'
+      redirect_to about_contents_path
+    else
+      flash[:alert] = 'something went wrong'
+      redirect_to about_contents_path
+    end
   end
 
   private
