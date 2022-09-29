@@ -37,12 +37,16 @@ class AboutContentsController < ApplicationController
   end
 
   def destroy
-    if @content.destroy
-      flash[:alert] = 'successfully deleted'
-      redirect_to about_contents_path
+    if AboutContent.active_db_texts.count == 1 && @content.active == true
+      flash[:alert] = 'Cannot delete without any active text'
     else
-      flash[:alert] = 'something went wrong'
-      redirect_to about_contents_path
+      if @content.destroy
+        flash[:alert] = 'successfully deleted'
+        redirect_to about_contents_path
+      else
+        flash[:alert] = 'something went wrong'
+        redirect_to about_contents_path
+      end
     end
   end
 

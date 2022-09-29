@@ -9,7 +9,7 @@ class AboutContent < ApplicationRecord
   store :part_1, accessors: [:en, :es, :de], prefix: :part_1
   store :part_2, accessors: [:en, :es, :de], prefix: :part_2
 
-  validate :active, :none_active_text?#, on: [:create, :update]
+  validate :active, :none_active_text?, on: [:create, :update]
 
   def active?
     active
@@ -22,8 +22,12 @@ class AboutContent < ApplicationRecord
   end
 
   def none_active_text?
-    if AboutContent.where(active: true).empty? && self.active == false
+    if self.class.active_db_texts.empty? && self.active == false
       errors.add(:active, "Needs to have at least one about text set to be used on website")
     end
+  end
+
+  def self.active_db_texts
+    self.where(active: true)
   end
 end

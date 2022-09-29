@@ -12,10 +12,10 @@
     = javascript_importmap_tags
   %body
     - flash.each do |type, msg|
-        - if type == 'notice'
-          .alert.alert-info
-            = msg
-        - else
-          .alert.alert-danger
-            = msg
+      - if type == 'notice'
+        .alert.alert-info
+          = msg
+      - else
+        .alert.alert-danger
+          = msg
     = yield
