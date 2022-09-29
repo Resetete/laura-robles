@@ -96,4 +96,8 @@ module ApplicationHelper
       link_to(t('buttons.admin_login'), new_admin_session_path, class: 'btn btn-outline-dark')
     end
   end
+
+  def get_current_page_path(request)
+    "#{request.path.split('/').last}_path"
+  end
 end

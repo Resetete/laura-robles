@@ -11,7 +11,8 @@
     = stylesheet_link_tag "admin", "data-turbo-track": "reload"
     = javascript_importmap_tags
   %body
-    = render 'shared/admin_navigation'
+    = render 'shared/admin_navigation', target: get_current_page_path(request)
+
     .container.mt-3.mb-5   
       - flash.each do |type, msg|
         - if type == 'notice'

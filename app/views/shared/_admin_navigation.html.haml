@@ -11,5 +11,5 @@
           %li.nav-item
             .nav-link.admin-pages= item
       .d-flex.admin-pages.navbar-nav
-        - language_selection(target: 'about_contents_path').each do |language|
+        - language_selection(target: target).each do |language|
           .nav-link= language.html_safe

@@ -18,6 +18,8 @@ de:
         anti_groove_text: 'In meinem ersten Soloprojekt verwende ich Rhythmen aus verschiedenen Ländern und verändere die interne Phrasierung zwischen ihnen durch Morphing und Improvisation. Ich komponiere auch Rhythmen und melodische Linien, die mich während des Prozesses der Veränderung begleiten.' 
         robles_corona_duo_text: 'Ich spiele seit 4 Jahren mit Carlos Corona (Gitarre-Mexico), das ist unsere Art, immer im Einklang mit der lateinamerikanischen Musik zu sein. Wir spielen auch unsere eigenen Kompositionen, alle mit lateinamerikanischen Klängen.'
         astrocombo_text: 'Die Astrocombo besteht aus 12 Kompositionen, die nicht 100%ig "fertig" sind und die ich mit jedem Gast vervollständige, jeder Gast hat Raum, die Musik so zu interpretieren, wie er möchte. Ein Gast bleibt maximal zwei Jahre und jede Saison hat einen anderen Schwerpunkt.'
+    imprint:
+      header: 'Impressum'
   about_contents:
     new: 'Erstelle einen neuen about text'
     edit: 'Bearbeite den about text'
