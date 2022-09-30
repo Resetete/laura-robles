@@ -137,10 +137,10 @@
                     = t('pages.home_page.projects_section.tripas_text')
                 = render 'shared/music_player'
               .project-image
-                .scene2
-                  %div{'data-depth': 0.1}
+                .scene2.parallax-parent
+                  .parallax-back#back{'data-depth': 0.1}
                     = image_tag('illustration/craneo.svg')
-                  %div{'data-depth': 0.3}
+                  .parallax-front#front{'data-depth': 0.3}
                     = image_tag('illustration/craneo-black.svg')
             .project-wrapper.order-text-right
               .project-text

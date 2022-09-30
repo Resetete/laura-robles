@@ -12,85 +12,117 @@ import jquery from 'jquery';
 window.jQuery = jquery
 window.$ = jquery
 
+// document.addEventListener("DOMContentLoaded", function(){
+//   var scene = $('.scene').get(0);
+//   var parallaxInstance = new Parallax(scene);
 
-document.addEventListener("DOMContentLoaded", function(){
-  var scene = $('.scene').get(0);
-  var parallaxInstance = new Parallax(scene);
+//   var scene2 = $('.scene2').get(0);
+//   var parallaxInstance2 = new Parallax(scene2);
 
-  var scene2 = $('.scene2').get(0);
-  var parallaxInstance2 = new Parallax(scene2);
-
-  var scene3 = $('.scene3').get(0);
-  var parallaxInstance3 = new Parallax(scene3);
+//   var scene3 = $('.scene3').get(0);
+//   var parallaxInstance3 = new Parallax(scene3);
   
-  var scene4 = $('.scene4').get(0);
-  var parallaxInstance4 = new Parallax(scene4);
+//   var scene4 = $('.scene4').get(0);
+//   var parallaxInstance4 = new Parallax(scene4);
 
-  var scene5 = $('.scene5').get(0);
-  var parallaxInstance5 = new Parallax(scene5);
+//   var scene5 = $('.scene5').get(0);
+//   var parallaxInstance5 = new Parallax(scene5);
 
-  var scene6 = $('.scene6').get(0);
-  var parallaxInstance6 = new Parallax(scene6);
-});
+//   var scene6 = $('.scene6').get(0);
+//   var parallaxInstance6 = new Parallax(scene6);
+// });
 
 
+// Parallax effects for some images
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  //Mobile
+  window.addEventListener('deviceorientation', initFallback);
+  console.log('mobile view');
+   } else {
+      var scene = $('.scene').get(0);
+      var parallaxInstance = new Parallax(scene);
+
+      var scene2 = $('.scene2').get(0);
+      var parallaxInstance2 = new Parallax(scene2);
+
+      var scene3 = $('.scene3').get(0);
+      var parallaxInstance3 = new Parallax(scene3);
+
+      var scene4 = $('.scene4').get(0);
+      var parallaxInstance4 = new Parallax(scene4);
+
+      var scene5 = $('.scene5').get(0);
+      var parallaxInstance5 = new Parallax(scene5);
+
+      var scene6 = $('.scene6').get(0);
+      var parallaxInstance6 = new Parallax(scene6);
+   }
+
+function initFallback() {
+  console.log('in fallback method');
+  $('.parallax-front').css('left', "5px");
+};
+
+
+// Navigation with flying menu bar
 document.onreadystatechange = function() {
   var paperMenu = {
-		$window: $('#paper-window'),
-		$paperFront: $('#paper-front'),
-		$hamburger: $('.hamburger'),
-		offset: 1800,
-		pageHeight: $('#paper-front').outerHeight(),
-		
-		open: function() {
-			this.$window.addClass('tilt');
-			this.$hamburger.off('click');
-			$('#container, .hamburger').on('click', this.close.bind(this));
-			this.hamburgerFix(true);
-			console.log('opening...');
-		},
-		close: function() {
-			this.$window.removeClass('tilt'); 
-			$('#container, .hamburger').off('click');
-			this.$hamburger.on('click', this.open.bind(this));
-			this.hamburgerFix(false);
-			console.log('closing...');
-		},
-		updateTransformOrigin: function() {
-			var scrollTop = this.$window.scrollTop();
-			var equation = (scrollTop + this.offset) / this.pageHeight * 100;
-			this.$paperFront.css('transform-origin', 'center ' + equation + '%');
-		},
-		//hamburger icon fix to keep its position
-		hamburgerFix: function(opening) {
-				if(opening) {
-					$('.hamburger').css({
-						position: 'absolute',
-						top: this.$window.scrollTop() + 30 + 'px'
-					});
-				} else {
-					setTimeout(function() {
-						$('.hamburger').css({
-							position: 'fixed',
-							top: '30px'
-						});
-					}, 300);
-				}
-			},
-		bindEvents: function() {
-			this.$hamburger.on('click', this.open.bind(this));
-			$('.close').on('click', this.close.bind(this));
-			this.$window.on('scroll', this.updateTransformOrigin.bind(this));
-		},
-		init: function() {
-			this.bindEvents();
-			this.updateTransformOrigin();
-		},
-	};
+    $window: $('#paper-window'),
+    $paperFront: $('#paper-front'),
+    $hamburger: $('.hamburger'),
+    offset: 1800,
+    pageHeight: $('#paper-front').outerHeight(),
+    
+    open: function() {
+      this.$window.addClass('tilt');
+      this.$hamburger.off('click');
+      $('#container, .hamburger').on('click', this.close.bind(this));
+      this.hamburgerFix(true);
+      console.log('opening...');
+    },
+    close: function() {
+      this.$window.removeClass('tilt'); 
+      $('#container, .hamburger').off('click');
+      this.$hamburger.on('click', this.open.bind(this));
+      this.hamburgerFix(false);
+      console.log('closing...');
+    },
+    updateTransformOrigin: function() {
+      var scrollTop = this.$window.scrollTop();
+      var equation = (scrollTop + this.offset) / this.pageHeight * 100;
+      this.$paperFront.css('transform-origin', 'center ' + equation + '%');
+    },
+    //hamburger icon fix to keep its position
+    hamburgerFix: function(opening) {
+        if(opening) {
+          $('.hamburger').css({
+            position: 'absolute',
+            top: this.$window.scrollTop() + 30 + 'px'
+          });
+        } else {
+          setTimeout(function() {
+            $('.hamburger').css({
+              position: 'fixed',
+              top: '30px'
+            });
+          }, 300);
+        }
+      },
+    bindEvents: function() {
+      this.$hamburger.on('click', this.open.bind(this));
+      $('.close').on('click', this.close.bind(this));
+      this.$window.on('scroll', this.updateTransformOrigin.bind(this));
+    },
+    init: function() {
+      this.bindEvents();
+      this.updateTransformOrigin();
+    },
+  };
 
 paperMenu.init();
 
-// Start changing text animation
+// Home page - the changing text animation (writing)
 const elts = {
     text1: document.getElementById("text1"),
     text2: document.getElementById("text2")
@@ -179,4 +211,6 @@ function animate() {
 
 animate();
 };
+
+
 
