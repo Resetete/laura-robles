@@ -98,6 +98,19 @@ module ApplicationHelper
   end
 
   def get_current_page_path(request)
-    "#{request.path.split('/').last}_path"
+    split_path = request.path.split('/')
+    split_path_length = split_path.count
+
+    case split_path_length
+    when 3
+      # for multi object routes e.g. about_contents_path (index)
+      "#{split_path.last}_path"
+    when 4
+      # for single object routes, new e.g. new_about_content_path
+      "#{[split_path[3], split_path[2].chomp('s')].join('_')}_path"
+    when 5
+      # for single object routes with :id, edit e.g. edit_about_content_path(:id)
+      "#{[split_path[4], split_path[2].chomp('s')].join('_')}_path"
+    end
   end
 end

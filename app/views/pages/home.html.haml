@@ -105,7 +105,7 @@
               #about-text-part1
                 - if admin_signed_in?
                   = admin_editor_tools(main_path: 'about_content', object: @about_content)
-                %p= @about_content.part_1.fetch(I18n.locale.to_s)                  
+                %p= sanitize(@about_content.part_1.fetch(I18n.locale.to_s))
               #about-text-part2
                 .text
                   %p
