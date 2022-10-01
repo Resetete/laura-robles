@@ -11,8 +11,10 @@ For the user, enjoy the content :) It is a website multi-language page, where yo
 For the admin, AKA musician Laura, 
 she is able to log into an admin area where she can modify the content of the texts. She can store several text versions and decide which one should be active. Validations ensure that there is always exactly one active text in the db. The different language versions are stored in a json field in the table. 
 
-![About section with admin actions](app/assets/readme/about-content.png?raw=true "About section with admin actions")
-![Create new content](app/assets/readme/create-new-about-content.png?raw=true "Create new content")
+![About section with admin actions](https://github.com/Resetete/laura-robles/blob/1d3c9fb37f2fe43ef9b830a99ae17862da297387/app/assets/images/readme/about-content.png?raw=true "About section with admin actions")
+![Create new content](https://github.com/Resetete/laura-robles/blob/1d3c9fb37f2fe43ef9b830a99ae17862da297387/app/assets/images/readme/create-new-about-content.png?raw=true "Create new content")
+
+
 
 ### Coming soon(ish): 
 - CRUD for videos
