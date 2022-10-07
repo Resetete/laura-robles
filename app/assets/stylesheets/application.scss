@@ -53,6 +53,42 @@ a:hover {
   display: block;
 }
 
+/*********************/
+/*** Cookie banner ***/
+/*********************/
+
+.cookie-banner {
+  position: fixed;
+  z-index: 10000;
+  bottom: 30vh;
+  left: 25vw;
+  width: 50vw;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  background-color: $primary-color;
+  border-radius: 5px;
+  border: 5px dashed $secondary-color;
+  box-shadow: 0 0 2px 1px rgba(1, 1, 1, 0.2);
+  color: $secondary-color;
+}
+
+#cookie-banner-icon {
+  width: 10vw;
+}
+
+.close {
+  height: 20px;
+  background-color: #777;
+  border: none;
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
 /*****************+**/
 /**** Landing view **/
 /*****************+**/
@@ -321,7 +357,7 @@ a:hover {
 }
 
 .bg-cajon {
-  background: image-url('video-icons/cajon');
+  background: image-url('video-icons/cajon.jpg');
 }
 
 .bg-bass {

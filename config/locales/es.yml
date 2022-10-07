@@ -42,3 +42,10 @@ es:
     en: 'Inglés'
     es: 'Español'
     de: 'Alemán'
+  cookie_banner:
+    content_html:
+      "
+      <p>Mi sitio web sólo utiliza cookies después de iniciar sesión en el área de administración. No utiliza cookies para las páginas de acceso público :). Si quieres estar seguro, bloquea el almacenamiento de cookies a través de la configuración de tu navegador o utiliza una ventana privada del mismo, ¡gracias!</p>
+      <p>Si tiene curiosidad, puede explorar <a href='https://cookie-script.com/cookie-scanner'>aquí</a> las cookies que utiliza este sitio web.</p>
+      <p>Para más información, consulte mi <a href=%{imprint_path}>aviso legal</a> y a mi <a href=%{imprint_path}>política de privacidad</a>.</p>
+      "

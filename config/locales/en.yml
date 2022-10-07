@@ -76,3 +76,11 @@ en:
     en: 'English'
     es: 'Spanish'
     de: 'German'
+  cookie_banner:
+    content_html:
+      "
+      <p>My website only uses cookies after logging into the admin area. It does not use cookies for the publicly accessible pages :). If you want to be sure, please block cookies from being saved via your browser settings or use a Private Browser Window, thanks!</p>
+      <p>If you are curious, you can scan <a href='https://cookie-script.com/cookie-scanner'>here</a> for the cookies this website might use.</p>
+      <p>For more information you can read my <a href=%{imprint_path}>imprint</a> and <a href=%{imprint_path}>data privacy policy</a>.</p>
+      "
+

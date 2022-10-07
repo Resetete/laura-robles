@@ -42,3 +42,10 @@ de:
     en: 'Englisch'
     es: 'Spanisch'
     de: 'Deutsch'
+  cookie_banner:
+    content_html:
+      "
+      <p>Meine Webseite verwendet nur Cookies nach dem Einloggen in den Adminbereich. Sie verwendet keine Cookies für die öffentlich zugänglichen Seiten :). Wenn du sicher gehen möchtest, dann blocke das Speichern von Cookies bitte über deine Browsereinstellungen oder verwende ein Privates Browser Fenster, Danke!</p>
+      <p>Wenn du neugierig bist, kannst du <a href='https://cookie-script.com/cookie-scanner'>hier</a> nach den Cookies scannen, die diese Webseite verwendet.</p>
+      <p>Weitere Information kannst du meinem <a href=%{imprint_path}>Impressum</a> und <a href=%{imprint_path}>Datenschutzrichtlinien</a> entnehmen.</p>
+      "
