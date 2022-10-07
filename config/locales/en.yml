@@ -83,4 +83,7 @@ en:
       <p>If you are curious, you can scan <a href='https://cookie-script.com/cookie-scanner'>here</a> for the cookies this website might use.</p>
       <p>For more information you can read my <a href=%{imprint_path}>imprint</a> and <a href=%{imprint_path}>data privacy policy</a>.</p>
       "
+  menu-bar:
+    projects: 'Projects'
+    contact: 'Contact'
 

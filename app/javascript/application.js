@@ -38,7 +38,6 @@ window.$ = jquery
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   //Mobile
   window.addEventListener('deviceorientation', initFallback);
-  console.log('mobile view');
    } else {
       var scene = $('.scene').get(0);
       var parallaxInstance = new Parallax(scene);

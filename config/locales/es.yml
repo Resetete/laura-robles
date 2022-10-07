@@ -49,3 +49,8 @@ es:
       <p>Si tiene curiosidad, puede explorar <a href='https://cookie-script.com/cookie-scanner'>aquí</a> las cookies que utiliza este sitio web.</p>
       <p>Para más información, consulte mi <a href=%{imprint_path}>aviso legal</a> y a mi <a href=%{imprint_path}>política de privacidad</a>.</p>
       "
+  menu-bar:
+    projects: 'Proyectos'
+    contact: 'Contacto'
+
+

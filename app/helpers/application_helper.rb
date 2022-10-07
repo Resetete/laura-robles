@@ -8,8 +8,8 @@ module ApplicationHelper
       link_to('Videos', '#videos'),
       link_to('News', '#news'),
       link_to('About', '#about'),
-      link_to('Projects', '#projects'),
-      link_to('Contact', CONTACT_EMAIL)
+      link_to(t('menu-bar.projects'), '#projects'),
+      link_to(t('menu-bar.contact'), CONTACT_EMAIL)
     ]
   end
 

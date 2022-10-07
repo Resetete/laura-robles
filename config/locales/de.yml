@@ -49,3 +49,6 @@ de:
       <p>Wenn du neugierig bist, kannst du <a href='https://cookie-script.com/cookie-scanner'>hier</a> nach den Cookies scannen, die diese Webseite verwendet.</p>
       <p>Weitere Information kannst du meinem <a href=%{imprint_path}>Impressum</a> und <a href=%{imprint_path}>Datenschutzrichtlinien</a> entnehmen.</p>
       "
+  menu-bar:
+    projects: 'Projekte'
+    contact: 'Kontakt'
