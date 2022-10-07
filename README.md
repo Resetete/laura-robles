@@ -23,9 +23,9 @@ she is able to log into an admin area where she can modify the content of the te
 - Possibility to change images
 
 ## Design
-I designed the website from skretch. The illustrations are exclusively drawn by [Rodrigo La Hoz](https://rodrigolahoz.tumblr.com/) form Peru (Copyright! Do not download/copy those images and use somewhere else, Thanks!).
+I designed the website from scratch. The illustrations are exclusively drawn by [Rodrigo La Hoz](https://rodrigolahoz.tumblr.com/) form Peru (Copyright! Do not download/copy those images and use somewhere else, Thanks!).
 
-Laura, wanted a black and white website, which is not clean, but chaotic. She also wants to connect the art by Rodrigo La Hoz with her music and each of her projects. For this reason, most of the elements and objects are overlapping (of course mantaining readability ;) ), crooked and bent. 
-I am using [parallax.js](http://matthew.wagerfield.com/parallax/) for some moving images to create a some playful effect. For mobile phones, the effect wasn't working correctly and thus I use a fallback with CSS animations.
+Laura, wanted a black and white website, which is not clean, but chaotic. She also wants to connect the art by Rodrigo La Hoz with her music and each of her projects. For this reason, most of the elements and objects are overlapping (of course I aim on maintaining readability ;) ), crooked and bent.
+I am using [parallax.js](http://matthew.wagerfield.com/parallax/) for some moving images to create a some playful effect. For mobile phones, the effect wasn't working trustfully correct enough and thus I use a fallback with CSS animations.
 
-The website is responsive for mobile phones and desktops. Due to lack of time, I didn't (yet) implement responsiveness for medium sized devices live ipads.
+The website is responsive for mobile phones and desktops. Due to lack of time, I didn't (yet) implement responsiveness for medium sized devices like tablets.
