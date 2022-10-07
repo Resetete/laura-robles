@@ -3,5 +3,5 @@
     Cookies?
     = image_tag('cookie_banner_icon.png', alt: 'cookie icon', id: 'cookie-banner-icon')
   = t('cookie_banner.content_html', imprint_path: imprint_path)
-  %button.close
-    &times;
+  %button.banner-close
+    %i.fa-solid.fa-xmark

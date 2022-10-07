@@ -65,8 +65,8 @@ a:hover {
   width: 50vw;
   padding: 15px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: column;
   padding: 10px;
   background-color: $primary-color;
@@ -74,19 +74,21 @@ a:hover {
   border: 5px dashed $secondary-color;
   box-shadow: 0 0 2px 1px rgba(1, 1, 1, 0.2);
   color: $secondary-color;
+  button.banner-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 2em;
+    border: none;
+    color: $secondary-color;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: $primary-color;
+  }
 }
 
 #cookie-banner-icon {
   width: 10vw;
-}
-
-.close {
-  height: 20px;
-  background-color: #777;
-  border: none;
-  color: white;
-  border-radius: 2px;
-  cursor: pointer;
 }
 
 /*****************+**/
