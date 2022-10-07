@@ -24,7 +24,7 @@ module ApplicationHelper
   def contact_button
     tag.div(class: 'contact-button') do
       link_to CONTACT_EMAIL do
-        image_tag('buttons/contact-button.svg')
+        image_tag('buttons/contact-button.png')
       end
     end
   end
