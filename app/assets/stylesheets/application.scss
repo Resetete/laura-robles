@@ -1019,6 +1019,24 @@ svg#filters {
     background: $primary-color;
   }
 
+  .cookie-banner {
+    bottom: 5vh;
+    left: 5vw;
+    width: 90vw;
+    padding: 1em;
+    button.banner-close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 2em;
+      border: none;
+      color: $secondary-color;
+      border-radius: 2px;
+      cursor: pointer;
+      background-color: $primary-color;
+    }
+  }
+
   .start-section {
     background: image-url('laura-hero-start-mobile.svg') no-repeat;
     height: 97vh;

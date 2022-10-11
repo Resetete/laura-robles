@@ -38,6 +38,7 @@ window.$ = jquery
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   //Mobile
   window.addEventListener('deviceorientation', initFallback);
+  console.log('mobile view');
    } else {
       var scene = $('.scene').get(0);
       var parallaxInstance = new Parallax(scene);
@@ -118,8 +119,8 @@ document.onreadystatechange = function() {
       this.updateTransformOrigin();
     },
   };
-
-paperMenu.init();
+  paperMenu.init();
+};
 
 // Home page - the changing text animation (writing)
 const elts = {
@@ -209,7 +210,6 @@ function animate() {
 }
 
 animate();
-};
 
 
 $(document).ready(function(){
