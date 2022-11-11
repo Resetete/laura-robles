@@ -10,7 +10,7 @@
     = render 'shared/favicons'
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
-  %body
+  %body{class: "#{controller_name} #{action_name}"}
     - flash.each do |type, msg|
       - if type == 'notice'
         .alert.alert-info

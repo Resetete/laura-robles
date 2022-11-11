@@ -4,13 +4,14 @@
       %nav
         .close
           = navigation_items_html_safe
+      }
     #paper-window
       #paper-front
         .hamburger
           %span
         #container
           #navline.mobile
-          %section.start-section
+          %section.start-section{'data-turbo': "false"}
             = social_media_helper(animation: 'fa-flip', direction: 'vertical')
             = language_selection_html_safe
           %section.video-section#videos

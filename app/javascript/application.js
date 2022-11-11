@@ -1,5 +1,6 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
-import "@hotwired/turbo-rails"
+import { Turbo } from "@hotwired/turbo-rails"
+
 import "controllers"
 
 // install bootstrap and dependencies
@@ -34,7 +35,6 @@ window.$ = jquery
 
 
 // Parallax effects for some images
-
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   //Mobile
   window.addEventListener('deviceorientation', initFallback);
@@ -119,8 +119,8 @@ document.onreadystatechange = function() {
       this.updateTransformOrigin();
     },
   };
-  paperMenu.init();
-};
+
+paperMenu.init();
 
 // Home page - the changing text animation (writing)
 const elts = {
@@ -210,6 +210,7 @@ function animate() {
 }
 
 animate();
+};
 
 
 $(document).ready(function(){
@@ -219,7 +220,7 @@ $(document).ready(function(){
     localStorage.setItem('cookieSeen','shown')
   }
 
-  $('.banner-close').click(function(e) {
+  $('.close').click(function(e) {
     $('.cookie-banner').fadeOut();
   });
 });
