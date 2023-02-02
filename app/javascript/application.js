@@ -220,7 +220,7 @@ $(document).ready(function(){
     localStorage.setItem('cookieSeen','shown')
   }
 
-  $('.close').click(function(e) {
+  $('.banner-close').click(function(e) {
     $('.cookie-banner').fadeOut();
   });
 });
