@@ -757,7 +757,7 @@ svg#filters {
   background: $primary-color;
   display: flex;
   flex-direction: column;
-  align-item: center;
+  align-items: center;
   justify-content: center;
 }
 
@@ -773,7 +773,7 @@ svg#filters {
 .project-wrapper {
   display: flex;
   width: 100vw;
-  justify-content: space-around;
+  justify-content: center;
   align-content: center;
   margin: 20px 0;
 }
@@ -787,7 +787,7 @@ svg#filters {
 }
 
 .project-text {
-  width: 50vw;
+  width: 60vw;
   padding: 0 10vw;
 }
 
@@ -804,7 +804,7 @@ svg#filters {
 }
 
 .project-image {
-  width: 30vw;
+  width: 25vw;
   margin: 0 10vw;
   img {
     width: 100%;
