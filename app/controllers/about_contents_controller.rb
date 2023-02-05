@@ -39,14 +39,12 @@ class AboutContentsController < ApplicationController
   def destroy
     if AboutContent.active_db_texts.count == 1 && @content.active == true
       flash[:alert] = 'Cannot delete without any active text'
+    elsif @content.destroy
+      flash[:alert] = 'successfully deleted'
+      redirect_to about_contents_path
     else
-      if @content.destroy
-        flash[:alert] = 'successfully deleted'
-        redirect_to about_contents_path
-      else
-        flash[:alert] = 'something went wrong'
-        redirect_to about_contents_path
-      end
+      flash[:alert] = 'something went wrong'
+      redirect_to about_contents_path
     end
   end
 
@@ -56,7 +54,7 @@ class AboutContentsController < ApplicationController
     params.require(:about_content).permit(
       :active,
       :part_1_en, :part_1_es, :part_1_de,
-      :part_2_en, :part_2_es, :part_2_de,
+      :part_2_en, :part_2_es, :part_2_de
     )
   end
 
