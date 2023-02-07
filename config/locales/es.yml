@@ -27,7 +27,12 @@ es:
       used: 'Utilizado?'
     part_1: 'Primera parte'
     part_2: 'Segunda parte'
-    use: '¿Debe aparecer este texto en la sección "About me" del sitio web? '
+    use: '¿Debe aparecer este texto en la sección "About me" del sitio web?'
+  news_contents:
+    title: 'Novedades'
+    new: 'Añadir un nuevo texto de novedades'
+    edit: 'Editar texto de novedades'
+    show: 'Texto de novedades'
   buttons:
     contact: 'contacto'
     admin_login: 'admin'
