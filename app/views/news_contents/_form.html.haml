@@ -1,0 +1,24 @@
+- if content.errors.any?
+  The following error occured
+  - content.errors.each do |error|
+    %li= error.message
+
+= form_with model: content, local: true do |f|
+  %h3
+    = t('news_contents.title')
+  .row
+    .col-12
+      = f.label :title, class: 'form-label'
+      = f.text_field :title, class: 'form-control'
+    .col-12
+      = f.label :date, class: 'form-label'
+      = f.text_field :date, class: 'form-control'
+    .col-12
+      = f.label :content, class: 'form-label'
+      = f.text_area :content, class: 'form-control'
+    .col-12
+      = f.label :social_media_permalink, class: 'form-label'
+      = f.text_field :social_media_permalink, class: 'form-control'
+
+  .mt-3
+    = f.submit t('buttons.save'), class: 'btn btn-primary'

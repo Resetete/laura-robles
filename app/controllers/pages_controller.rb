@@ -7,6 +7,7 @@ class PagesController < ApplicationController
 
   def home
     @about_content = AboutContent.where(active: true).first
+    @news_content = NewsContent.sort_by(:created_at).last
   end
 
   def imprint; end

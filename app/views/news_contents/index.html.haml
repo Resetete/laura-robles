@@ -1,3 +1,12 @@
 %section.admin-pages-section
   %h1= t('news_contents.title') 
   = admin_editor_tools(main_path: 'news_content')
+
+  - @news_contents.each do |content|
+    %ul
+      %li= content.title
+      %li= content.date 
+      %li= content.content
+      %li= content.social_media_permalink
+      %li= content.created_at
+      %li= content.updated_at
