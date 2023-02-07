@@ -80,8 +80,8 @@ group :development do
   gem 'web-console'
 
   # for debugging
-  gem 'pry-rails'
   gem 'pry-byebug'
+  gem 'pry-rails'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"

@@ -46,6 +46,7 @@ module ApplicationHelper
   end
 
   def language_selection(target: 'root_path')
+    target = target.nil? ? 'root_path' : target
     [
       link_to('DE', public_send(target.to_s, locale: :de)),
       '/',
@@ -102,14 +103,17 @@ module ApplicationHelper
     split_path_length = split_path.count
 
     case split_path_length
+    when 2
+      # for multi object routes without locale e.g. about_contents_path (index)
+      "#{split_path.last}_path"
     when 3
-      # for multi object routes e.g. about_contents_path (index)
+      # for multi object routes e.g. en/about_contents_path (index)
       "#{split_path.last}_path"
     when 4
-      # for single object routes, new e.g. new_about_content_path
+      # for single object routes, new e.g. en/new_about_content_path
       "#{[split_path[3], split_path[2].chomp('s')].join('_')}_path"
     when 5
-      # for single object routes with :id, edit e.g. edit_about_content_path(:id)
+      # for single object routes with :id, edit e.g. en/edit_about_content_path(:id)
       "#{[split_path[4], split_path[2].chomp('s')].join('_')}_path"
     end
   end
