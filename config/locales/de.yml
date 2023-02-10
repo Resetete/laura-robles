@@ -33,6 +33,8 @@ de:
     new: 'Füge einen neuen news text hinzu'
     edit: 'Edit news text'
     show: 'News text'
+    news_date: 'Datum, das auf der Website angezeigt werden soll:' 
+    description: 'Beschreibung:'
   buttons:
     contact: 'Kontakt'
     admin_login: 'Admin'

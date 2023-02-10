@@ -3,10 +3,24 @@
   = admin_editor_tools(main_path: 'news_content')
 
   - @news_contents.each do |content|
-    %ul
-      %li= content.title
-      %li= content.date 
-      %li= content.content
-      %li= content.social_media_permalink
-      %li= content.created_at
-      %li= content.updated_at
+    .card
+      .card-body
+        %h5.card-title
+          = content.title
+        %p.card-text
+          .row
+            .col-3
+              %p= t('news_contents.news_date')
+              %p= t('news_contents.description')
+              %p Social media link
+              %p Created at:
+              %p Updated at:
+            .col-9
+              %p= content.date 
+              %p= content.content
+              %p= content.social_media_permalink
+              %p= content.created_at.to_date
+              %p= content.updated_at.to_date
+          = admin_editor_tools(main_path: 'news_content', object: content)
+
+      

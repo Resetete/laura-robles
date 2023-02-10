@@ -33,6 +33,8 @@ es:
     new: 'Añadir un nuevo texto de novedades'
     edit: 'Editar texto de novedades'
     show: 'Texto de novedades'
+    news_date: 'Fecha que se mostrará en el sitio web:'
+    description: 'Descripción:'
   buttons:
     contact: 'contacto'
     admin_login: 'admin'

@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     delete '/about_contents/:id', to: 'about_contents#destroy', as: 'destroy_about_contents'
 
     resources :news_contents
+    delete '/news_contents/:id', to: 'news_contents#destroy', as: 'destroy_news_contents'
   end
 end

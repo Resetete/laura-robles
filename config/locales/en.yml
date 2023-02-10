@@ -67,6 +67,8 @@ en:
     new: 'Add a new news text'
     edit: 'Edit news text'
     show: 'News text'
+    news_date: 'Date to show on website:' 
+    description: 'Description:'
   buttons:
     contact: 'contact'
     admin_login: 'admin'
