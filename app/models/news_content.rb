@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class NewsContent < ApplicationRecord
-  validates_presence_of :title
-  validates_presence_of :content
-  validates_presence_of :date
+  validates :title, presence: true
+  validates :content, presence: true
+  validates :date, presence: true
 end

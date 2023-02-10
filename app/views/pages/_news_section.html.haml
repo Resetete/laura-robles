@@ -5,6 +5,8 @@
     #news-content-elements
     #updates-wrapper
       .headline
+      - if admin_signed_in?
+        = admin_editor_tools(main_path: 'news_content', object: @news_content)
       %h2.title
         = @news_content.title
       %p.date
