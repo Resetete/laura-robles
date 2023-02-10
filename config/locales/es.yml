@@ -1,4 +1,7 @@
 es:
+  time:
+    formats:
+      date_with_month: '%d. %B %Y'
   devise:
     sessions:
       new:
