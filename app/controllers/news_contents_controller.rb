@@ -36,7 +36,9 @@ class NewsContentsController < ApplicationController
   end
 
   def destroy
-    if @news_content.destroy
+    if NewsContent.count == 1
+      flash[:alert] = 'Cannot delete - need to have at least one news content. Instead edit the current entry.'
+    elsif @news_content.destroy
       flash[:alert] = 'successfully deleted'
       redirect_to news_contents_path
     else
