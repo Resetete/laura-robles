@@ -19,7 +19,29 @@ class NewsContentsController < ApplicationController
       flash[:notice] = 'successfully created'
       redirect_to news_contents_path
     else
+      flash[:alert] = 'something went wrong'
       render 'new'
+    end
+  end
+
+  def edit; end
+
+  def update
+    if @news_content.update(news_content_params)
+      flash[:notice] = 'successfully updated'
+      redirect_to news_contents_path
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    if @news_content.destroy
+      flash[:alert] = 'successfully deleted'
+      redirect_to news_contents_path
+    else
+      flash[:alert] = 'something went wrong'
+      redirect_to news_contents_path
     end
   end
 
