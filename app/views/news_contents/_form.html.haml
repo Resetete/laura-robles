@@ -1,0 +1,26 @@
+- if content.errors.any?
+  The following error occured
+  - content.errors.each do |error|
+    %li= error.message
+
+= form_with model: content, local: true do |f|
+  %h3
+    = t('news_contents.title')
+  .row
+    .col-12
+      = f.label :title, class: 'form-label'
+      = f.text_field :title, class: 'form-control', required: true
+    .col-12.pt-3.pb-3
+      = f.label :date, class: 'form-label'
+      = f.date_select :date, class: 'form-control', required: true
+    .col-12
+      = f.label :content, class: 'form-label'
+      = f.text_area :content, class: 'form-control', required: true
+    .col-12
+      = f.label :social_media_permalink, label: 'Instagram url', class: 'form-label'
+      = f.text_field :social_media_permalink, class: 'form-control'
+      %p.text-muted
+        that's the URL of the instagram post, e.g. 
+        %em https://www.instagram.com/p/CmEzUiHO0m-/
+  .mt-3
+    = f.submit t('buttons.save'), class: 'btn btn-primary'

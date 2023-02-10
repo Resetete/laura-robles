@@ -30,6 +30,12 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  time:
+    formats:
+      date_with_month: "%d %B '%y"
+      only_year: "'%y"
+      dotted_day: "%d"
+      full_month: '%B'
   devise:
     sessions:
       new:
@@ -62,6 +68,13 @@ en:
     part_1: 'First part'
     part_2: 'Second part'
     use: 'Should this text appear in the "About me" section of the website?'
+  news_contents:
+    title: 'News'
+    new: 'Add a new news text'
+    edit: 'Edit news text'
+    show: 'News text'
+    news_date: 'Date to show on website:' 
+    description: 'Description:'
   buttons:
     contact: 'contact'
     admin_login: 'admin'

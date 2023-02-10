@@ -6,6 +6,7 @@
       Version from
       = content.created_at.strftime('%d/%m/%y %H:%M')
     .row
+      = admin_editor_tools(main_path: 'about_content', object: content)
       - ['en', 'es', 'de'].each do |locale|
         .col-md-3
           - ['part_1', 'part_2'].each do |part|
@@ -16,4 +17,4 @@
       .card.col-md-3
         %h2= t('about_contents.index.used')
         = content.active?
-      = admin_editor_tools(main_path: 'about_content', object: content)
+      

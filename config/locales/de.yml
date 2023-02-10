@@ -1,4 +1,10 @@
 de:
+  time:
+    formats:
+      date_with_month: "%d. %B '%y"
+      dotted_day: "%d."
+      only_year: "'%y"
+      full_month: '%B'
   devise:
     sessions:
       new:
@@ -28,6 +34,13 @@ de:
     part_1: 'Erster Teil'
     part_2: 'Zweiter Teil'
     use: 'Soll dieser Text in der Rubrik "About me" auf der Website erscheinen?'
+  news_contents:
+    title: 'Neuigkeiten'
+    new: 'Füge einen neuen news text hinzu'
+    edit: 'Edit news text'
+    show: 'News text'
+    news_date: 'Datum, das auf der Website angezeigt werden soll:' 
+    description: 'Beschreibung:'
   buttons:
     contact: 'Kontakt'
     admin_login: 'Admin'

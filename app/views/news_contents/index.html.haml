@@ -1,0 +1,26 @@
+%section.admin-pages-section
+  %h1= t('news_contents.title') 
+  = admin_editor_tools(main_path: 'news_content')
+
+  - @news_contents.each do |content|
+    .card
+      .card-body
+        %h5.card-title
+          = content.title
+        %p.card-text
+          .row
+            .col-3
+              %p= t('news_contents.news_date')
+              %p= t('news_contents.description')
+              %p Social media link
+              %p Created at:
+              %p Updated at:
+            .col-9
+              %p= l(content.date, format: :date_with_month)
+              %p= content.content
+              %p= content.social_media_permalink
+              %p= content.created_at.to_date
+              %p= content.updated_at.to_date
+          = admin_editor_tools(main_path: 'news_content', object: content)
+
+      

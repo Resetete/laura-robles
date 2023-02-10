@@ -7,9 +7,15 @@
         %li.nav-item
           .nav-link.admin-pages
             = link_to('Home', root_path(locale: I18n.locale))
-        - navigation_items.each do |item|
-          %li.nav-item
-            .nav-link.admin-pages= item
+        %li.nav-item  
+          .nav-link.admin-pages
+            = link_to('News', news_contents_path(locale: I18n.locale))
+        %li.nav-item  
+          .nav-link.admin-pages
+            = link_to('About', about_contents_path(locale: I18n.locale))
+        %li.nav-item  
+          .nav-link.admin-pages
+            = link_to('Projects', project_contents_path(locale: I18n.locale))
       .d-flex.admin-pages.navbar-nav
         - language_selection(target: target).each do |language|
           .nav-link= language.html_safe
