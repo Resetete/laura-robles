@@ -6,7 +6,7 @@ class NewsContentsController < ApplicationController
   before_action :set_news_content, except: %i[new create index]
 
   def index
-    @news_contents = NewsContent.all
+    @news_contents = NewsContent.order(date: :desc)
   end
 
   def new

@@ -32,7 +32,10 @@
 en:
   time:
     formats:
-      date_with_month: '%d. %B %Y'
+      date_with_month: "%d %B '%y"
+      only_year: "'%y"
+      dotted_day: "%d"
+      full_month: '%B'
   devise:
     sessions:
       new:

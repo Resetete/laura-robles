@@ -1,27 +1,27 @@
 %section.news-section#news
-    #down-looking-face
-        = image_tag('facelookingdown.svg')
-    .news-section-content
-        #news-content-elements
-        #updates-wrapper
-            .headline
-            %h2.title
-                Rehearsal
-            %p.date
-                %span.day 1.
-                %span.month July
-                %span.year= "'22"
-            .news-content
-            .instagram-content-wrapper
-                %blockquote.instagram-media{"data-instgrm-captioned" => "none", "data-instgrm-permalink" => "https://www.instagram.com/p/Cf634StskCJ/?utm_source=ig_embed&utm_campaign=loading", "data-instgrm-version" => "14", :style => "background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:350px; min-width=80px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"}
-                %script{:async => "", :src => "//www.instagram.com/embed.js"}
-            %p.news-content-text
-                Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium po. Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras Cras quis nulla commodo, liquam lectus sed, blandit Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras
-                Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium po. Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras Cras quis nulla commodo, liquam lectus sed, blandit Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras
-                Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium po. Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras Cras quis nulla commodo, liquam lectus sed, blandit Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras
-                Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium po. Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras Cras quis nulla commodo, liquam lectus sed, blandit Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras
-            = contact_button
-            = slogan_animation
-        #news-headline-section
-        = image_tag('news-vertical.svg', class: 'desktop')
-        = image_tag('news-horizontal.svg', class: 'mobile')
+  #down-looking-face
+    = image_tag('facelookingdown.svg')
+  .news-section-content
+    #news-content-elements
+    #updates-wrapper
+      .headline
+      %h2.title
+        = @news_content.title
+      %p.date
+        %span.day
+          = l(@news_content.date, format: :dotted_day)
+        %span.month
+          = l(@news_content.date, format: :full_month)
+        %span.year
+          = l(@news_content.date, format: :only_year)
+      .news-content
+      .instagram-content-wrapper
+        %blockquote.instagram-media{"data-instgrm-captioned" => "none", "data-instgrm-permalink" => "#{@news_content.social_media_permalink}?utm_source=ig_embed&utm_campaign=loading", "data-instgrm-version" => "14", :style => "background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:350px; min-width=80px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"}
+        %script{:async => "", :src => "//www.instagram.com/embed.js"}
+      %p.news-content-text
+        = @news_content.content
+      = contact_button
+      = slogan_animation
+    #news-headline-section
+    = image_tag('news-vertical.svg', class: 'desktop')
+    = image_tag('news-horizontal.svg', class: 'mobile')
