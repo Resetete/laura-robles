@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_05_214142) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_17_150125) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -39,6 +39,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_05_214142) do
     t.datetime "date", null: false
     t.text "content", null: false
     t.string "social_media_permalink"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "projects_tables", force: :cascade do |t|
+    t.text "title_en"
+    t.text "title_es"
+    t.text "title_de"
+    t.text "description_en"
+    t.text "description_es"
+    t.text "description_de"
+    t.text "music_url"
+    t.text "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
