@@ -8,23 +8,31 @@
         %h5.card-title
           = content.title
         %p.card-text
-          .row
-            .col-3
-              %p English description
-              %p Spanish description
-              %p German description
-              %p music player url
-              %p project image url
-              %p Created at:
-              %p Updated at:
-            .col-9
-              %p= content.description_en
-              %p= content.description_es
-              %p= content.description_de
-              %p= content.music_url
-              %p= content.image_url
-              %p= content.created_at.to_date
-              %p= content.updated_at.to_date
+          %table.project-index-table
+            %tr
+              %th 
+              %th 
+            %tr
+              %td English description:
+              %td= content.description_en
+            %tr
+              %td Spanish description:
+              %td= content.description_es
+            %tr
+              %td German description:
+              %td= content.description_de
+            %tr
+              %td music player url:
+              %td= content.music_url
+            %tr
+              %td project image url:
+              %td= content.image_url
+            %tr
+              %td Created at:
+              %td= content.created_at.to_date
+            %tr
+              %td Updated at:
+              %td= content.updated_at.to_date
           = admin_editor_tools(main_path: 'project_content', object: content)
 
       

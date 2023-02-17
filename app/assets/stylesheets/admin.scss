@@ -57,3 +57,14 @@ a:hover {
   color: $primary-color;
 }
 
+/***************/
+/* Projects */
+/**************/
+
+table tr td {
+  padding: 1em;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
