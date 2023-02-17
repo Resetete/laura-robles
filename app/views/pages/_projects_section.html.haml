@@ -9,7 +9,7 @@
           = project.title
         .project-content
           %p= project.public_send("description_#{I18n.locale}")
-        = render 'shared/music_player'
+        = render('shared/music_player', url: project.music_url) unless project.music_url.empty?
       .project-image
         .scene2.parallax-parent
           .parallax-front{'data-depth': 0.1}
