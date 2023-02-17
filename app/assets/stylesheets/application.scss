@@ -641,6 +641,12 @@ svg#filters {
   border-radius: 2em;
   margin: 2em 0;
 }
+
+.blog-social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 /**********************/
 /**** ABOUT section *****/
 /**********************/
@@ -1232,8 +1238,6 @@ svg#filters {
   .blog-article-body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
   .blog-card-element {
@@ -1243,6 +1247,11 @@ svg#filters {
     align-items: center;
     width: 100%;
   }
+
+  .blog-social-media {
+    flex-direction: column;
+  }
+
   /* parallax */
   .scene {
     margin: 0;
