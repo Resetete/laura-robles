@@ -902,7 +902,6 @@ svg#filters {
   width: 100%;
   top: -1px;
   left: 0;
-  -webkit-appearance: none;
   height: 3px;
   z-index:2
 }
@@ -954,10 +953,9 @@ svg#filters {
 }
 
 .controls--actions {
-  display:inline-block;
-  vertical-align: top;
+  display: block;
   margin-top: 10px;
-  float:right;
+  float: right;
 }
 .controls--actions i {
     font-size: 20px;
