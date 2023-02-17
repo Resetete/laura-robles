@@ -11,4 +11,8 @@ class PagesController < ApplicationController
   end
 
   def imprint; end
+
+  def blog
+    @news_contents = NewsContent.order(date: :desc).all
+  end
 end

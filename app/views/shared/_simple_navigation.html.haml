@@ -1,0 +1,14 @@
+%nav.navbar.navbar-expand-lg.bg-light
+  .container-fluid
+    %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarNav", "data-bs-toggle" => "collapse", :type => "button"}
+      %i.fa-solid.fa-burger
+    .collapse.navbar-collapse#navbarSupportedContent
+      %ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        %li.nav-item
+          .navbar-brand.admin-pages
+            = link_to root_path(locale: I18n.locale) do
+              %i.fa-solid.fa-hand-point-left
+              Home
+      .d-flex.admin-pages.navbar-nav
+        - language_selection(target: target).each do |language|
+          .nav-link= language.html_safe

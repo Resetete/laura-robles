@@ -13,7 +13,7 @@
       - @news_contents.each_with_index do |content, index|
         #news-element-wrapper
           %h2.title
-            = content.title
+            = link_to(content.title, blog_path)
           %p.date
             %span.day
               = l(content.date, format: :dotted_day)

@@ -26,6 +26,8 @@ es:
         astrocombo_text: 'El Astrocombo consta de 12 composiciones que no están 100% "terminadas" y que completo con cada invitado, cada invitado tiene espacio para interpretar la música como quiera. Un huésped se queda un máximo de dos años y cada temporada tiene un enfoque diferente.'
     imprint:
       header: 'Aviso legal'
+    blog:
+      header: 'Blog'
   about_contents:
     new: 'Adiciona un texto de about nuevo'
     edit: 'Edita el texto de about'

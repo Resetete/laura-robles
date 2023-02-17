@@ -596,7 +596,27 @@ svg#filters {
   height: 0;
 }
 
+/**********************/
+/**** BLOG section *****/
+/** /blog **************/
+/**********************/
+.blog-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
 
+.blog-card-element {
+  display: flex;
+  justify-content: space-between;
+  width: 40vw;
+  background-color: $primary-color;
+  color: $secondary-color;
+  border-radius: 2em;
+  margin: 2em 0;
+}
 /**********************/
 /**** ABOUT section *****/
 /**********************/

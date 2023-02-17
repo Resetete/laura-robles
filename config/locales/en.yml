@@ -59,6 +59,8 @@ en:
       header: 'Imprint'
       rodrigo: 'Basically all of the illustrations were drawn by the artist'
       images_links: 'Links to the copyright info of other images'
+    blog:
+      header: 'Blog'
   about_contents:
     new: 'Add a new about text'
     edit: 'Edit about text'
