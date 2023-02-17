@@ -43,7 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_17_150125) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "projects_tables", force: :cascade do |t|
+  create_table "project_contents", force: :cascade do |t|
     t.string "title"
     t.text "description_en"
     t.text "description_es"

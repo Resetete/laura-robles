@@ -1,0 +1,30 @@
+- if content.errors.any?
+  The following error occured
+  - content.errors.each do |error|
+    %li= error.message
+
+= form_with model: content, local: true do |f|
+  .row
+    .col-12
+      = f.label :title, 'Project title', class: 'form-label'
+      = f.text_field :title, class: 'form-control', required: true
+    .col-12.pt-3.pb-3
+      = f.label :description_en, label: 'English description', class: 'form-label'
+      = f.text_area :description_en, class: 'form-control', required: true
+    .col-12.pt-3.pb-3
+      = f.label :description_es, label: 'Spanish description', class: 'form-label'
+      = f.text_area :description_es, class: 'form-control', required: true
+    .col-12.pt-3.pb-3
+      = f.label :description_de, label: 'German description', class: 'form-label'
+      = f.text_area :description_de, class: 'form-control', required: true
+    .col-12
+      = f.label :music_url, class: 'form-label'
+      = f.text_field :music_url, class: 'form-control'
+    .col-12
+      = f.label :image_url, label: 'Project image url', class: 'form-label'
+      = f.text_field :image_url, class: 'form-control'
+      %p.text-muted
+        the URL to the project image 
+        %em ../assets/images/project/my_project_image.png
+  .mt-3
+    = f.submit t('buttons.save'), class: 'btn btn-primary'

@@ -1,6 +1,6 @@
-class CreateProjectContentsTable < ActiveRecord::Migration[7.0]
+class CreateProjectContents < ActiveRecord::Migration[7.0]
   def change
-    create_table :projects_tables do |t|
+    create_table :project_contents do |t|
       t.string :title
 
       t.text :description_en

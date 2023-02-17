@@ -77,6 +77,12 @@ en:
     show: 'News text'
     news_date: 'Date to show on website:' 
     description: 'Description:'
+  project_contents:
+    title: 'Project'
+    new: 'Add a new project'
+    edit: 'Edit project'
+    show: 'Project' 
+    description: 'Description:'
   buttons:
     contact: 'contact'
     admin_login: 'admin'

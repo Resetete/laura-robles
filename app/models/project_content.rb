@@ -1,7 +1,5 @@
-class ProjectContent < ActiveRecord
-  validates :title_en, presence: true
-  validates :title_es, presence: true
-  validates :title_de, presence: true
+class ProjectContent < ApplicationRecord
+  validates :title, presence: true
 
   validates :description_en, presence: true
   validates :description_es, presence: true
