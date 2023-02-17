@@ -1220,6 +1220,29 @@ svg#filters {
     height: auto;
   }
 
+  /*Blog*/
+  .blog-wrapper {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .blog-article-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blog-card-element {
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
   /* parallax */
   .scene {
     margin: 0;
