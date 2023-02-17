@@ -8,7 +8,7 @@
         .project-title
           = project.title
         .project-content
-          %p= project.description_en
+          %p= project.public_send("description_#{I18n.locale}")
         = render 'shared/music_player'
       .project-image
         .scene2.parallax-parent
