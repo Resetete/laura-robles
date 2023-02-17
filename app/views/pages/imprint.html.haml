@@ -3,22 +3,46 @@
 .container.mt-3.mb-5   
   %h1= t('pages.imprint.header')
 
-  %h2= t('pages.imprint.images_links')
+  .contact-info.pt-5
+    %h2= t('buttons.contact')
+    %ul.fa-ul
+      %li
+        %span.fa-li
+          %i.fa-regular.fa-id-badge
+        %p Laura Robles 
+        %p 
+          Musterstrasse 11
+          10000 Berlin
+      %li
+        %span.fa-li
+          %i.fa-solid.fa-phone
+        +49 1111111111
+      %li
+        %span.fa-li
+          %i.fa-solid.fa-envelope
+        laura.robles.myemailaddress@gmail.com
+      %li
+        %span.fa-li
+          %i.fa-solid.fa-percent
+        MY STEUER NUMBER
+      
 
-  %p
-    = t('pages.imprint.rodrigo')
-    = link_to 'Rodrigo la Hoz from Peru.', 'https://rodrigolahoz.tumblr.com'
-
-  %ul
-    %li
-      Image on
-      %em News
-      section
-      = link_to 'Image by rawpixel.com on Freepik', 'https://www.freepik.com/free-vector/hand-drawing-illustration-set-communication-icons_3110512.htm#query=news&from_query=no%20news&position=37&from_view=search&track=sph'
-    %li
-      Image on
-      %em Cookie banner
-      = link_to 'Image by pikisuperstar on Freepik', "https://www.freepik.com/free-vector/hand-drawn-halloween-candy-collection_9885936.htm#query=cookie%20punk%20creepy&position=4&from_view=search&track=ais"
-
-  %h2 Cookie banner information
-  = render 'shared/cookie_banner', style: 'display: block; position: unset;'
+  .image-links.pt-5
+    %h2= t('pages.imprint.images_links')
+    %p
+      = t('pages.imprint.rodrigo')
+      = link_to 'Rodrigo la Hoz from Peru.', 'https://rodrigolahoz.tumblr.com'
+    %ul
+      %li
+        Image on
+        %em News
+        section
+        = link_to 'Image by rawpixel.com on Freepik', 'https://www.freepik.com/free-vector/hand-drawing-illustration-set-communication-icons_3110512.htm#query=news&from_query=no%20news&position=37&from_view=search&track=sph'
+      %li
+        Image on
+        %em Cookie banner
+        = link_to 'Image by pikisuperstar on Freepik', "https://www.freepik.com/free-vector/hand-drawn-halloween-candy-collection_9885936.htm#query=cookie%20punk%20creepy&position=4&from_view=search&track=ais"
+  
+  .cookie.pt-5
+    %h2 Cookie banner information
+    = render 'shared/cookie_banner', style: 'display: block; position: unset;'
