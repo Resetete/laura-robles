@@ -8,6 +8,7 @@ class PagesController < ApplicationController
   def home
     @about_content = AboutContent.where(active: true).first
     @news_contents = NewsContent.order(date: :desc).first(3)
+    @projects = ProjectContent.all
   end
 
   def imprint; end
