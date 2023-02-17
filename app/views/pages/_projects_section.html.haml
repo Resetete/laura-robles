@@ -1,0 +1,18 @@
+%section.projects-section#projects
+  = image_tag('projects-headline-white.svg', id: 'project-headline')
+  - if admin_signed_in?
+    = admin_editor_tools(main_path: 'project_content', object: @project_content)
+  - @projects.each_with_index do |project, index|
+    .project-wrapper{ class: "order-text-#{index.even? ? 'left' : 'right'}" }
+      .project-text
+        .project-title
+          = project.title
+        .project-content
+          %p= project.public_send("description_#{I18n.locale}")
+        = render('shared/music_player', url: project.music_url) unless project.music_url.empty?
+      .project-image
+        .scene2.parallax-parent
+          .parallax-front{'data-depth': 0.1}
+            = image_tag("#{project.image_url}-white.svg")
+          .parallax-back{'data-depth': 0.3}
+            = image_tag("#{project.image_url}-black.svg")

@@ -641,6 +641,12 @@ svg#filters {
   border-radius: 2em;
   margin: 2em 0;
 }
+
+.blog-social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 /**********************/
 /**** ABOUT section *****/
 /**********************/
@@ -1218,6 +1224,32 @@ svg#filters {
     align-items: center;
     flex-direction: column-reverse;
     height: auto;
+  }
+
+  /*Blog*/
+  .blog-wrapper {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .blog-article-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blog-card-element {
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .blog-social-media {
+    flex-direction: column;
   }
 
   /* parallax */

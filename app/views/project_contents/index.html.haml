@@ -1,0 +1,38 @@
+%section.admin-pages-section
+  %h1= t('project_contents.title') 
+  = admin_editor_tools(main_path: 'project_content')
+
+  - @project_contents.each do |content|
+    .card
+      .card-body
+        %h5.card-title
+          = content.title
+        %p.card-text
+          %table.project-index-table
+            %tr
+              %th 
+              %th 
+            %tr
+              %td English description:
+              %td= content.description_en
+            %tr
+              %td Spanish description:
+              %td= content.description_es
+            %tr
+              %td German description:
+              %td= content.description_de
+            %tr
+              %td music player url:
+              %td= content.music_url
+            %tr
+              %td project image url:
+              %td= content.image_url
+            %tr
+              %td Created at:
+              %td= content.created_at.to_date
+            %tr
+              %td Updated at:
+              %td= content.updated_at.to_date
+          = admin_editor_tools(main_path: 'project_content', object: content)
+
+      
