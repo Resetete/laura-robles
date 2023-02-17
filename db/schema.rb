@@ -44,14 +44,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_17_150125) do
   end
 
   create_table "projects_tables", force: :cascade do |t|
-    t.text "title_en"
-    t.text "title_es"
-    t.text "title_de"
+    t.string "title"
     t.text "description_en"
     t.text "description_es"
     t.text "description_de"
-    t.text "music_url"
-    t.text "image_url"
+    t.string "music_url"
+    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
