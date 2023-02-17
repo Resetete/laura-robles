@@ -7,21 +7,27 @@
       .headline
       - if admin_signed_in?
         = admin_editor_tools(main_path: 'news_content', object: @news_content)
-      %h2.title
-        = @news_content.title
-      %p.date
-        %span.day
-          = l(@news_content.date, format: :dotted_day)
-        %span.month
-          = l(@news_content.date, format: :full_month)
-        %span.year
-          = l(@news_content.date, format: :only_year)
-      .news-content
-        .instagram-content-wrapper
-          %blockquote.instagram-media{"data-instgrm-captioned" => "none", "data-instgrm-permalink" => "#{@news_content.social_media_permalink}?utm_source=ig_embed&utm_campaign=loading", "data-instgrm-version" => "14", :style => "background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:350px; min-width=80px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"}
-          %script{:async => "", :src => "//www.instagram.com/embed.js"}
-        %p.news-content-text
-          = @news_content.content
+        .text-muted
+          Note: the instragam publication is only shown for the latest news. To see the other instagram publication go to the 
+        = link_to('blog', blog_path)
+      - @news_contents.each_with_index do |content, index|
+        #news-element-wrapper
+          %h2.title
+            = content.title
+          %p.date
+            %span.day
+              = l(content.date, format: :dotted_day)
+            %span.month
+              = l(content.date, format: :full_month)
+            %span.year
+              = l(content.date, format: :only_year)
+          .news-content
+            - if index == 0
+              .instagram-content-wrapper
+                %blockquote.instagram-media{"data-instgrm-captioned" => "none", "data-instgrm-permalink" => "#{content.social_media_permalink}?utm_source=ig_embed&utm_campaign=loading", "data-instgrm-version" => "14", :style => "background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:350px; min-width=80px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"}
+                %script{:async => "", :src => "//www.instagram.com/embed.js"}
+            %p.news-content-text
+              = content.content
       = contact_button
       = slogan_animation
     #news-headline-section
