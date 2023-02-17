@@ -486,6 +486,30 @@ a:hover {
 /*** News section *****/
 /**********************/
 
+.title a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+  color: $primary-color;
+}
+
+.title a:focus {
+  border-bottom: 1px solid;
+  background: $primary-color;
+  color: $secondary-color;
+}
+
+.title a:hover {
+  background: $primary-color;
+  color: $secondary-color;
+  padding: 5px;
+}
+
+.title a:active {
+  background: $primary-color;
+  color: $secondary-color;
+}
+
 .news-section {
   position: relative;
   background-color: $secondary-color;
