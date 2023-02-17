@@ -1,0 +1,24 @@
+= render 'shared/simple_navigation', target: get_current_page_path(request)
+
+.container.mt-3.mb-5
+  %h1= t('pages.blog.header')
+  .blog-wrapper
+    - @news_contents.each do |content|
+      .card.bg-dark.row.blog-card-element
+        .card-body
+          %h2.card-title
+            = content.title
+          .card-text.row
+            .col-4
+              %p.date
+                %span.day
+                  = l(content.date, format: :dotted_day)
+                %span.month
+                  = l(content.date, format: :full_month)
+                %span.year
+                  = l(content.date, format: :only_year)
+              %p.news-content-text
+                = content.content
+            .col-8
+              %blockquote.instagram-media{"data-instgrm-captioned" => "none", "data-instgrm-permalink" => "#{content.social_media_permalink}?utm_source=ig_embed&utm_campaign=loading", "data-instgrm-version" => "14", :style => "background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:350px; min-width=80px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"}
+                %script{:async => "", :src => "//www.instagram.com/embed.js"}

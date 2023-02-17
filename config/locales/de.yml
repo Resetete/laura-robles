@@ -26,6 +26,8 @@ de:
         astrocombo_text: 'Die Astrocombo besteht aus 12 Kompositionen, die nicht 100%ig "fertig" sind und die ich mit jedem Gast vervollständige, jeder Gast hat Raum, die Musik so zu interpretieren, wie er möchte. Ein Gast bleibt maximal zwei Jahre und jede Saison hat einen anderen Schwerpunkt.'
     imprint:
       header: 'Impressum'
+    blog:
+      header: 'Blog'
   about_contents:
     new: 'Erstelle einen neuen about text'
     edit: 'Bearbeite den about text'
