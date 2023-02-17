@@ -33,11 +33,17 @@ de:
     use: 'Soll dieser Text in der Rubrik "About me" auf der Website erscheinen?'
   news_contents:
     title: 'Neuigkeiten'
-    new: 'Füge einen neuen news text hinzu'
-    edit: 'Edit news text'
-    show: 'News text'
+    new: 'Füge einen neuen News-Text hinzu'
+    edit: 'Editiere den News Text'
+    show: 'News Text'
     news_date: 'Datum, das auf der Website angezeigt werden soll:' 
     description: 'Beschreibung:'
+  project_contents:
+    title: 'Projekte'
+    new: 'Füge ein neues Projekt hinzu'
+    edit: 'Editiere ein Projekt'
+    show: 'Projekt' 
+    description: 'Beschreibung'
   buttons:
     contact: 'Kontakt'
     admin_login: 'Admin'

@@ -32,10 +32,16 @@ es:
     use: '¿Debe aparecer este texto en la sección "About me" del sitio web?'
   news_contents:
     title: 'Novedades'
-    new: 'Añadir un nuevo texto de novedades'
+    new: 'Agregar un nuevo texto de novedades'
     edit: 'Editar texto de novedades'
     show: 'Texto de novedades'
     news_date: 'Fecha que se mostrará en el sitio web:'
+    description: 'Descripción:'
+  project_contents:
+    title: 'Proyecto'
+    new: 'Agregar un nuevo proyecto'
+    edit: 'Editar proyecto'
+    show: 'Proyecto' 
     description: 'Descripción:'
   buttons:
     contact: 'contacto'
