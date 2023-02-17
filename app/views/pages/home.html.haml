@@ -15,31 +15,7 @@
             = language_selection_html_safe
           = render 'video_section'
           = render 'news_section'
-          %section.about-section#about
-            .about-text-wrapper                  
-              #about-text-part1
-                - if admin_signed_in?
-                  = admin_editor_tools(main_path: 'about_content', object: @about_content)
-                %p= sanitize(@about_content.part_1.fetch(I18n.locale.to_s))
-              #about-text-part2
-                .text
-                  %p
-                    = @about_content.part_2.fetch(I18n.locale.to_s)
-                    = link_to(t('pages.home_page.about_section.about_button'), 'mailto:lauraroblesinfo@gmail.com', class: 'btn btn-outline-light mt-2')
-                .about-section-heading
-                  = image_tag('about.svg')
-          %section.images-section#images
-            .row-first
-              .scene#bass-player-illustration.parallax-parent
-                .parallax-back{'data-depth': 0.1}
-                  = image_tag('illustration/inferno-bass-player-bg-layer.svg', id: 'bass-bg')
-                .parallax-front{'data-depth': 0.3}
-                  = image_tag('illustration/inferno-bass-player-front-layer.svg', id: 'bass-front')
-              = image_tag('buttons/bass-bg-black.svg', class: 'bass-button')
-            .row-second
-              = image_tag('videos/laura-video-gif.gif', class: 'image-cajon-player')
-              = image_tag('buttons/bass.svg', class: 'cajon-button')
-              .second-row-part1
-              .second-row-part2
+          = render 'about_section'
+          = render 'images_section'
           = render 'projects_section'
-          = render('shared/footer')
+          = render 'shared/footer'
