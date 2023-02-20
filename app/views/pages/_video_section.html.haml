@@ -10,21 +10,11 @@
       .row.full-height.justify-content-center
         .col-lg-10.col-xl-8.align-self-center.padding-tb
           .section.mx-auto.text-center.slider-height-padding
-            %input#slider-1.checkbox.frst{'checked': "checked", 'name': "slider", 'type': "radio"}/
-            %label.bg-cajon.hovertext{for: "slider-1", 'data-hover': 'Cajon :)'}
-            %input#slider-2.checkbox.scnd{'name': "slider", 'type': "radio"}/
-            %label.bg-bass.hovertext{for: "slider-2", 'data-hover': 'Bass'}
-            %input#slider-3.checkbox.thrd{'name': "slider", 'type': "radio"}/
-            %label.bg-cajon.hovertext{for: "slider-3", 'data-hover': 'Cajon'}
-            %input#slider-4.checkbox.foth{'name': "slider", 'type': "radio"}/
-            %label.bg-bass.hovertext{for: "slider-4", 'data-hover': 'Bass'}
+            - @videos.each_with_index do |video, index|
+              %input.checkbox{id: "slider-#{index+1}", class: ordinalize(index+1), checked: ("checked" if index == 0), 'name': "slider", 'type': "radio"}/
+              %label.hovertext{class: "bg-#{video.instrument}", for: "slider-#{index+1}", 'data-hover': video.instrument.humanize }
             %ul
-              / add -nocookie to the youtube like to disable cookie trackers from youtube: https://cookie-script.com/blog/how-to-add-youtube-videos-without-cookies
-              %li.video-wrapper
-                %iframe{:allow => "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube-nocookie.com/embed/VfAlUSPLzNk?start=230", :title => "YouTube video player"}
-              %li.video-wrapper
-                %iframe{:allow => "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube-nocookie.com/embed/gpSdOwjbD4Q", :title => "YouTube video player"}
-              %li.video-wrapper
-                %iframe{:allow => "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube-nocookie.com/embed/orwZBgfxqoo", :title => "YouTube video player"}
-              %li.video-wrapper
-                %iframe{:allow => "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube-nocookie.com/embed/LLWE7mp-Yg8", :title => "YouTube video player"}
+              - @videos.each do |video|
+                %li.video-wrapper
+                  / add -nocookie to the youtube like to disable cookie trackers from youtube: https://cookie-script.com/blog/how-to-add-youtube-videos-without-cookies
+                  %iframe{:allow => "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube-nocookie.com/embed/#{video.video_url}", :title => "YouTube video player"}

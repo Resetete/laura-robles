@@ -6,11 +6,11 @@
 = form_with model: content, local: true do |f|
   .row
     .col-12
-      = f.label :video_url, label: 'Video url', class: 'form-label'
+      = f.label :video_url, label: 'Video url id', class: 'form-label'
       = f.text_field :video_url, class: 'form-control', required: true
       %p.text-muted
-        the URL to the youtube video
-        %em https://www.youtube-nocookie.com/embed/gpSdOwjbD4Q
+        the id of the youtube video from the shared url
+        %em https://www.youtube-nocookie.com/embed/gpSdOwjbD4Q --> id: 'gpSdOwjbD4Q'
     .col-12
       = f.label :instrument, 'Instrument for video select buttons', class: 'form-label'
       = f.select :instrument, VideoPlayerContent.instruments.keys.map{ |instrument| [instrument.humanize, instrument] }, {required: true}, { class: 'form-control' }

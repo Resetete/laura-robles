@@ -117,4 +117,29 @@ module ApplicationHelper
       "#{[split_path[4], split_path[2].chomp('s')].join('_')}_path"
     end
   end
+
+  def ordinalize(number)
+    case number
+    when 1
+      'first'
+    when 2
+      'second'
+    when 3
+      'third'
+    when 4
+      'fourth'
+    when 5
+      'fifth'
+    when 6
+      'sixth'
+    when 7
+      'seventh'
+    when 8
+      'eigth'
+    when 9
+      'ninth'
+    when 10
+      'tenth'
+    end
+  end
 end

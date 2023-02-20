@@ -9,6 +9,7 @@ class PagesController < ApplicationController
     @about_content = AboutContent.where(active: true).first
     @news_contents = NewsContent.order(date: :desc).first(3)
     @projects = ProjectContent.all
+    @videos = VideoPlayerContent.order(updated_at: :desc)
   end
 
   def imprint; end

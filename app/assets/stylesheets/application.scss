@@ -31,7 +31,7 @@ html {
 }
 
 
-body { 
+body {
   /*overflow-x: hidden;*/
   min-height: 100vh;
   overflow: auto;
@@ -113,7 +113,7 @@ a:hover {
     text-decoration: none;
     color: black;
     filter: drop-shadow(.5px 1px .5px white);
-    /*text-shadow: 
+    /*text-shadow:
       -0.5px 0.5px 0 white,
       0.5px 0.5px 0 white,
       0.5px -0.5px 0 white,
@@ -186,11 +186,11 @@ a:hover {
 #paper-window {
   height: 100vh;
   width: 100vw;
-  position: relative; 
+  position: relative;
   overflow-x: hidden;
   overflow-y: scroll;
   z-index: 2;
-  
+
   &.tilt {
     overflow: hidden;
     pointer-events: none;
@@ -220,7 +220,7 @@ a:hover {
   user-select: none;
   span {
     position: relative;
-    
+
     &, &:before, &:after {
       display: block;
       width: 45px;
@@ -229,14 +229,14 @@ a:hover {
       /* highlight hamburger menu on black background */
       filter: drop-shadow(0.5px 1px 0.5px white)
     }
-    
+
     &:before, &:after {
       content: '';
       position: absolute;
     }
     &:before { bottom: -14px; }
     &:after { bottom: -28px; }
-    
+
   }
 }
 
@@ -247,7 +247,7 @@ a:hover {
   width: 45px;
   height: 34px;
   cursor: pointer;
-  
+
   &:before, &:after {
       content: '';
       position: absolute;
@@ -373,13 +373,13 @@ a:hover {
     animation-play-state: running;
 }
 @keyframes border-transform {
-  0%,100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; } 
-  14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; } 
-  28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; } 
-  42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; } 
-  56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; } 
-  70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; } 
-  84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; } 
+  0%,100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; }
+  14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; }
+  28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; }
+  42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; }
+  56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; }
+  70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; }
+  84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; }
 }
 
 .slider-height-padding {
@@ -441,22 +441,22 @@ a:hover {
   transition: all 0.5s ease;
 }
 
-.checkbox.frst:checked ~ ul li:nth-child(1) {
+.checkbox.first:checked ~ ul li:nth-child(1) {
   opacity: 1;
   pointer-events: auto;
   border-radius: 16px;
 }
-.checkbox.scnd:checked ~ ul li:nth-child(2) {
+.checkbox.second:checked ~ ul li:nth-child(2) {
   opacity: 1;
   pointer-events: auto;
   border-radius: 16px;
 }
-.checkbox.thrd:checked ~ ul li:nth-child(3) {
+.checkbox.third:checked ~ ul li:nth-child(3) {
   opacity: 1;
   pointer-events: auto;
   border-radius: 16px;
 }
-.checkbox.foth:checked ~ ul li:nth-child(4) {
+.checkbox.fourth:checked ~ ul li:nth-child(4) {
   opacity: 1;
   pointer-events: auto;
   border-radius: 16px;
@@ -1234,7 +1234,7 @@ svg#filters {
     align-items: center;
     width: 100%;
   }
-  
+
   .blog-article-body {
     display: flex;
     flex-direction: column;
