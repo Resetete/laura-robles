@@ -45,9 +45,9 @@ de:
     show: 'Projekt'
     description: 'Beschreibung'
   video_contents:
-    title: 'Video'
+    title: 'Videos'
     new: 'Füge ein neues Video hinzu'
-    edit: 'Editiere das video'
+    edit: 'Editiere das Video'
     show: 'Video'
     description: 'Beschreibung:'
   buttons:

@@ -78,7 +78,7 @@ en:
     show: 'Project'
     description: 'Description:'
   video_contents:
-    title: 'Video'
+    title: 'Videos'
     new: 'Add a new video'
     edit: 'Edit video'
     show: 'Video'

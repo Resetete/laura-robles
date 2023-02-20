@@ -44,7 +44,7 @@ es:
     show: 'Proyecto'
     description: 'Descripción:'
   video_contents:
-    title: 'Video'
+    title: 'Videos'
     new: 'Agregar un nuevo video'
     edit: 'Editar video'
     show: 'Video'
