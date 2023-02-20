@@ -3,6 +3,10 @@
   = image_tag('laura-portrait.svg', id: 'laura-portrait-video')
   .section.full-height.over-hide.px-4.px-sm-0
     .container
+      - if admin_signed_in?
+        .row.justify-content-md-center
+          .col-1
+            = admin_editor_tools(main_path: 'video_player_content', object: @video_content)
       .row.full-height.justify-content-center
         .col-lg-10.col-xl-8.align-self-center.padding-tb
           .section.mx-auto.text-center.slider-height-padding

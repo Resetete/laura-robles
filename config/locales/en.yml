@@ -43,7 +43,7 @@ en:
   pages:
     home_page:
       about_section:
-        about_text: 
+        about_text:
           part_1_html: "My name is <span class='text-highlight'> Laura Robles Marcuello</span>, I was born on 21.07.1981 in Swaziland, Mbabane because my dad (Peruvian) worked nearby and then we went to Cape Verde for a while. My mom (Argentina) got tired of being in Africa and we moved to Lima."
           part_2: 'When I was 4 years old I started playing cajon, my first teacher was Amador Chebo Ballumbrosio, I was with him until I was 12 years old, then he never wanted to give me lessons again, he told me that I asked too many questions. My neighbor Susana Baca, Peruvian singer, opened an institute called Negro Continuo and I could follow theory classes there with Nilo Borges, Cuban violinist and an incredible person who gave me hours of teaching for years and in parallel I could listen to rehearsals, meet many musicians who passed through there and play with my first bands. Then I met Laureano Rigol and Roberto Borrell, both Cubans, with whom I learned technique and theory, traditional and popular Cuban music, among other things. I started playing electric bass at the age of 20, I formed different projects, but so far the most important project is the Astrocombo.'
           part_3: 'I have worked with musicians from many countries and participated in international festivals. Currently, I spend most of my time researching different ways of writing traditional rhythms, how to explain what groove is and composing. I also have an experimental music trio called Tripas, I am part of the band Perfektomat led by Joscha Oetz, I work together with Peter Ehwald, our project is called Camina, a duo with Carlos Corona and I work on my solo project Antigroove.'
@@ -69,13 +69,19 @@ en:
     new: 'Add a new news text'
     edit: 'Edit news text'
     show: 'News text'
-    news_date: 'Date to show on website:' 
+    news_date: 'Date to show on website:'
     description: 'Description:'
   project_contents:
     title: 'Project'
     new: 'Add a new project'
     edit: 'Edit project'
-    show: 'Project' 
+    show: 'Project'
+    description: 'Description:'
+  video_contents:
+    title: 'Video'
+    new: 'Add a new video'
+    edit: 'Edit video'
+    show: 'Video'
     description: 'Description:'
   buttons:
     contact: 'contact'

@@ -1,0 +1,24 @@
+%section.admin-pages-section
+  %h1= t('video_contents.title')
+  = admin_editor_tools(main_path: 'video_player_content')
+
+  - @video_contents.each do |content|
+    .card
+      .card-body
+        %h5.card-title
+          Video Player
+        %p.card-text
+          %table.video-index-table
+            %tr
+              %th
+              %th
+            %tr
+              %td Video URL:
+              %td= content.video_url
+            %tr
+              %td
+                %iframe{:allow => "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube-nocookie.com/embed/VfAlUSPLzNk?start=230", :title => "YouTube video player"}
+            %tr
+              %td Instrument:
+              %td= content.instrument
+          = admin_editor_tools(main_path: 'video_player_content', object: content)
