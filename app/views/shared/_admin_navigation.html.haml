@@ -7,13 +7,16 @@
         %li.nav-item
           .nav-link.admin-pages
             = link_to('Home', root_path(locale: I18n.locale))
-        %li.nav-item  
+        %li.nav-item
           .nav-link.admin-pages
             = link_to('News', news_contents_path(locale: I18n.locale))
-        %li.nav-item  
+        %li.nav-item
+          .nav-link.admin-pages
+            = link_to('Videos', video_player_contents_path(locale: I18n.locale))
+        %li.nav-item
           .nav-link.admin-pages
             = link_to('About', about_contents_path(locale: I18n.locale))
-        %li.nav-item  
+        %li.nav-item
           .nav-link.admin-pages
             = link_to('Projects', project_contents_path(locale: I18n.locale))
       .d-flex.admin-pages.navbar-nav

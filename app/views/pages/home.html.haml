@@ -13,59 +13,9 @@
           %section.start-section{'data-turbo': "false"}
             = social_media_helper(animation: 'fa-flip', direction: 'vertical')
             = language_selection_html_safe
-          %section.video-section#videos
-            = image_tag('video-header.svg', id: 'video-header')
-            = image_tag('laura-portrait.svg', id: 'laura-portrait-video')
-            .section.full-height.over-hide.px-4.px-sm-0
-              .container
-                .row.full-height.justify-content-center
-                  .col-lg-10.col-xl-8.align-self-center.padding-tb
-                    .section.mx-auto.text-center.slider-height-padding
-                      %input#slide-1.checkbox.frst{'checked': "checked", 'name': "slider", 'type': "radio"}/
-                      %label.bg-cajon.hovertext{for: "slide-1", 'data-hover': 'Cajon :)'}
-                      %input#slider-2.checkbox.scnd{'name': "slider", 'type': "radio"}/
-                      %label.bg-bass.hovertext{for: "slider-2", 'data-hover': 'Bass'}
-                      %input#slider-3.checkbox.thrd{'name': "slider", 'type': "radio"}/
-                      %label.bg-cajon.hovertext{for: "slider-3", 'data-hover': 'Cajon'}
-                      %input#slider-4.checkbox.foth{'name': "slider", 'type': "radio"}/
-                      %label.bg-bass.hovertext{for: "slider-4", 'data-hover': 'Bass'}
-                      %input#slider-4.checkbox.foth{'name': "slider", 'type': "radio"}/
-                      %ul
-                        / add -nocookie to the youtube like to disable cookie trackers from youtube: https://cookie-script.com/blog/how-to-add-youtube-videos-without-cookies
-                        %li.video-wrapper
-                          %iframe{:allow => "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube-nocookie.com/embed/VfAlUSPLzNk?start=230", :title => "YouTube video player"}
-                        %li.video-wrapper
-                          %iframe{:allow => "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube-nocookie.com/embed/gpSdOwjbD4Q", :title => "YouTube video player"}
-                        %li.video-wrapper
-                          %iframe{:allow => "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube-nocookie.com/embed/orwZBgfxqoo", :title => "YouTube video player"}
-                        %li.video-wrapper
-                          %iframe{:allow => "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube-nocookie.com/embed/LLWE7mp-Yg8", :title => "YouTube video player"}
+          = render 'video_section'
           = render 'news_section'
-          %section.about-section#about
-            .about-text-wrapper                  
-              #about-text-part1
-                - if admin_signed_in?
-                  = admin_editor_tools(main_path: 'about_content', object: @about_content)
-                %p= sanitize(@about_content.part_1.fetch(I18n.locale.to_s))
-              #about-text-part2
-                .text
-                  %p
-                    = @about_content.part_2.fetch(I18n.locale.to_s)
-                    = link_to(t('pages.home_page.about_section.about_button'), 'mailto:lauraroblesinfo@gmail.com', class: 'btn btn-outline-light mt-2')
-                .about-section-heading
-                  = image_tag('about.svg')
-          %section.images-section#images
-            .row-first
-              .scene#bass-player-illustration.parallax-parent
-                .parallax-back{'data-depth': 0.1}
-                  = image_tag('illustration/inferno-bass-player-bg-layer.svg', id: 'bass-bg')
-                .parallax-front{'data-depth': 0.3}
-                  = image_tag('illustration/inferno-bass-player-front-layer.svg', id: 'bass-front')
-              = image_tag('buttons/bass-bg-black.svg', class: 'bass-button')
-            .row-second
-              = image_tag('videos/laura-video-gif.gif', class: 'image-cajon-player')
-              = image_tag('buttons/bass.svg', class: 'cajon-button')
-              .second-row-part1
-              .second-row-part2
+          = render 'about_section'
+          = render 'images_section'
           = render 'projects_section'
-          = render('shared/footer')
+          = render 'shared/footer'
