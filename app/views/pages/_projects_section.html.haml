@@ -12,7 +12,7 @@
         = render('shared/music_player', url: project.music_url) unless project.music_url.empty?
       .project-image
         .scene2.parallax-parent
-          .parallax-front{'data-depth': 0.1}
-            = image_tag("#{project.image_url}-white.svg")
-          .parallax-back{'data-depth': 0.3}
-            = image_tag("#{project.image_url}-black.svg")
+          -# .parallax-front{'data-depth': 0.1}
+          -#   = image_tag("#{project&.image}-white.svg")
+          -# .parallax-back{'data-depth': 0.3}
+          -#   = image_tag("#{project&.image}-black.svg")

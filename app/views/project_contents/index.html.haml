@@ -1,5 +1,5 @@
 %section.admin-pages-section
-  %h1= t('project_contents.title') 
+  %h1= t('project_contents.title')
   = admin_editor_tools(main_path: 'project_content')
 
   - @project_contents.each do |content|
@@ -10,8 +10,8 @@
         %p.card-text
           %table.project-index-table
             %tr
-              %th 
-              %th 
+              %th
+              %th
             %tr
               %td English description:
               %td= content.description_en
@@ -26,7 +26,7 @@
               %td= content.music_url
             %tr
               %td project image url:
-              %td= content.image_url
+              %td= content.image
             %tr
               %td Created at:
               %td= content.created_at.to_date
@@ -35,4 +35,3 @@
               %td= content.updated_at.to_date
           = admin_editor_tools(main_path: 'project_content', object: content)
 
-      
