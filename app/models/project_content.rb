@@ -6,7 +6,9 @@ class ProjectContent < ApplicationRecord
   validates :description_de, presence: true
 
   # active_storage - image upload
-  has_one_attached :image
+  has_one_attached :image do |attachable|
+    attachable.variant :thumb, resize_to_limit: [100, 100]
+  end
 
   # call a custom validation
   validate :acceptable_image

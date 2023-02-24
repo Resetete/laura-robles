@@ -17,6 +17,9 @@ gem 'sprockets-rails'
 # User authentication / login area
 gem 'devise'
 
+# request
+gem 'rest-client'
+
 # use postgres
 gem 'pg'
 
@@ -68,7 +71,7 @@ gem 'bootsnap', require: false
 # gem "sassc-rails"
 
 # Allow upload of images to dropbox
-gem 'activestorage-dropbox'    # adapter for dropbox
+gem 'activestorage-dropbox', git: 'git@github.com:Resetete/activestorage-dropbox.git' # adapter for dropbox, acounts for missing custom_metadata
 gem 'dropbox_api'              # required for `activestorage-dropbox` gem
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]

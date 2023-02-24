@@ -15,7 +15,6 @@ class ProjectContentsController < ApplicationController
 
   def create
     @project_content = ProjectContent.new(project_content_params)
-    binding.pry
     if @project_content.save
       flash[:notice] = 'successfully created'
       redirect_to project_contents_path
