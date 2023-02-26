@@ -28,8 +28,8 @@ class ProjectContent < ApplicationRecord
       errors.add(:image, "size #{image_size} MB exceeds 1 MB limit")
     end
 
-    acceptable_types = ['image/jpeg', 'image/jpg', 'image/png']
-    errors.add(:image, 'must be a JPEG or PNG') unless acceptable_types.include?(image.content_type)
+    acceptable_types = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']
+    errors.add(:image, 'must be a JPEG, GIF, SVG or PNG') unless acceptable_types.include?(image.content_type)
   end
 
   # define the after_save action to remove an image

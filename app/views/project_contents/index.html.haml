@@ -27,6 +27,10 @@
             %tr
               %td project image url:
               %td= content.image.inspect
+            - if content.image.attached? && content.image.variable?
+              %tr
+                %td= image_tag(content.image.variant(resize_to_limit: [75, 75]))
+                %td= content.image.filename
             %tr
               %td Created at:
               %td= content.created_at.to_date
