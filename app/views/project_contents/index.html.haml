@@ -24,13 +24,14 @@
             %tr
               %td music player url:
               %td= content.music_url
-            %tr
-              %td project image url:
-              %td= content.image.inspect
-            - if content.image.attached? && content.image.variable?
+            - if content.image_black.attached? && content.image_black.variable?
               %tr
-                %td= image_tag(content.image.variant(resize_to_limit: [75, 75]))
-                %td= content.image.filename
+                %td= image_tag(content.image_black.variant(resize_to_limit: [75, 75]))
+                %td= content.image_black.filename
+            - if content.image_white.attached? && content.image_white.variable?
+              %tr
+                %td= image_tag(content.image_white.variant(resize_to_limit: [75, 75]))
+                %td= content.image_white.filename
             %tr
               %td Created at:
               %td= content.created_at.to_date

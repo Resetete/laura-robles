@@ -59,7 +59,8 @@ class ProjectContentsController < ApplicationController
       :description_en,
       :description_es,
       :description_de,
-      :image,
+      :image_white,
+      :image_black,
       :music_url
     )
   end
