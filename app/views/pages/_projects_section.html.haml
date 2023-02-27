@@ -13,6 +13,8 @@
       .project-image
         .scene2.parallax-parent
           .parallax-front{'data-depth': 0.1}
-            = image_tag("#{project.image_url}-white.svg")
-          .parallax-back{'data-depth': 0.3}
-            = image_tag("#{project.image_url}-black.svg")
+            - if project.image_black.attached? && project.image_black.variable?
+              = image_tag(project.image_black)
+          .parallax-back{'data-depth': 0.15}
+            - if project.image_white.attached? && project.image_white.variable?
+              = image_tag(project.image_white)
