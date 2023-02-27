@@ -15,6 +15,6 @@
           .parallax-front{'data-depth': 0.1}
             - if project.image_black.attached? && project.image_black.variable?
               = image_tag(project.image_black)
-          .parallax-back{'data-depth': 0.2}
+          .parallax-back{'data-depth': 0.15}
             - if project.image_white.attached? && project.image_white.variable?
               = image_tag(project.image_white)
