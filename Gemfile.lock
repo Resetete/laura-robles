@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:Resetete/activestorage-dropbox.git
-  revision: 722b4b135bbab97058965f10dbaa27fab491a9e8
+  revision: 0cce2817b737d26152ae35abfad70225a75e623d
   specs:
     activestorage-dropbox (1.0.0)
       dropbox_api (~> 0.1.21)
