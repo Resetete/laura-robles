@@ -20,20 +20,12 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   window.addEventListener('deviceorientation', initFallback);
   console.log('mobile view');
    } else {
-      var scene = $('#scene0').get(0);
-      var parallaxInstance = new Parallax(scene0);
-
-      var scene = $('#scene1').get(0);
-      var parallaxInstance = new Parallax(scene1);
-
-      var scene2 = $('#scene2').get(0);
-      var parallaxInstance2 = new Parallax(scene2);
-
-      var scene3 = $('#scene3').get(0);
-      var parallaxInstance3 = new Parallax(scene3);
-
-      var scene4 = $('#scene4').get(0);
-      var parallaxInstance4 = new Parallax(scene4);
+      for(var i=0; i<number_images; i++) {
+        var type = 'scene';
+        window[type + i] = $("#scene" + i).get(0);
+        var parallaxInstance = new Parallax(window[type + i]);
+        console.log(window[type + i]);
+      }
    }
 
 function initFallback() {
