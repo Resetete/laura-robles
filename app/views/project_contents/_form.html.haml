@@ -44,5 +44,10 @@
       = f.file_field :image_white, class: 'form-control'
       %p.text-muted
         upload a new white image (as background)
+    .col-12
+      = f.label :audio_file, label: 'Audio example file', class: 'form-label'
+      = f.file_field :audio_file, class: 'form-control'
+      %p.text-muted
+        upload an audio file
   .mt-3
     = f.submit t('buttons.save'), class: 'btn btn-primary'

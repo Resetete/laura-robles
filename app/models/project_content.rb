@@ -13,6 +13,8 @@ class ProjectContent < ApplicationRecord
     attachable.variant :thumb, resize_to_limit: [100, 100]
   end
 
+  has_one_attached :audio_file
+
   # call a custom validation
   validate :acceptable_image_black
   validate :acceptable_image_white
