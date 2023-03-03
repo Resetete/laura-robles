@@ -425,7 +425,8 @@ a:hover {
   border: 5px solid $secondary-color;
   background-size: cover;
   background-position: center;
-  border-radius: 50%;
+  pointer-events: auto;
+  border-radius: 16px;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
@@ -435,7 +436,6 @@ a:hover {
   color: #343434;
   writing-mode: vertical-rl;
   opacity: 0;
-  pointer-events: none;
   box-shadow: 0 8px 25px 0 rgba(16,39,112,.1);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;

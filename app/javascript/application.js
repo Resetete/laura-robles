@@ -13,9 +13,6 @@ import jquery from 'jquery';
 window.jQuery = jquery
 window.$ = jquery
 
-// Define a variable to check in inlined HTML script
-console.log(test8);
-
 // Parallax effects for some images
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   //Mobile
@@ -23,23 +20,20 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   window.addEventListener('deviceorientation', initFallback);
   console.log('mobile view');
    } else {
-      var scene = $('.scene').get(0);
-      var parallaxInstance = new Parallax(scene);
+      var scene = $('#scene0').get(0);
+      var parallaxInstance = new Parallax(scene0);
 
-      var scene2 = $('.scene2').get(0);
+      var scene = $('#scene1').get(0);
+      var parallaxInstance = new Parallax(scene1);
+
+      var scene2 = $('#scene2').get(0);
       var parallaxInstance2 = new Parallax(scene2);
 
-      var scene3 = $('.scene3').get(0);
+      var scene3 = $('#scene3').get(0);
       var parallaxInstance3 = new Parallax(scene3);
 
-      var scene4 = $('.scene4').get(0);
+      var scene4 = $('#scene4').get(0);
       var parallaxInstance4 = new Parallax(scene4);
-
-      var scene5 = $('.scene5').get(0);
-      var parallaxInstance5 = new Parallax(scene5);
-
-      var scene6 = $('.scene6').get(0);
-      var parallaxInstance6 = new Parallax(scene6);
    }
 
 function initFallback() {
@@ -211,7 +205,6 @@ $(document).ready(function(){
 jQuery(function(){
   // Show videos in player when clicking on radio buttons (labels)
     $('input[type="radio"]').click(function(){
-      console.log('test');
       var radioBtnValue = $(this).val();
       console.log(radioBtnValue);
       console.log("#video-"+radioBtnValue);
