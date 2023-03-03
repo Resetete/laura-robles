@@ -441,6 +441,12 @@ a:hover {
   transition: all 0.5s ease;
 }
 
+// by default show the first video
+// with js show other videos when clicking on labels
+#video-1 {
+  opacity: 1;
+}
+
 @media (max-width: 767px) {
   .slider-height-padding {
     padding-top: 340px;
@@ -873,9 +879,7 @@ svg#filters {
   position:relative;
   z-index:1;
 }
-.music-player--main {
-  /* height: 100px; */
-}
+
 .music-player--progress {
   position: relative;
   overflow:auto;

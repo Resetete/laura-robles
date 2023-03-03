@@ -202,13 +202,11 @@ $(document).ready(function(){
 });
 
 
+// Show videos in player when clicking on radio buttons (labels)
 jQuery(function(){
-  // Show videos in player when clicking on radio buttons (labels)
-    $('input[type="radio"]').click(function(){
-      var radioBtnValue = $(this).val();
-      console.log(radioBtnValue);
-      console.log("#video-"+radioBtnValue);
-      $(".video-wrapper").hide();
-      $("#video-"+radioBtnValue).css({ opacity: 1}).show();
-    });
+  $('input[type="radio"]').click(function(){
+    var radioBtnValue = $(this).val();
+    $(".video-wrapper").hide();
+    $("#video-"+radioBtnValue).css({ opacity: 1}).show();
   });
+});

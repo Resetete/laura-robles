@@ -20,3 +20,6 @@
           .parallax-back{'data-depth': 0.15}
             - if project.image_white.attached? && project.image_white.variable?
               = image_tag(project.image_white)
+
+:javascript
+  number_images = #{@projects.length}
