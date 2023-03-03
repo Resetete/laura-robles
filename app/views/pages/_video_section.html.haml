@@ -11,10 +11,9 @@
         .col-lg-10.col-xl-8.align-self-center.padding-tb
           .section.mx-auto.text-center.slider-height-padding
             - @videos.each_with_index do |video, index|
-              %input.checkbox{id: "slider-#{index+1}", class: ordinalize(index+1), checked: ("checked" if index == 0), 'name': "slider", 'type': "radio"}/
+              %input.checkbox{name: "slider", type: "radio", id: "slider-#{index+1}", class: ordinalize(index+1), checked: ('checked' if index == 0), value: "#{index+1}"}/
               %label.hovertext{class: "bg-#{video.instrument}", for: "slider-#{index+1}", 'data-hover': video.instrument.humanize }
             %ul
-              - @videos.each do |video|
-                %li.video-wrapper
-                  / add -nocookie to the youtube like to disable cookie trackers from youtube: https://cookie-script.com/blog/how-to-add-youtube-videos-without-cookies
+              - @videos.each_with_index do |video, index|
+                %li{class: "video-wrapper", id: "video-#{index+1}"}
                   %iframe{:allow => "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube-nocookie.com/embed/#{video.video_url}", :title => "YouTube video player"}

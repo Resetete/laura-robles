@@ -441,28 +441,6 @@ a:hover {
   transition: all 0.5s ease;
 }
 
-// 10 loop iterations for styling the video buttons; defining the ordinals
-$ordinals: (
-  1: 'first',
-  2: 'second',
-  3: 'third',
-  4: 'fourth',
-  5: 'fifth',
-  6: 'sixth',
-  7: 'seventh',
-  8: 'eigth',
-  9: 'ninth',
-  10: 'tenth'
-);
-// 10 loop iterations for styling the video buttons; potentially can have 15 videos
-@each $number, $ordinal in $ordinals {
-  .checkbox.#{$ordinal}:checked ~ ul li:nth-child(#{$number}) {
-    opacity: 1;
-    pointer-events: auto;
-    border-radius: 16px;
-  }
-}
-
 @media (max-width: 767px) {
   .slider-height-padding {
     padding-top: 340px;

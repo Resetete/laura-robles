@@ -13,30 +13,13 @@ import jquery from 'jquery';
 window.jQuery = jquery
 window.$ = jquery
 
-// document.addEventListener("DOMContentLoaded", function(){
-//   var scene = $('.scene').get(0);
-//   var parallaxInstance = new Parallax(scene);
-
-//   var scene2 = $('.scene2').get(0);
-//   var parallaxInstance2 = new Parallax(scene2);
-
-//   var scene3 = $('.scene3').get(0);
-//   var parallaxInstance3 = new Parallax(scene3);
-  
-//   var scene4 = $('.scene4').get(0);
-//   var parallaxInstance4 = new Parallax(scene4);
-
-//   var scene5 = $('.scene5').get(0);
-//   var parallaxInstance5 = new Parallax(scene5);
-
-//   var scene6 = $('.scene6').get(0);
-//   var parallaxInstance6 = new Parallax(scene6);
-// });
-
+// Define a variable to check in inlined HTML script
+console.log(test8);
 
 // Parallax effects for some images
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   //Mobile
+  // TODO: this needs to be extendable as well --> refactor so that variables are generated automatically
   window.addEventListener('deviceorientation', initFallback);
   console.log('mobile view');
    } else {
@@ -73,7 +56,7 @@ document.onreadystatechange = function() {
     $hamburger: $('.hamburger'),
     offset: 1800,
     pageHeight: $('#paper-front').outerHeight(),
-    
+
     open: function() {
       this.$window.addClass('tilt');
       this.$hamburger.off('click');
@@ -82,7 +65,7 @@ document.onreadystatechange = function() {
       console.log('opening...');
     },
     close: function() {
-      this.$window.removeClass('tilt'); 
+      this.$window.removeClass('tilt');
       $('#container, .hamburger').off('click');
       this.$hamburger.on('click', this.open.bind(this));
       this.hamburgerFix(false);
@@ -136,7 +119,7 @@ const texts = [
     "contact me",
     "just",
     "click",
-    "the", 
+    "the",
     "button",
     ";)"
 ];
@@ -212,7 +195,6 @@ function animate() {
 animate();
 };
 
-
 $(document).ready(function(){
 // cookie banner
   if(localStorage.getItem('cookieSeen') != 'shown'){
@@ -225,3 +207,15 @@ $(document).ready(function(){
   });
 });
 
+
+jQuery(function(){
+  // Show videos in player when clicking on radio buttons (labels)
+    $('input[type="radio"]').click(function(){
+      console.log('test');
+      var radioBtnValue = $(this).val();
+      console.log(radioBtnValue);
+      console.log("#video-"+radioBtnValue);
+      $(".video-wrapper").hide();
+      $("#video-"+radioBtnValue).css({ opacity: 1}).show();
+    });
+  });
