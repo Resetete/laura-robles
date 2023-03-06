@@ -21,4 +21,8 @@
             %tr
               %td Instrument:
               %td= content.instrument
+            - if content.video.attached?
+              %tr
+                %td Video:
+                %td= video_tag(polymorphic_path(content.video), controls: true)
           = admin_editor_tools(main_path: 'video_player_content', object: content)

@@ -56,7 +56,8 @@ class VideoPlayerContentsController < ApplicationController
   def video_content_params
     params.require(:video_player_content).permit(
       :instrument,
-      :video_url
+      :video_url,
+      :video,
     )
   end
 end

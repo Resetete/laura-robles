@@ -31,7 +31,7 @@
       = f.label :image_black, label: 'Project image black', class: 'form-label'
       = f.file_field :image_black, class: 'form-control'
       %p.text-muted
-        upload a new black image (as front)
+        upload a new black image (as front) as png (preferred), jpg or gif
     .col-12.pt-3.pb-3
       - if content.image_white.attached? && content.image_white.variable?
         = image_tag(content.image_white.variant(resize_to_limit: [75, 75]))
@@ -43,7 +43,7 @@
       = f.label :image_white, label: 'Project image white', class: 'form-label'
       = f.file_field :image_white, class: 'form-control'
       %p.text-muted
-        upload a new white image (as background)
+        upload a new white image (as background) as png (preferred), jpg or gif
     .col-12
       = f.label :audio_file, label: 'Audio example file', class: 'form-label'
       = f.file_field :audio_file, class: 'form-control'

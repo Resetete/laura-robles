@@ -44,7 +44,7 @@ class ProjectContent < ApplicationRecord
       errors.add(:image, "size #{image_size} MB exceeds 1 MB limit")
     end
 
-    acceptable_types = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']
+    acceptable_types = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/svg+xml']
     errors.add(:image, 'must be a JPEG, GIF, SVG or PNG') unless acceptable_types.include?(image.content_type)
   end
 
