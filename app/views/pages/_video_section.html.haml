@@ -16,4 +16,7 @@
             %ul
               - @videos.each_with_index do |video, index|
                 %li{class: "video-wrapper", id: "video-#{index+1}"}
-                  %iframe{:allow => "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube-nocookie.com/embed/#{video.video_url}", :title => "YouTube video player"}
+                  - if video.video_url.present?
+                    %iframe{:allow => "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube-nocookie.com/embed/#{video.video_url}", :title => "YouTube video player"}
+                  - elsif video.video.attached?
+                    = video_tag(polymorphic_path(video.video), controls: true)
