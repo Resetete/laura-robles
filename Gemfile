@@ -71,7 +71,7 @@ gem 'bootsnap', require: false
 # gem "sassc-rails"
 
 # Allow upload of images to dropbox
-gem 'activestorage-dropbox', git: 'git@github.com:Resetete/activestorage-dropbox.git' # adapter for dropbox, acounts for missing custom_metadata
+gem 'activestorage-dropbox', git: 'https://github.com/Resetete/activestorage-dropbox.git' # adapter for dropbox, acounts for missing custom_metadata
 # required for `activestorage-dropbox` gem
 gem 'dropbox_api'
 

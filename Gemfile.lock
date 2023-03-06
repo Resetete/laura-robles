@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:Resetete/activestorage-dropbox.git
+  remote: https://github.com/Resetete/activestorage-dropbox.git
   revision: 0f02d2cd12af8dea4d6dfec86679858e0129977a
   specs:
     activestorage-dropbox (1.0.0)
