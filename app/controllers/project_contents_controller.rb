@@ -62,7 +62,7 @@ class ProjectContentsController < ApplicationController
       :image_white,
       :image_black,
       :music_url,
-      :audio_file,
+      :audio_file
     )
   end
 end
