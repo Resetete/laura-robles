@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class VideoPlayerContent < ApplicationRecord
   validates :instrument, presence: true
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Dropbox
   class Authentication
     # TODO: need to store the access_token as long as it is valid
