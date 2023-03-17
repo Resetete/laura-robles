@@ -22,25 +22,32 @@
               %td German description:
               %td= content.description_de
             %tr
-              %td music player url:
-              %td= content.music_url
-            - if content.audio_file.attached?
-              %tr
-                %td= content.audio_file.filename
-                %td= audio_tag(polymorphic_path(content.audio_file), controls: true)
-            - if content.image_black.attached? && content.image_black.variable?
-              %tr
-                %td= content.image_black.filename
-                %td= image_tag(content.image_black.variant(resize_to_limit: [75, 75]))
-            - if content.image_white.attached? && content.image_white.variable?
-              %tr
-                %td= content.image_white.filename
-                %td= image_tag(content.image_white.variant(resize_to_limit: [75, 75]))
-            %tr
               %td Created at:
               %td= content.created_at.to_date
             %tr
               %td Updated at:
               %td= content.updated_at.to_date
+            - if content.audio_file.attached?
+              %tr
+                %th Audio
+                %th
+              %tr
+                %td= content.audio_file.filename
+                %td= audio_tag(polymorphic_path(content.audio_file), controls: true)
+              %tr
+                %td Audio musicians:
+                %td= content.musicians
+            - if content.image_black.attached? || content.image_white.attached?
+              %tr
+                %th Project illustration
+                %th
+              - if content.image_black.attached? && content.image_black.variable?
+                %tr
+                  %td= content.image_black.filename
+                  %td= image_tag(content.image_black.variant(resize_to_limit: [75, 75]))
+              - if content.image_white.attached? && content.image_white.variable?
+                %tr
+                  %td= content.image_white.filename
+                  %td= image_tag(content.image_white.variant(resize_to_limit: [75, 75]))
           = admin_editor_tools(main_path: 'project_content', object: content)
 

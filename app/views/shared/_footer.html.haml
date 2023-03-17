@@ -1,8 +1,11 @@
 = render 'shared/cookie_banner', style: 'display: none;'
 
 .footer-wrapper
-  .first-part  
+  .first-part
     = image_tag('infierno-footer-black.svg')
+    #rodrigolapaz.speech-bubble
+      By the way, the great illustrations were done by
+      = link_to 'Rodrigo La Paz!', 'https://rodrigolahoz.tumblr.com/'
   .middle-part
     = social_media_helper(animation: '', direction: 'horizontal')
     = footer_copyright
@@ -10,4 +13,3 @@
     = contact_helper
     = admin_helper
     = link_to(t('buttons.imprint'), imprint_path)
-  

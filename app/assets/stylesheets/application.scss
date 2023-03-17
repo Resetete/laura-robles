@@ -986,11 +986,59 @@ svg#filters {
 }
 
 .first-part {
+  position: relative;
   margin: 0 10px;
   img {
     width: 10vw;
   }
 }
+
+/* show info about illustrations */
+.first-part #rodrigolapaz {
+  visibility: hidden;
+  color:$primary-color;
+  background-color: $secondary-color;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  bottom: 130%;
+  left: 50%;
+  margin-left: -60px;
+}
+.first-part:hover #rodrigolapaz {
+  visibility: visible;
+}
+
+/*speech-bubble*/
+.speech-bubble {
+  position: relative;
+  margin: .5em auto;
+  padding: 1em;
+  border-radius: .25em;
+  transform: rotate(-4deg) rotateY(15deg);
+  background: #4b4e51;
+  text-align: center;
+}
+.speech-bubble:before, .speech-bubble:after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+}
+.speech-bubble:after {
+  top: 0; right: 0; bottom: 0; left: 0;
+  border-radius: inherit;
+  transform: rotate(2deg) translate(.35em, -.15em) scale(1.02);
+  background: #f4fbfe;
+}
+.speech-bubble:before {
+  border: solid 0 transparent;
+  border-right: solid 3.5em #f4fbfe;
+  border-bottom: solid .25em #629bdd;
+  bottom: .25em; left: 1.25em;
+  width: 0; height: 1em;
+  transform: rotate(45deg) skewX(75deg);
+}
+
 
 .middle-part {
   display: flex;
@@ -1323,5 +1371,10 @@ svg#filters {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  // don't show tooltip about rodrigo on mobile
+  .first-part:hover #rodrigolapaz {
+    visibility: hidden;
   }
 }
