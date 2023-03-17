@@ -986,10 +986,31 @@ svg#filters {
 }
 
 .first-part {
+  position: relative;
   margin: 0 10px;
   img {
     width: 10vw;
   }
+}
+
+/* show info about illustrations */
+.first-part #rodrigolapaz {
+  visibility: hidden;
+  width: 120px;
+  color:$primary-color;
+  background-color: $secondary-color;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 130%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.first-part:hover #rodrigolapaz {
+  visibility: visible;
 }
 
 .middle-part {
