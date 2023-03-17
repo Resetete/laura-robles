@@ -10,10 +10,10 @@
         .project-content
           %p
             = project.public_send("description_#{I18n.locale}")
-            = render('shared/music_player', url: project.music_url) unless project.music_url.empty?
             - if project.audio_file.attached?
               .audio-player.mt-5.mb-5
                 = audio_tag(polymorphic_path(project.audio_file), controls: true)
+                %p.text-muted= project.musicians
       .project-image
         .parallax-parent{id: "scene#{index}"}
           .parallax-front{'data-depth': 0.1}
