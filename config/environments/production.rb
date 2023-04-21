@@ -18,7 +18,7 @@ Rails.application.configure do
 
 
   # email configuration
-  config.action_mailer.default_url_options = { host: 'laura-robles.com', protocol: 'https' }
+  config.action_mailer.default_url_options = { host: 'lauraroblesmusic.com', protocol: 'https' }
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
@@ -96,4 +96,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # reverse proxy
+  config.action_controller.default_url_options = { protocol: 'https', host: 'lauraroblesmusic.com' }
+  config.action_controller.forgery_protection_origin_check = false
 end

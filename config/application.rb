@@ -24,8 +24,7 @@ module LauraRoblesWebapp
     config.action_dispatch.default_headers = {
       'Access-Control-Allow-Origin' => 'https://lauraroblesmusic.com',
     }
-    config.action_controller.default_url_options = { host: 'https://lauraroblesmusic.com' }
-
+    config.action_controller.default_url_options = { protocol: 'https', host: 'lauraroblesmusic.com' }
     config.i18n.available_locales = [:en, :de, :es]
     config.i18n.default_locale = :en
   end
