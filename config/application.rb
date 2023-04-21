@@ -19,6 +19,13 @@ module LauraRoblesWebapp
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    # to avoid CSRF errors when receiving requests from https domain
+    config.action_controller.default_protect_from_forgery = true
+    config.action_dispatch.default_headers = {
+      'Access-Control-Allow-Origin' => 'https://lauraroblesmusic.com',
+    }
+    config.action_controller.default_url_options = { host: 'https://lauraroblesmusic.com' }
+
     config.i18n.available_locales = [:en, :de, :es]
     config.i18n.default_locale = :en
   end
