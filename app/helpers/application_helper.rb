@@ -86,7 +86,7 @@ module ApplicationHelper
                   image_tag('chamaeleon.png', id: 'copyright-icon'),
                   Time.zone.now.year,
                   link_to('@theresamannschatz.design', 'https://theresamannschatz.design')
-                ])
+                ], ' ')
     end
   end
 

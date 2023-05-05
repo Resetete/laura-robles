@@ -11,6 +11,9 @@
       %p.text-muted
         the id of the youtube video from the shared url
         %em https://www.youtube-nocookie.com/embed/gpSdOwjbD4Q --> id: 'gpSdOwjbD4Q'
+      %p.text-muted
+        if you have this:
+        %em 'watch?v=pfrvdPWXMCU' --> only keep: 'pfrvdPWXMCU'
     .col-12
       = f.label :instrument, 'Instrument for video select buttons', class: 'form-label'
       = f.select :instrument, VideoPlayerContent.instruments.keys.map{ |instrument| [instrument.humanize, instrument] }, {required: true}, { class: 'form-control' }

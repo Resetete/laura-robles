@@ -1039,7 +1039,7 @@ svg#filters {
   transform: rotate(45deg) skewX(75deg);
 }
 
-
+/* middle part */
 .middle-part {
   display: flex;
   flex-direction: column;
@@ -1068,7 +1068,7 @@ svg#filters {
   align-items: center;
   justify-content: space-around;
   a {
-    padding: 5px;
+    padding: 7px;
     text-decoration: none;
     color: $primary-color;
   }
@@ -1081,7 +1081,8 @@ svg#filters {
 }
 
 #copyright {
-  font-size: 0.8em;
+  font-size: 1em;
+  text-align: center;
 }
 
 /***********************************+*/
