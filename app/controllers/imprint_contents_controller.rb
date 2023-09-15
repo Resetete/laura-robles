@@ -40,6 +40,15 @@ class ImprintContentsController < ApplicationController
   end
 
   def imprint_content_params
-    params.require(:imprint_content).permit(:name, :address)
+    params.require(:imprint_content).permit(
+      :name,
+      :address,
+      :phone,
+      :email,
+      :tax_number,
+      :copyright_en,
+      :copyright_es,
+      :copyright_de,
+    )
   end
 end
