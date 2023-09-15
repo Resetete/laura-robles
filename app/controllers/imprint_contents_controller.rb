@@ -36,7 +36,7 @@ class ImprintContentsController < ApplicationController
   private
 
   def set_imprint_content
-    @imprint_content = ImprintContent.new(params[:id])
+    @imprint_content = ImprintContent.find(params[:id])
   end
 
   def imprint_content_params
