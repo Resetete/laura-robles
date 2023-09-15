@@ -51,8 +51,8 @@ en:
         about_button: 'write me'
     imprint:
       header: 'Imprint'
-      rodrigo: 'Basically all of the illustrations were drawn by the artist'
-      images_links: 'Links to the copyright info of other images'
+      rodrigo: 'Básicamente todas las ilustraciones fueron dibujadas por el artista'
+      copyright: 'Copyright information'
     blog:
       header: 'Blog'
   about_contents:
@@ -83,6 +83,16 @@ en:
     edit: 'Edit video'
     show: 'Video'
     description: 'Description:'
+  imprint_contents:
+    title: 'Imprint'
+    new: 'Add a new imprint'
+    edit: 'Edit imprint'
+    show: 'Imprint'
+    name: 'Name'
+    address: 'Address'
+    phone: 'Phone'
+    tax_number: 'Tax number'
+    contact: 'Contact'
   buttons:
     contact: 'contact'
     admin_login: 'admin'
