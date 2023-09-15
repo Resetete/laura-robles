@@ -17,5 +17,7 @@ Rails.application.routes.draw do
 
     resources :video_player_contents
     delete '/video_player_contents/:id', to: 'video_player_contents#destroy', as: 'destroy_video_player_contents'
+
+    resources :imprint_contents, except: %i[index, destroy, show]
   end
 end

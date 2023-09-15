@@ -20,6 +20,7 @@ es:
         about_button: 'escríbeme'
     imprint:
       header: 'Aviso legal'
+      copyright: 'Información de derechos de autor'
     blog:
       header: 'Blog'
   about_contents:
@@ -49,6 +50,16 @@ es:
     edit: 'Editar video'
     show: 'Video'
     description: 'Descripción:'
+  imprint_contents:
+    title: 'Aviso Legal'
+    new: 'Agregar un nuevo aviso legal'
+    edit: 'Editar aviso legal'
+    show: 'Aviso Legal'
+    name: 'Nombre'
+    address: 'Dirección'
+    phone: 'Teléfono'
+    tax_number: 'Número de impuestos'
+    contact: 'Contacto'
   buttons:
     contact: 'contacto'
     admin_login: 'admin'

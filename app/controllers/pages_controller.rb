@@ -12,7 +12,9 @@ class PagesController < ApplicationController
     @videos = VideoPlayerContent.order(updated_at: :desc)
   end
 
-  def imprint; end
+  def imprint
+    @imprint_content = ImprintContent.last
+  end
 
   def blog
     @news_contents = NewsContent.order(date: :desc).all

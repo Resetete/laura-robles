@@ -1,7 +1,7 @@
-.cookie-banner{style: style}
+.cookie-banner{style: local_assigns[:style]}
   %h1
     Cookies?
     = image_tag('cookie_banner_icon.png', alt: 'cookie icon', id: 'cookie-banner-icon')
   = t('cookie_banner.content_html', imprint_path: imprint_path)
-  %button.banner-close
+  %button.banner-close{style: local_assigns[:closing_button_style]}
     %i.fa-solid.fa-xmark

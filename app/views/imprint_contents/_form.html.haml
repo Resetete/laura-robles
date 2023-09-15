@@ -1,0 +1,32 @@
+- if @imprint_content.errors.any?
+  The following error occured
+  - @imprint_content.errors.each do |error|
+    %li= error.message
+.mt-3
+  = form_with model: @imprint_content, local: true do |f|
+    .mb-3
+      = f.label :name, t('imprint_contents.name'), class: 'form-label'
+      = f.text_field :name, class: 'form-control'
+    .mb-3
+      = f.label :address, t('imprint_contents.address'), class: 'form-label'
+      = f.text_field :address, class: 'form-control'
+    .mb-3
+      = f.label :phone, t('imprint_contents.phone'), class: 'form-label'
+      = f.text_field :phone, class: 'form-control'
+    .mb-3
+      = f.label :email, class: 'form-label'
+      = f.text_field :email, class: 'form-control'
+    .mb-3
+      = f.label :tax_number, t('imprint_contents.tax_number'), class: 'form-label'
+      = f.text_field :tax_number, class: 'form-control'
+    .mb-3
+      = f.label :copyright_en, class: 'form-label'
+      = f.text_area :copyright_en, class: 'form-control'
+    .mb-3
+      = f.label :copyright_de, class: 'form-label'
+      = f.text_area :copyright_de, class: 'form-control'
+    .mb-3
+      = f.label :copyright_es, class: 'form-label'
+      = f.text_area :copyright_es, class: 'form-control'
+    .mt-3
+    = f.submit t('buttons.save'), class: 'btn btn-primary'
