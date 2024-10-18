@@ -1,0 +1,7 @@
+2024-10-18 14:51:27.651 CEST [76612] LOG:  starting PostgreSQL 14.12 (Homebrew) on x86_64-apple-darwin21.6.0, compiled by Apple clang version 14.0.0 (clang-1400.0.29.202), 64-bit
+2024-10-18 14:51:27.653 CEST [76612] LOG:  listening on IPv6 address "::1", port 5432
+2024-10-18 14:51:27.653 CEST [76612] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-10-18 14:51:27.654 CEST [76612] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-10-18 14:51:27.660 CEST [76613] LOG:  database system was shut down at 2024-10-18 14:51:12 CEST
+2024-10-18 14:51:27.678 CEST [76612] LOG:  database system is ready to accept connections
+2024-10-18 14:52:01.654 CEST [77494] FATAL:  database "db/laura_development" does not exist

@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
     resources :project_contents
     delete '/project_contents/:id', to: 'project_contents#destroy', as: 'destroy_project_contents'
+    get 'project_contents/:id/audio_file', to: 'audio#show', as: 'audio'
 
     resources :video_player_contents
     delete '/video_player_contents/:id', to: 'video_player_contents#destroy', as: 'destroy_video_player_contents'

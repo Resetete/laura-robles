@@ -298,6 +298,8 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.0.4)
       railties (>= 6.0.0)
+    streamio-ffmpeg (3.0.2)
+      multi_json (~> 1.8)
     strscan (3.0.3)
     temple (0.8.2)
     thor (1.2.1)
@@ -361,6 +363,7 @@ DEPENDENCIES
   selenium-webdriver
   sprockets-rails
   stimulus-rails
+  streamio-ffmpeg
   turbo-rails
   tzinfo-data
   web-console
