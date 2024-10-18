@@ -89,10 +89,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_15_095302) do
   end
 
   create_table "project_contents", force: :cascade do |t|
-    t.string "title"
-    t.text "description_en"
-    t.text "description_es"
-    t.text "description_de"
+    t.string "title", null: false
+    t.text "description_en", null: false
+    t.text "description_es", null: false
+    t.text "description_de", null: false
     t.string "musicians"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

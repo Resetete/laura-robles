@@ -12,8 +12,9 @@
             = project.public_send("description_#{I18n.locale}")
             - if project.audio_file.attached?
               .audio-player.mt-5.mb-5
-                = audio_tag(polymorphic_path(project.audio_file), controls: true)
+                = audio_tag(polymorphic_path(project.audio_file), controls: true, type: 'audio/mpeg')
                 %p.text-muted= project.musicians
+              = audio_tag(audio_path(project.id), controls: true, type: 'audio/mpeg')
       .project-image
         .parallax-parent{id: "scene#{index}"}
           .parallax-front{'data-depth': 0.1}
